@@ -10,4 +10,9 @@ class WorksController extends Controller
     {
         return view('works');
     }
+
+    public function single($name)
+    {
+        return view('work', compact('name'));
+    }
 }

@@ -12,8 +12,15 @@
 */
 
 Route::get('/', 'MainController@index');
+
 Route::get('/works', 'WorksController@index');
+Route::get('/works/{name}', 'WorksController@single');
+
 Route::get('/artists', 'ArtistsController@index');
+Route::get('/artists/{name}', 'ArtistsController@single');
+
 Route::get('/about', 'AboutController@index');
+
 Route::get('/recruit', 'RecruitController@index');
+
 Route::get('/contact', 'ContactController@index');

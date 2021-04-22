@@ -10,4 +10,9 @@ class ArtistsController extends Controller
     {
         return view('artists');
     }
+
+    public function single($name)
+    {
+        return view('artist', ['artist' => $name]);
+    }
 }
