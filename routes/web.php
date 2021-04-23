@@ -11,16 +11,16 @@
 |
 */
 
-Route::get('/', 'MainController@index');
+Route::get('/', 'MainController@index')->name('main');
 
-Route::get('/works', 'WorksController@index');
-Route::get('/works/{name}', 'WorksController@single');
+Route::get('/works', 'WorksController@index')->name('works');
+Route::get('/works/{name}', 'WorksController@single')->name('work');
 
-Route::get('/artists', 'ArtistsController@index');
-Route::get('/artists/{name}', 'ArtistsController@single');
+Route::get('/artists', 'ArtistsController@index')->name('artists');
+Route::get('/artists/{name}', 'ArtistsController@single')->name('artist');
 
-Route::get('/about', 'AboutController@index');
+Route::get('/about', 'AboutController@index')->name('about');
 
-Route::get('/recruit', 'RecruitController@index');
+Route::get('/recruit', 'RecruitController@index')->name('recruit');
 
-Route::get('/contact', 'ContactController@index');
+Route::get('/contact', 'ContactController@index')->name('contact');
