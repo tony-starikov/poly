@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Artist;
 use Illuminate\Http\Request;
 
 class ArtistsController extends Controller
 {
     public function index()
     {
-        return view('artists');
+        $artists = Artist::get();
+        return view('artists', compact('artists'));
     }
 
-    public function single($name)
+    public function single($code)
     {
-        return view('artist', ['artist' => $name]);
+        $artist = Artist::where('code', $code)->first();
+        return view('artist', compact('artist'));
     }
 }

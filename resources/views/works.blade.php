@@ -12,7 +12,9 @@
         <hr>
 
         <div class="row">
-            @include('work-card')
+            @foreach($works as $work)
+                @include('work-card', ['work' => $work])
+            @endforeach
         </div>
     </div>
 @endsection

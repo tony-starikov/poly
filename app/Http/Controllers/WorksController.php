@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Work;
 use Illuminate\Http\Request;
 
 class WorksController extends Controller
 {
     public function index()
     {
-        return view('works');
+        $works = Work::get();
+        return view('works', compact('works'));
     }
 
-    public function single($name)
+    public function single($code)
     {
-        return view('work', compact('name'));
+        $work = Work::where('code', $code)->first();
+        return view('work', compact('work'));
     }
 }

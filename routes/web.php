@@ -14,10 +14,10 @@
 Route::get('/', 'MainController@index')->name('main');
 
 Route::get('/works', 'WorksController@index')->name('works');
-Route::get('/works/{name}', 'WorksController@single')->name('work');
+Route::get('/works/{code}', 'WorksController@single')->name('work');
 
 Route::get('/artists', 'ArtistsController@index')->name('artists');
-Route::get('/artists/{name}', 'ArtistsController@single')->name('artist');
+Route::get('/artists/{code}', 'ArtistsController@single')->name('artist');
 
 Route::get('/about', 'AboutController@index')->name('about');
 

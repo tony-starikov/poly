@@ -12,7 +12,9 @@
         <hr>
 
         <div class="row">
-            @include('artist-card')
+            @foreach($artists as $artist)
+                @include('artist-card', compact('artist'))
+            @endforeach
         </div>
     </div>
 @endsection
