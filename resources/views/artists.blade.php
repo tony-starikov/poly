@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', 'ARTISTS | POLYGONERDS')
+@section('title', $page_info->title)
 
 @section('content')
     <div class="container">
@@ -8,6 +8,9 @@
         <hr>
 
         <h1>ARTISTS</h1>
+
+        <p>title: {{ $page_info->title }}</p>
+        <p>description: {{ $page_info->description }}</p>
 
         <hr>
 
