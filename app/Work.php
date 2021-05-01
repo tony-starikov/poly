@@ -8,11 +8,11 @@ class Work extends Model
 {
     public function software()
     {
-        return $this->belongsToMany(Software::class);
+        return $this->belongsToMany(Software::class)->withTimestamps();
     }
 
     public function artists()
     {
-        return $this->belongsToMany(Artist::class);
+        return $this->belongsToMany(Artist::class)->withTimestamps();
     }
 }

@@ -8,6 +8,6 @@ class Artist extends Model
 {
     public function works()
     {
-        return $this->belongsToMany(Work::class);
+        return $this->belongsToMany(Work::class)->withTimestamps();
     }
 }
