@@ -11,6 +11,15 @@
 |
 */
 
+Auth::routes([
+    'reset' => false,
+    'confirm' => false,
+    'verify' => false,
+    'register' => false,
+]);
+
+Route::get('/home', 'AdminController@index')->name('admin');
+
 Route::get('/', 'MainController@index')->name('main');
 
 Route::get('/works', 'WorksController@index')->name('works');

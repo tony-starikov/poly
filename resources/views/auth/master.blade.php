@@ -37,17 +37,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                     </li>
-                    @guest()
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Admin</a>
-                        </li>
-                    @endguest
-
-                    @auth()
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin') }}">Admin</a>
-                        </li>
-                    @endauth
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             EN
