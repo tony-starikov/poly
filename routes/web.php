@@ -22,7 +22,9 @@ Route::group([
     'middleware' => 'auth',
     'namespace' => 'Admin',
 ], function () {
-    Route::get('/admin', 'AdminController@index')->name('admin');
+    Route::group(['middleware' => 'is_admin'], function () {
+        Route::get('/admin', 'AdminController@index')->name('admin');
+    });
 });
 
 Route::get('/', 'MainController@index')->name('main');
