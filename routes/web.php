@@ -21,9 +21,12 @@ Auth::routes([
 Route::group([
     'middleware' => 'auth',
     'namespace' => 'Admin',
+    'prefix' => 'admin',
 ], function () {
     Route::group(['middleware' => 'is_admin'], function () {
-        Route::get('/admin', 'AdminController@index')->name('admin');
+        Route::get('', 'AdminController@index')->name('admin');
+
+        Route::resource('software', 'SoftwareController');
     });
 });
 
