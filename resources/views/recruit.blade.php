@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', $recruits->title)
+@section('title', $page_info->title)
 
 @section('content')
     <div class="container">
@@ -9,11 +9,11 @@
 
         <h1>RECRUIT</h1>
 
-        <p>title: {{ $recruits->title }}</p>
-        <p>description: {{ $recruits->description }}</p>
-        <p>email_link: {{ $recruits->email_link }}</p>
-        <p>job_description: {{ $recruits->job_description }}</p>
-        <p>recruiting_process: {{ $recruits->recruiting_process }}</p>
+        <p>title: {{ $page_info->title }}</p>
+        <p>description: {{ $page_info->description }}</p>
+        <p>email_link: {{ $page_info->email_link }}</p>
+        <p>jobs_description: {{ $page_info->jobs_description }}</p>
+        <p>recruiting_process: {{ $page_info->recruiting_process }}</p>
 
         <hr>
 

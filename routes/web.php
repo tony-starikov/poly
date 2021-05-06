@@ -30,16 +30,16 @@ Route::group([
     });
 });
 
-Route::get('/', 'MainController@index')->name('main');
+Route::get('/', 'PageController@main')->name('main');
 
-Route::get('/works', 'WorksController@index')->name('works');
-Route::get('/works/{code}', 'WorksController@single')->name('work');
+Route::get('/works', 'PageController@works')->name('works');
+Route::get('/works/{code}', 'PageController@work')->name('work');
 
-Route::get('/artists', 'ArtistsController@index')->name('artists');
-Route::get('/artists/{code}', 'ArtistsController@single')->name('artist');
+Route::get('/artists', 'PageController@artists')->name('artists');
+Route::get('/artists/{code}', 'PageController@artist')->name('artist');
 
-Route::get('/about', 'AboutController@index')->name('about');
+Route::get('/about', 'PageController@about')->name('about');
 
-Route::get('/recruit', 'RecruitController@index')->name('recruit');
+Route::get('/recruit', 'PageController@recruit')->name('recruit');
 
-Route::get('/contact', 'ContactController@index')->name('contact');
+Route::get('/contact', 'PageController@contact')->name('contact');
