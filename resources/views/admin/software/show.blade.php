@@ -13,5 +13,7 @@
 
         <h2>id: {{ $software->id }} | name: {{ $software->name }}</h2>
 
+        <img src="{{ Storage::url($software->image) }}" alt="{{ $software->name }}" height="50px">
+
     </div> <!-- /container -->
 @endsection

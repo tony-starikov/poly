@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Software;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class SoftwareController extends Controller
 {
@@ -38,7 +39,10 @@ class SoftwareController extends Controller
      */
     public function store(Request $request)
     {
-        Software::create($request->all());
+        $image_path = $request->file('image')->store('software');
+        $parameters = $request->all();
+        $parameters['image'] = $image_path;
+        Software::create($parameters);
         return redirect()->route('software.index');
     }
 
@@ -73,7 +77,11 @@ class SoftwareController extends Controller
      */
     public function update(Request $request, Software $software)
     {
-        $software->update($request->all());
+        Storage::delete($software->image);
+        $image_path = $request->file('image')->store('software');
+        $parameters = $request->all();
+        $parameters['image'] = $image_path;
+        $software->update($parameters);
         return redirect()->route('software.index');
     }
 
