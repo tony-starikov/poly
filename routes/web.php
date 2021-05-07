@@ -27,6 +27,7 @@ Route::group([
         Route::get('', 'AdminController@index')->name('admin');
 
         Route::resource('software', 'SoftwareController');
+        Route::resource('artists', 'ArtistController');
     });
 });
 

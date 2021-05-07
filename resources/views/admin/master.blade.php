@@ -23,39 +23,16 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('works') }}">Works <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('software.index') }}">Software</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('artists') }}">Artists</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('recruit') }}">Recruit</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                        <a class="nav-link" href="{{ route('artists.index') }}">Artists</a>
                     </li>
                     @auth()
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin') }}">Admin</a>
                         </li>
                     @endauth
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            EN
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Українська</a>
-                            <a class="dropdown-item" href="#">Русский</a>
-                            <a class="dropdown-item" href="#">English</a>
-                            <a class="dropdown-item" href="#">Deutsch</a>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
