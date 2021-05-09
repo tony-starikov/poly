@@ -28,6 +28,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('artists.index') }}">Artists</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('works.index') }}">Works</a>
+                    </li>
                     @auth()
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin') }}">Admin</a>

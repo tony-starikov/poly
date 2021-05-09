@@ -28,6 +28,7 @@ Route::group([
 
         Route::resource('software', 'SoftwareController');
         Route::resource('artists', 'ArtistController');
+        Route::resource('works', 'WorkController');
     });
 });
 
