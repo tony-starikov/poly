@@ -93,7 +93,12 @@ class ArtistController extends Controller
      */
     public function destroy(Artist $artist)
     {
+        foreach ($artist->works as $work) {
+            $artist->works()->detach($work->id);
+        }
+
         $artist->delete();
+
         return redirect()->route('artists.index');
     }
 }

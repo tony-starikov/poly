@@ -93,7 +93,12 @@ class SoftwareController extends Controller
      */
     public function destroy(Software $software)
     {
+        foreach ($software->works as $work) {
+            $software->works()->detach($work->id);
+        }
+
         $software->delete();
+
         return redirect()->route('software.index');
     }
 }
