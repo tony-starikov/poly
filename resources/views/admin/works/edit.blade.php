@@ -11,9 +11,43 @@
 
         <hr>
 
-        <form method="POST" enctype="multipart/form-data" action="{{ route('works.store') }}">
+        <form method="POST" enctype="multipart/form-data" action="{{ route('works.update', $work) }}">
             <div>
+                @method('PUT')
                 @csrf
+                <div class="form-row">
+                    <div class="input-group flex-nowrap mb-3 col-md-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="addon-wrapping">NAME</span>
+                        </div>
+                        <input type="text" name="name" id="name" value="{{ $work->name }}" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping">
+                    </div>
+
+                    <div class="input-group flex-nowrap mb-3 col-md-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="addon-wrapping">CODE</span>
+                        </div>
+                        <input type="text" name="code" id="code" value="{{ $work->code }}" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">TITLE</span>
+                    </div>
+                    <input type="text" name="title" id="title" value="{{ $work->title }}" class="form-control" aria-describedby="addon-wrapping">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-floating mb-3 col-md-6">
+                        <label for="marmoset">DESCRIPTION</label>
+                        <textarea class="form-control" name="description" id="description" style="height: 100px">{{ $work->description }}</textarea>
+                    </div>
+                    <div class="form-floating mb-3 col-md-6">
+                        <label for="marmoset">MARMOSET</label>
+                        <textarea class="form-control" name="marmoset" id="marmoset" style="height: 100px">{{ $work->marmoset }}</textarea>
+                    </div>
+                </div>
 
                 <div class="form-row">
                     <div class="input-group mb-3 col-md-6">
@@ -56,51 +90,6 @@
                             <input type="file" name="video" id="video" class="custom-file-input" aria-describedby="inputGroupFileAddon04">
                             <label class="custom-file-label" for="video">Choose file</label>
                         </div>
-                    </div>
-                </div>
-
-
-
-
-
-            </div>
-        </form>
-
-        <form method="POST" enctype="multipart/form-data" action="{{ route('works.update', $work) }}">
-            <div>
-                @method('PUT')
-                @csrf
-                <div class="form-row">
-                    <div class="input-group flex-nowrap mb-3 col-md-6">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="addon-wrapping">NAME</span>
-                        </div>
-                        <input type="text" name="name" id="name" value="{{ $work->name }}" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping">
-                    </div>
-
-                    <div class="input-group flex-nowrap mb-3 col-md-6">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="addon-wrapping">CODE</span>
-                        </div>
-                        <input type="text" name="code" id="code" value="{{ $work->code }}" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping">
-                    </div>
-                </div>
-
-                <div class="input-group flex-nowrap mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">TITLE</span>
-                    </div>
-                    <input type="text" name="title" id="title" value="{{ $work->title }}" class="form-control" aria-describedby="addon-wrapping">
-                </div>
-
-                <div class="form-row">
-                    <div class="form-floating mb-3 col-md-6">
-                        <label for="marmoset">DESCRIPTION</label>
-                        <textarea class="form-control" name="description" id="description" style="height: 100px">{{ $work->description }}</textarea>
-                    </div>
-                    <div class="form-floating mb-3 col-md-6">
-                        <label for="marmoset">MARMOSET</label>
-                        <textarea class="form-control" name="marmoset" id="marmoset" style="height: 100px">{{ $work->marmoset }}</textarea>
                     </div>
                 </div>
 
