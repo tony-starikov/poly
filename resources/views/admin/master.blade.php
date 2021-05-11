@@ -22,6 +22,19 @@
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('admin.main.page') }}">MAIN</a>
+                            <a class="dropdown-item" href="{{ route('admin.works.page') }}">WORKS</a>
+                            <a class="dropdown-item" href="{{ route('admin.artists.page') }}">ARTISTS</a>
+                            <a class="dropdown-item" href="{{ route('admin.about.page') }}">ABOUT</a>
+                            <a class="dropdown-item" href="{{ route('admin.recruit.page') }}">RECRUIT</a>
+                            <a class="dropdown-item" href="{{ route('admin.contact.page') }}">CONTACT</a>
+                        </div>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('software.index') }}">Software</a>
                     </li>
