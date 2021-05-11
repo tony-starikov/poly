@@ -7,7 +7,7 @@
 
         <hr>
 
-        <h1>ADMIN-SOFTWARE-EDIT</h1>
+        <h1>EDIT SOFTWARE</h1>
 
         <hr>
 
@@ -15,23 +15,26 @@
             <div>
                 @method('PUT')
                 @csrf
-                <br>
-                <div class="input-group row">
-                    <label for="name" class="col-sm-2 col-form-label">NAME: </label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="name" id="name" value="{{ $software->name }}">
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">NAME</span>
+                    </div>
+                    <input type="text" name="name" id="name" value="{{ $software->name }}" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">IMAGE</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" name="image" id="image" class="custom-file-input" aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="image">Choose file</label>
                     </div>
                 </div>
-                <br>
-                <div class="input-group row">
-                    <label for="image" class="col-sm-2 col-form-label">IMAGE: </label>
-                    <div class="col-sm-10">
-                        <label class="btn btn-default btn-file">
-                            DOWNLOAD <input type="file" style="display: none;" name="image" id="image">
-                        </label>
-                    </div>
-                </div>
+
                 <button class="btn btn-success">EDIT</button>
+
+                <hr>
             </div>
         </form>
 

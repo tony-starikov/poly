@@ -7,13 +7,17 @@
 
         <hr>
 
-        <h1>ADMIN-SOFTWARE-SHOW</h1>
+        <h1>SHOW SOFTWARE</h1>
 
         <hr>
 
-        <h2>id: {{ $software->id }} | name: {{ $software->name }}</h2>
+        <img src="{{ Storage::url($software->image) }}" alt="{{ $software->name }}" class="img-fluid" height="50px">
 
-        <img src="{{ Storage::url($software->image) }}" alt="{{ $software->name }}" height="50px">
+        <h2>name: {{ $software->name }}</h2>
+
+        <h2>id: {{ $software->id }}</h2>
+
+        <hr>
 
     </div> <!-- /container -->
 @endsection

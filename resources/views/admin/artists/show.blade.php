@@ -7,13 +7,17 @@
 
         <hr>
 
-        <h1>ADMIN-ARTIST-SHOW</h1>
+        <h1>SHOW ARTIST</h1>
 
         <hr>
 
-        <h2>id: {{ $artist->id }} | name: {{ $artist->name }}</h2>
+        <img src="{{ Storage::url($artist->image) }}" alt="{{ $artist->name }}" class="img-fluid">
 
-        <img src="{{ Storage::url($artist->image) }}" alt="{{ $artist->name }}">
+        <h2>name: {{ $artist->name }}</h2>
+
+        <h2>id: {{ $artist->id }}</h2>
+
+        <hr>
 
     </div> <!-- /container -->
 @endsection

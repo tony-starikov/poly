@@ -7,7 +7,7 @@
 
         <hr>
 
-        <h1>ADMIN-WORK-EDIT</h1>
+        <h1>EDIT WORK</h1>
 
         <hr>
 

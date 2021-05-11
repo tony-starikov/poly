@@ -7,7 +7,7 @@
 
         <hr>
 
-        <h1>ADMIN-ARTISTS</h1>
+        <h1>ARTISTS</h1>
 
         <hr>
 

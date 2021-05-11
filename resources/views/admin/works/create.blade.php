@@ -118,6 +118,8 @@
 
                 <button class="btn btn-success my-3">CREATE</button>
 
+                <hr>
+
             </div>
         </form>
 

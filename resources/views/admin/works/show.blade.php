@@ -7,25 +7,32 @@
 
         <hr>
 
-        <h1>ADMIN-WORK-SHOW</h1>
+        <h1>SHOW WORK</h1>
 
         <hr>
 
-        <h2>id: {{ $work->id }} | name: {{ $work->name }}</h2>
+        <img src="{{ Storage::url($work->image_1) }}" alt="{{ $work->name }}" class="img-fluid">
 
-        <img src="{{ Storage::url($work->image_1) }}" alt="{{ $work->name }}">
+        <h2>name: {{ $work->name }}</h2>
 
-        <hr>
-
-        @foreach($work->software as $soft)
-            <p>{{ $soft->name }}</p>
-        @endforeach
+        <h2>id: {{ $work->id }}</h2>
 
         <hr>
 
-        @foreach($work->artists as $artist)
-            <p>{{ $artist->name }}</p>
-        @endforeach
+        <ul class="list-group list-group-horizontal">
+            @foreach($work->software as $soft)
+                <li class="list-group-item">{{ $soft->name }}</li>
+            @endforeach
+        </ul>
 
+        <hr>
+
+        <ul class="list-group list-group-horizontal">
+            @foreach($work->artists as $artist)
+                <li class="list-group-item">{{ $artist->name }}</li>
+            @endforeach
+        </ul>
+
+        <hr>
     </div> <!-- /container -->
 @endsection

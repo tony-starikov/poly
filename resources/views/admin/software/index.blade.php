@@ -7,7 +7,7 @@
 
         <hr>
 
-        <h1>ADMIN-SOFTWARE</h1>
+        <h1>SOFTWARE</h1>
 
         <hr>
 
