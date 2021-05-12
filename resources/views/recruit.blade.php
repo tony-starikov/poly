@@ -17,5 +17,20 @@
 
         <hr>
 
+        <div class="row">
+            @foreach($positions as $position)
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-body">
+                            <p>{{ $position->name }}</p>
+                            <p class="card-text">{{ $position->description }}</p>
+                            <p class="card-text">{{ $position->software }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            @endforeach
+        </div>
+
     </div> <!-- /container -->
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Artist;
 use App\Page;
+use App\Position;
 use App\Work;
 use Illuminate\Http\Request;
 
@@ -53,7 +54,9 @@ class PageController extends Controller
     {
         $page_info = Page::where('name', 'recruit')->first();
 
-        return view('recruit', compact('page_info'));
+        $positions = Position::all();
+
+        return view('recruit', compact('page_info', 'positions'));
     }
 
     public function contact()

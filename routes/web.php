@@ -47,6 +47,7 @@ Route::group([
         });
 
         Route::resource('software', 'SoftwareController');
+        Route::resource('positions', 'PositionController');
         Route::resource('artists', 'ArtistController');
         Route::resource('works', 'WorkController');
     });
