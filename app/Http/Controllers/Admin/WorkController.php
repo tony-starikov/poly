@@ -43,7 +43,6 @@ class WorkController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->all());
         $image_path_1 = null;
         $image_path_2 = null;
         $image_path_3 = null;
@@ -141,9 +140,9 @@ class WorkController extends Controller
             }
         }
 
-        $image_path_1 = null;
-        $image_path_2 = null;
-        $image_path_3 = null;
+        $image_path_1 = $work->image_1;
+        $image_path_2 = $work->image_2;
+        $image_path_3 = $work->image_3;
         $video_path = null;
 
         if ($request->file('image_1')){

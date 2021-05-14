@@ -39,7 +39,11 @@ class SoftwareController extends Controller
      */
     public function store(Request $request)
     {
-        $image_path = $request->file('image')->store('software');
+        $image_path = null;
+        if ($request->file('image')) {
+            $image_path = $request->file('image')->store('software');
+        }
+
         $parameters = $request->all();
         $parameters['image'] = $image_path;
         Software::create($parameters);
@@ -77,8 +81,13 @@ class SoftwareController extends Controller
      */
     public function update(Request $request, Software $software)
     {
-        Storage::delete($software->image);
-        $image_path = $request->file('image')->store('software');
+        $image_path = $software->image;
+
+        if ($request->file('image')) {
+            Storage::delete($software->image);
+            $image_path = $request->file('image')->store('software');
+        }
+
         $parameters = $request->all();
         $parameters['image'] = $image_path;
         $software->update($parameters);

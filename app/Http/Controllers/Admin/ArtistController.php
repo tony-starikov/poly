@@ -39,7 +39,12 @@ class ArtistController extends Controller
      */
     public function store(Request $request)
     {
-        $image_path = $request->file('image')->store('artists');
+        $image_path = null;
+
+        if ($request->file('image')){
+            $image_path = $request->file('image')->store('artists');
+        }
+
         $parameters = $request->all();
         $parameters['image'] = $image_path;
         Artist::create($parameters);
@@ -77,8 +82,13 @@ class ArtistController extends Controller
      */
     public function update(Request $request, Artist $artist)
     {
-        Storage::delete($artist->image);
-        $image_path = $request->file('image')->store('artists');
+        $image_path = $artist->image;
+
+        if ($request->file('image')) {
+            Storage::delete($artist->image);
+            $image_path = $request->file('image')->store('artists');
+        }
+
         $parameters = $request->all();
         $parameters['image'] = $image_path;
         $artist->update($parameters);
