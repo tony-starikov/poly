@@ -1,81 +1,120 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
+<!DOCTYPE html>
+<html>
+<head lang="en">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+        rel="stylesheet"
+    />
 
     <title>@yield('title')</title>
+
+    <style>
+        html, body {
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            color:white;
+        }
+    </style>
 </head>
-<body class="container text-center">
+<body class="text-center">
 
-<header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="{{ route('main') }}">POLYGONERDS</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!-- Easy as hell -->
+<div id="block" style="width: 100%; height: 100%; z-index: -1; position: fixed;" data-vide-bg="/images/poly"></div>
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('works') }}">Works <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('artists') }}">Artists</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('recruit') }}">Recruit</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
-                    </li>
-                    @guest()
+<div class="container pt-4 pb-4 d-flex w-100 h-100 flex-column">
+
+    <header class="mb-auto">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
+            <div class="container">
+                <a class="navbar-brand" href="{{ route('main') }}">
+                    <img
+                        src="/images/logo.png"
+                        class="me-2 d-none d-lg-block d-xl-block"
+                        width="350"
+                        alt=""
+                        loading="lazy"
+                    />
+                    <img
+                        src="/images/logo-s.png"
+                        class="me-2 d-block d-lg-none d-xl-none"
+                        height="100"
+                        alt=""
+                        loading="lazy"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Admin</a>
+                            <a class="nav-link h3 text-white" href="{{ route('works') }}">Works</a>
                         </li>
-                    @endguest
-
-                    @auth()
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin') }}">Admin</a>
+                            <a class="nav-link h3 text-white" href="{{ route('artists') }}">Artists</a>
                         </li>
-                    @endauth
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            EN
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Українська</a>
-                            <a class="dropdown-item" href="#">Русский</a>
-                            <a class="dropdown-item" href="#">English</a>
-                            <a class="dropdown-item" href="#">Deutsch</a>
-                        </div>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-link h3 text-white" href="{{ route('about') }}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link h3 text-white" href="{{ route('recruit') }}">Recruit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link h3 text-white" href="{{ route('contact') }}">Contact</a>
+                        </li>
+                        @auth()
+                            <li class="nav-item">
+                                <a class="nav-link h3 text-white" href="{{ route('admin') }}">Admin</a>
+                            </li>
+                        @endauth
+                    </ul>
+                </div>
             </div>
+        </nav>
+    </header>
+
+    @yield('main')
+
+    <footer class="mt-auto p-1">
+        <div class="inner">
+            <p>PolygoNerds &copy; 2021 Ukraine</p>
         </div>
-    </nav>
-</header>
+    </footer>
+</div>
 
-<main role="main">
-    @yield('content')
-</main>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.vide.js"></script>
 
-<footer class="container">
-    <p>PolygoNerds &copy; 2021 Ukraine</p>
-</footer>
-
-<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<!-- MDB -->
+<script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+></script>
 
 </body>
 </html>

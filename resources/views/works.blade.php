@@ -2,22 +2,38 @@
 
 @section('title', $page_info->title)
 
-@section('content')
-    <div class="container">
+@section('main')
+    <!--Main layout-->
+    <main class="my-4 p-2 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
+        <div class="container">
+            <!--Section: Content-->
+            <section class="text-center">
 
-        <hr>
+                <div class="row">
 
-        <h1>WORKS</h1>
+                    @foreach($works as $work)
+                        <div class="col-lg-4 col-md-6 my-2">
 
-        <p>title: {{ $page_info->title }}</p>
-        <p>description: {{ $page_info->description }}</p>
+                            <a href="{{ route('work', $work->code) }}">
+                                <div class="card">
+                                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                        <img src="{{ Storage::url($work->image_1) }}" class="img-fluid" />
+                                    </div>
+                                    <div class="card-img-overlay text-white d-flex align-items-end justify-content-center">
+                                        <h5 class="card-title">{{ $work->name }}</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
 
-        <hr>
 
-        <div class="row">
-            @foreach($works as $work)
-                @include('work-card', ['work' => $work])
-            @endforeach
+                    @endforeach
+
+                </div>
+
+            </section>
+            <!--Section: Content-->
         </div>
-    </div>
+    </main>
+    <!--Main layout-->
 @endsection

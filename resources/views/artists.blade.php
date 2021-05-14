@@ -2,22 +2,36 @@
 
 @section('title', $page_info->title)
 
-@section('content')
-    <div class="container">
+@section('main')
+    <!--Main layout-->
+    <main class="my-4 p-2 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
+        <div class="container">
+            <!--Section: Content-->
+            <section class="text-center">
 
-        <hr>
+                <div class="row">
 
-        <h1>ARTISTS</h1>
+                    @foreach($artists as $artist)
+                        <div class="col-lg-3 col-md-6 my-2">
 
-        <p>title: {{ $page_info->title }}</p>
-        <p>description: {{ $page_info->description }}</p>
+                            <a href="{{ route('artist', $artist->code) }}">
+                                <div class="card">
+                                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                        <img src="{{ Storage::url($artist->image) }}" class="img-fluid" />
+                                    </div>
+                                    <div class="card-img-overlay text-white d-flex align-items-end justify-content-center">
+                                        <h5 class="card-title">{{ $artist->name }}</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
 
-        <hr>
+                </div>
 
-        <div class="row">
-            @foreach($artists as $artist)
-                @include('artist-card', compact('artist'))
-            @endforeach
+            </section>
+
         </div>
-    </div>
+    </main>
+    <!--Main layout-->
 @endsection

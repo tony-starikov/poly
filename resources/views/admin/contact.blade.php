@@ -49,35 +49,35 @@
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">SOCIAL LINK 1</span>
+                        <span class="input-group-text" id="addon-wrapping">TELEGRAM</span>
                     </div>
                     <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_1 }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">SOCIAL LINK 2</span>
+                        <span class="input-group-text" id="addon-wrapping">ARTSTATION</span>
                     </div>
                     <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_2 }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">SOCIAL LINK 3</span>
+                        <span class="input-group-text" id="addon-wrapping">INSTAGRAM</span>
                     </div>
                     <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_3 }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">SOCIAL LINK 4</span>
+                        <span class="input-group-text" id="addon-wrapping">LINKEDIN</span>
                     </div>
                     <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_4 }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">SOCIAL LINK 5</span>
+                        <span class="input-group-text" id="addon-wrapping">FACEBOOK</span>
                     </div>
                     <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_5 }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
