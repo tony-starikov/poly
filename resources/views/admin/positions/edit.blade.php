@@ -15,6 +15,11 @@
             <div>
                 @method('PUT')
                 @csrf
+
+                @error('name')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="addon-wrapping">NAME</span>

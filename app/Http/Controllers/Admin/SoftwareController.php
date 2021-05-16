@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SoftwareRequest;
 use App\Software;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -37,7 +38,7 @@ class SoftwareController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SoftwareRequest $request)
     {
         $image_path = null;
         if ($request->file('image')) {
@@ -81,6 +82,10 @@ class SoftwareController extends Controller
      */
     public function update(Request $request, Software $software)
     {
+        $request->validate([
+            'name' => 'required'
+        ]);
+
         $image_path = $software->image;
 
         if ($request->file('image')) {

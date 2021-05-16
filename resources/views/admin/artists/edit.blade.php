@@ -15,6 +15,15 @@
             <div>
                 @method('PUT')
                 @csrf
+
+                @error('name')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
+                @error('code')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
                 <div class="form-row">
                     <div class="input-group flex-nowrap mb-3 col-md-6">
                         <div class="input-group-prepend">

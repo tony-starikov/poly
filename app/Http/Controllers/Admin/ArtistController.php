@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Artist;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ArtistRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -37,7 +38,7 @@ class ArtistController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ArtistRequest $request)
     {
         $image_path = null;
 
@@ -82,6 +83,11 @@ class ArtistController extends Controller
      */
     public function update(Request $request, Artist $artist)
     {
+        $request->validate([
+            'name' => 'required',
+            'code' => 'required'
+        ]);
+
         $image_path = $artist->image;
 
         if ($request->file('image')) {

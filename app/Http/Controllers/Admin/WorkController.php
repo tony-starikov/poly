@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Artist;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\WorkRequest;
 use App\Software;
 use App\Work;
 use Illuminate\Http\Request;
@@ -41,7 +42,7 @@ class WorkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(WorkRequest $request)
     {
         $image_path_1 = null;
         $image_path_2 = null;
@@ -121,6 +122,10 @@ class WorkController extends Controller
      */
     public function update(Request $request, Work $work)
     {
+        $request->validate([
+            'name' => 'required',
+            'code' => 'required'
+        ]);
         foreach ($work->software as $soft) {
             $work->software()->detach($soft->id);
         }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PositionRequest;
 use App\Position;
 use Illuminate\Http\Request;
 
@@ -36,7 +37,7 @@ class PositionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PositionRequest $request)
     {
         Position::create($request->all());
         return redirect()->route('positions.index');
@@ -73,6 +74,9 @@ class PositionController extends Controller
      */
     public function update(Request $request, Position $position)
     {
+        $request->validate([
+            'name' => 'required'
+        ]);
         $position->update($request->all());
         return redirect()->route('positions.index');
     }

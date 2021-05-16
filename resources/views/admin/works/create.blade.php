@@ -14,7 +14,17 @@
         <form method="POST" enctype="multipart/form-data" action="{{ route('works.store') }}">
             <div>
                 @csrf
+
+                @error('name')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
+                @error('code')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
                 <div class="form-row">
+
                     <div class="input-group flex-nowrap mb-3 col-md-6">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="addon-wrapping">NAME</span>
@@ -96,8 +106,8 @@
                     <p>SOFTWARE</p>
                     @foreach($software as $soft)
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="soft[]" value="{{ $soft->id }}" id="flexCheckDefault{{ $soft->id }}">
-                            <label class="form-check-label" for="flexCheckDefault{{ $soft->id }}">
+                            <input class="form-check-input" type="checkbox" name="soft[]" value="{{ $soft->id }}" id="flexCheckSoft{{ $soft->id }}">
+                            <label class="form-check-label" for="flexCheckSoft{{ $soft->id }}">
                                 {{ $soft->name }}
                             </label>
                         </div>
@@ -108,8 +118,8 @@
                     <p>ARTISTS</p>
                     @foreach($artists as $artist)
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="artists[]" value="{{ $artist->id }}" id="flexCheckDefault{{ $artist->id }}">
-                            <label class="form-check-label" for="flexCheckDefault{{ $artist->id }}">
+                            <input class="form-check-input" type="checkbox" name="artists[]" value="{{ $artist->id }}" id="flexCheckArtist{{ $artist->id }}">
+                            <label class="form-check-label" for="flexCheckArtist{{ $artist->id }}">
                                 {{ $artist->name }}
                             </label>
                         </div>
