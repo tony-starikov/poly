@@ -4,14 +4,14 @@
 
 @section('main')
     <!--Main layout-->
-    <main class="my-4 p-2 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
+    <main class="my-4 p-5 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
         <div class="container">
             <!--Section: Content-->
             <section class="text-center">
 
-                <div class="row">
+                <div class="row p-2" style="background-color: rgba(0, 0, 0, 0.90);border-radius: 25px;">
 
-                    <div class="col-md-8">
+                    <div class="col-md-8 mt-2">
                         <img
                             src="{{ Storage::url($work->image_1) }}"
                             alt="..."
@@ -37,7 +37,7 @@
 
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-2">
                         <h1>{{ $work->name }}</h1>
 
                         <p>

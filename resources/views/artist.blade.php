@@ -4,13 +4,13 @@
 
 @section('main')
     <!--Main layout-->
-    <main class="my-4 p-2 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
+    <main class="my-4 p-5 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
         <div class="container">
             <!--Section: Content-->
             <section class="text-center">
 
-                <div class="row">
-                    <div class="col-md-8">
+                <div class="row p-3" style="background-color: rgba(0, 0, 0, 0.70);border-radius: 25px;">
+                    <div class="col-md-8 p-2">
                         <h1>
                             {{ $artist->name }}
                         </h1>
@@ -32,7 +32,7 @@
                         <hr>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 p-2">
                         <div class="card">
                             <img
                                 src="{{ Storage::url($artist->image) }}"
@@ -41,11 +41,8 @@
                             />
                         </div>
                     </div>
-                </div>
 
-                <hr>
-
-                <div class="row">
+                    <hr>
 
                     <h2>WORKS</h2>
 
@@ -72,7 +69,6 @@
                             </div>
                         </div>
                     @endforeach
-
                 </div>
 
             </section>

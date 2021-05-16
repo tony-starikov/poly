@@ -4,12 +4,12 @@
 
 @section('main')
     <!--Main layout-->
-    <main class="my-4 p-2 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
+    <main class="my-4 p-5 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
         <div class="container">
             <!--Section: Content-->
             <section class="text-center">
 
-                <div class="row">
+                <div class="row p-3" style="background-color: rgba(0, 0, 0, 0.70);border-radius: 25px;">
 
                     <img src="https://picsum.photos/id/870/1000/160?grayscale&blur=2" alt="" class="img-responsive w-100">
                     <p class="mt-2">

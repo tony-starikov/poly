@@ -4,14 +4,14 @@
 
 @section('main')
     <!--Main layout-->
-    <main class="my-4 p-2 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
+    <main class="my-4 p-5 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
         <div class="container">
             <!--Section: Content-->
             <section class="text-center">
 
-                <div class="row">
+                <div class="row p-3" style="background-color: rgba(0, 0, 0, 0.70);border-radius: 25px;">
 
-                    <div class="col-md-4 p-3">
+                    <div class="col-md-4 p-2">
                         <h1>Contact Us</h1>
                         <hr>
                         <p>{{ $page_info->company_name }}</p>

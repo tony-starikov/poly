@@ -68,7 +68,7 @@
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-bars text-white"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
