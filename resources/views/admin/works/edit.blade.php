@@ -106,8 +106,8 @@
                     <p>SOFTWARE</p>
                     @foreach($software as $soft)
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="soft[]" value="{{ $soft->id }}" id="flexCheckDefault{{ $soft->id }}" @if($work->software->contains($soft->id)) checked @endif>
-                            <label class="form-check-label" for="flexCheckDefault{{ $soft->id }}">
+                            <input class="form-check-input" type="checkbox" name="soft[]" value="{{ $soft->id }}" id="flexCheckSoft{{ $soft->id }}" @if($work->software->contains($soft->id)) checked @endif>
+                            <label class="form-check-label" for="flexCheckSoft{{ $soft->id }}">
                                 {{ $soft->name }}
                             </label>
                         </div>
@@ -118,8 +118,8 @@
                     <p>ARTISTS</p>
                     @foreach($artists as $artist)
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="artists[]" value="{{ $artist->id }}" id="flexCheckDefault{{ $artist->id }}" @if($work->artists->contains($artist->id)) checked @endif>
-                            <label class="form-check-label" for="flexCheckDefault{{ $artist->id }}">
+                            <input class="form-check-input" type="checkbox" name="artists[]" value="{{ $artist->id }}" id="flexCheckArtist{{ $artist->id }}" @if($work->artists->contains($artist->id)) checked @endif>
+                            <label class="form-check-label" for="flexCheckArtist{{ $artist->id }}">
                                 {{ $artist->name }}
                             </label>
                         </div>
