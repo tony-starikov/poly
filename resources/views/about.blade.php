@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="row m-2 text-center">
-                        <div class="col"><h4>Location: {{ $page_info->location }}</h4></div>
+                        <div class="col"><h4>Location: {{ $page_info->location_text }}</h4></div>
                     </div>
 
                     <div class="row m-2 text-center">

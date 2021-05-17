@@ -15,7 +15,7 @@
                         <h1>Contact Us</h1>
                         <hr>
                         <p>{{ $page_info->company_name }}</p>
-                        <p>{{ $page_info->location }}</p>
+                        <p>{{ $page_info->location_text }}</p>
                         <hr>
                         <a class="text-white" href = "mailto: {{ $page_info->email }}">{{ $page_info->email }}</a>
                         <hr>

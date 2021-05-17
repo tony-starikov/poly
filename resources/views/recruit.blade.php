@@ -22,7 +22,7 @@
                     @foreach($positions as $position)
                         <div class="col-lg-4 col-md-12 mb-4 text-dark">
 
-                            <div class="card">
+                            <div class="card" style="border-radius: 10px;">
 
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $position->name }}</h5>
@@ -69,19 +69,6 @@
                     <hr>
 
                 </div>
-
-
-
-            </section>
-
-
-            <section class="text-center">
-
-
-
-            </section>
-
-            <section class="text-center">
 
 
 

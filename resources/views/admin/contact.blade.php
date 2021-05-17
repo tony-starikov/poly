@@ -37,7 +37,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">LOCATION</span>
                     </div>
-                    <input type="text" name="location" id="location" value="{{ $page_info->location }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="location" id="location" value="{{ $page_info->location_text }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
