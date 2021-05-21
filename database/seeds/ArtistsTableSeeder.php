@@ -12,9 +12,9 @@ class ArtistsTableSeeder extends Seeder
     public function run()
     {
         DB::table('artists')->insert([
-            ['name' => 'Artist 1', 'code' => 'artist_1', 'position' => 'Artist position.'],
-            ['name' => 'Artist 2', 'code' => 'artist_2', 'position' => 'Artist position.'],
-            ['name' => 'Artist 3', 'code' => 'artist_3', 'position' => 'Artist position.'],
+            ['name' => 'Mishio Hirai', 'code' => 'mishio_hirai', 'position' => '3D artist', 'description' => '3D tracking, effects, compositing. Specialist in 3D tracking and 3D scanning. He is experienced in location shooting and likes to give advice about the best possible way of shooting.', 'title' => 'polygonerds | Mishio Hirai | Design Company'],
+            ['name' => 'Mishio Hirai', 'code' => 'mishio_hirai', 'position' => 'Artist position.', 'description' => '3D tracking, effects, compositing. Specialist in 3D tracking and 3D scanning. He is experienced in location shooting and likes to give advice about the best possible way of shooting.', 'title' => 'polygonerds | Mishio Hirai | Design Company'],
+            ['name' => 'Mishio Hirai', 'code' => 'mishio_hirai', 'position' => 'Artist position.', 'description' => '3D tracking, effects, compositing. Specialist in 3D tracking and 3D scanning. He is experienced in location shooting and likes to give advice about the best possible way of shooting.', 'title' => 'polygonerds | Mishio Hirai | Design Company'],
         ]);
     }
 }
