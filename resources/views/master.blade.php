@@ -93,19 +93,19 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link h3 text-white" href="{{ route('works') }}">Works</a>
+                            <a class="nav-link h3 text-white" href="{{ route('works') }}">@lang('main.works')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link h3 text-white" href="{{ route('artists') }}">Artists</a>
+                            <a class="nav-link h3 text-white" href="{{ route('artists') }}">@lang('main.artists')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link h3 text-white" href="{{ route('about') }}">About</a>
+                            <a class="nav-link h3 text-white" href="{{ route('about') }}">@lang('main.about')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link h3 text-white" href="{{ route('recruit') }}">Recruit</a>
+                            <a class="nav-link h3 text-white" href="{{ route('recruit') }}">@lang('main.recruit')</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link h3 text-white" href="{{ route('contact') }}">Contact</a>
+                            <a class="nav-link h3 text-white" href="{{ route('contact') }}">@lang('main.contact')</a>
                         </li>
                         @auth()
                             <li class="nav-item">
@@ -121,21 +121,21 @@
                                 data-mdb-toggle="dropdown"
                                 aria-expanded="false"
                             >
-                                EN
+                                @lang('main.current_locale')
                             </a>
                             <!-- Dropdown menu -->
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#">UA</a>
+                                    <a class="dropdown-item" href="{{ route('locale', 'ua') }}">UA</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">RU</a>
+                                    <a class="dropdown-item" href="{{ route('locale', 'ru') }}">RU</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">EN</a>
+                                    <a class="dropdown-item" href="{{ route('locale', 'en') }}">EN</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">DE</a>
+                                    <a class="dropdown-item" href="{{ route('locale', 'de') }}">DE</a>
                                 </li>
 
                             </ul>

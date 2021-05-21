@@ -11,12 +11,32 @@
 |
 */
 
-Auth::routes([
-    'reset' => false,
-    'confirm' => false,
-    'verify' => false,
-    'register' => false,
-]);
+Route::group([
+    'middleware' => 'set_locale',
+], function () {
+    Auth::routes([
+        'reset' => false,
+        'confirm' => false,
+        'verify' => false,
+        'register' => false,
+    ]);
+
+    Route::get('/', 'PageController@main')->name('main');
+
+    Route::get('locale/{locale}', 'PageController@changeLocale')->name('locale');
+
+    Route::get('/works', 'PageController@works')->name('works');
+    Route::get('/works/{code}', 'PageController@work')->name('work');
+
+    Route::get('/artists', 'PageController@artists')->name('artists');
+    Route::get('/artists/{code}', 'PageController@artist')->name('artist');
+
+    Route::get('/about', 'PageController@about')->name('about');
+
+    Route::get('/recruit', 'PageController@recruit')->name('recruit');
+
+    Route::get('/contact', 'PageController@contact')->name('contact');
+});
 
 Route::group([
     'middleware' => 'auth',
@@ -53,16 +73,3 @@ Route::group([
     });
 });
 
-Route::get('/', 'PageController@main')->name('main');
-
-Route::get('/works', 'PageController@works')->name('works');
-Route::get('/works/{code}', 'PageController@work')->name('work');
-
-Route::get('/artists', 'PageController@artists')->name('artists');
-Route::get('/artists/{code}', 'PageController@artist')->name('artist');
-
-Route::get('/about', 'PageController@about')->name('about');
-
-Route::get('/recruit', 'PageController@recruit')->name('recruit');
-
-Route::get('/contact', 'PageController@contact')->name('contact');

@@ -7,9 +7,16 @@ use App\Page;
 use App\Position;
 use App\Work;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class PageController extends Controller
 {
+    public function changeLocale($locale)
+    {
+        session(['locale' => $locale]);
+        App::setLocale($locale);
+        return redirect()->back();
+    }
     public function main()
     {
         $page_info = Page::where('name', 'main')->first();
