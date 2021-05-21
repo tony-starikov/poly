@@ -31,6 +31,26 @@
             height: 100%;
             color:white;
         }
+
+        .my-overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5); /* Black see-through */
+            color: #f1f1f1;
+            width: 100%;
+            transition: .5s ease;
+            opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+            text-align: left;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .my-card:hover .my-overlay {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="text-center">
@@ -38,7 +58,7 @@
 <!-- Easy as hell -->
 <div id="block" style="width: 100%; height: 100%; z-index: -1; position: fixed;" data-vide-bg="/images/poly"></div>
 
-<div class="container pt-4 pb-4 d-flex w-100 h-100 flex-column">
+<div class="container pt-2 pb-2 d-flex w-100 h-100 flex-column">
 
     <header class="mb-auto">
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
@@ -92,6 +112,34 @@
                                 <a class="nav-link h3 text-white" href="{{ route('admin') }}">Admin</a>
                             </li>
                         @endauth
+                        <li class="nav-item h3 text-white dropdown">
+                            <a
+                                class="nav-link text-white dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                EN
+                            </a>
+                            <!-- Dropdown menu -->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">UA</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">RU</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">EN</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">DE</a>
+                                </li>
+
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -115,6 +163,13 @@
     type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
 ></script>
+
+<!-- Masonry -->
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+        crossorigin="anonymous"
+        async>
+</script>
 
 </body>
 </html>

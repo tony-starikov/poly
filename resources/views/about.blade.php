@@ -4,44 +4,61 @@
 
 @section('main')
     <!--Main layout-->
-    <main class="my-4 p-5 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
+    <main class="my-2 py-3 px-5 text-light" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
         <div class="container">
             <!--Section: Content-->
             <section class="text-center">
 
-                <div class="row p-3" style="background-color: rgba(0, 0, 0, 0.70);border-radius: 25px;">
+                <div class="row d-flex justify-content-center" style="background-color: rgba(0, 0, 0, 0.70);border-radius: 25px;">
 
-                    <img src="https://picsum.photos/id/870/1000/160?grayscale&blur=2" alt="" class="img-responsive w-100">
-                    <p class="mt-2">
-                        {{ $page_info->description }}
-                    </p>
-                    <hr>
-                    <h2>Company Profile</h2>
-                    <div class="row m-2 text-center">
-                        <div class="col"><h4>Company name: {{ $page_info->company_name }}</h4></div>
+                    <img src="https://picsum.photos/id/870/1000/160?grayscale&blur=2" style="border-radius: 25px 25px 0 0;" alt="" class="img-responsive w-100 p-0 m-0">
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-12 mx-5">
+
+                            <p class="h5 mx-5 mt-4">
+                                {{ $page_info->description }}
+                            </p>
+
+                        </div>
                     </div>
 
-                    <div class="row m-2 text-center">
-                        <div class="col"><h4>Location: {{ $page_info->location_text }}</h4></div>
+                    <hr size="5" class="w-50 my-2">
+
+                    <h2 class="fw-bolder">Company Profile</h2>
+
+
+                    <div class="row w-75 mx-5">
+                        <div class="col-3 text-start"><h5 class="fw-bolder">Company name: </h5></div>
+                        <div class="col-6 text-start"><h5>{{ $page_info->company_name }}</h5></div>
                     </div>
 
-                    <div class="row m-2 text-center">
-                        <div class="col"><h4>Establishment: {{ $page_info->establishment }}</h4></div>
+                    <div class="row w-75 mx-5">
+                        <div class="col-3 text-start"><h5 class="fw-bolder">Location: </h5></div>
+                        <div class="col-6 text-start"><h5>{{ $page_info->location_text }}</h5></div>
                     </div>
 
-                    <div class="row m-2 text-center">
-                        <div class="col"><h4>Employee: {{ $page_info->employee }}</h4></div>
+                    <div class="row w-75 mx-5">
+                        <div class="col-3 text-start"><h5 class="fw-bolder">Establishment: </h5></div>
+                        <div class="col-6 text-start"><h5>{{ $page_info->establishment }}</h5></div>
                     </div>
 
-                    <div class="row m-2 text-center">
-                        <div class="col"><h4>CEO: {{ $page_info->ceo }}</h4></div>
+                    <div class="row w-75 mx-5">
+                        <div class="col-3 text-start"><h5 class="fw-bolder">Employee: </h5></div>
+                        <div class="col-6 text-start"><h5>{{ $page_info->employee }}</h5></div>
                     </div>
 
-                    <div class="row m-2 text-center">
-                        <div class="col"><h4>Director: {{ $page_info->director }}</h4></div>
+                    <div class="row w-75 mx-5">
+                        <div class="col-3 text-start"><h5 class="fw-bolder">CEO: </h5></div>
+                        <div class="col-6 text-start"><h5>{{ $page_info->ceo }}</h5></div>
                     </div>
 
-                    <hr>
+                    <div class="row w-75 mx-5">
+                        <div class="col-3 text-start"><h5 class="fw-bolder">Director: </h5></div>
+                        <div class="col-6 text-start"><h5>{{ $page_info->director }}</h5></div>
+                    </div>
+
+                    <hr size="5" class="w-50 mb-4" style="color: rgb(250,250,250);">
 
                 </div>
 

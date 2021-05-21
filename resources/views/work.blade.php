@@ -9,70 +9,99 @@
             <!--Section: Content-->
             <section class="text-center">
 
-                <div class="row p-2" style="background-color: rgba(0, 0, 0, 0.90);border-radius: 25px;">
+                <div class="row p-2" style="background-color: rgba(0, 0, 0, 0.9);border-radius: 25px;">
 
-                    <div class="col-md-8 mt-2">
+                    <div class="col-md-8 p-0" style="background-color: rgba(0, 0, 0, 0.1);border-radius: 25px;">
                         <img
                             src="{{ Storage::url($work->image_1) }}"
                             alt="..."
                             width="100%"
+                            style="border-radius: 25px 0 0 0;"
+                            class="mb-1"
                         />
-                        <hr>
+
+                        <video class="mb-1" width="100%" height="auto" controls="controls" poster="/images/ocean.jpg" loop autoplay>
+                            <source src="/images/ocean.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                            <source src="/images/ocean.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            Тег video не поддерживается вашим браузером.
+                        </video>
 
                         <img
                             src="{{ Storage::url($work->image_1) }}"
                             alt="..."
                             width="100%"
+                            class="mb-1"
                         />
-                        <hr>
+
+                        <iframe
+                            width='100%'
+                            height='400px'
+                            src='https://www.artstation.com/embed/665067'
+                            frameborder='0' allowfullscreen
+                            mozallowfullscreen='true'
+                            webkitallowfullscreen='true'
+                            onmousewheel='true'
+                            scrolling='no'>
+                        </iframe>
 
                         <img
                             src="{{ Storage::url($work->image_1) }}"
                             alt="..."
                             width="100%"
+                            style="background-color: rgba(0, 0, 0, 0.90);border-radius: 0 0 0 25px;"
+                            class="mb-1"
                         />
-                        <hr>
-
-                        <iframe width='100%' height='480px' src='https://www.artstation.com/embed/665067' frameborder='0' allowfullscreen mozallowfullscreen='true' webkitallowfullscreen='true' onmousewheel='true' scrolling='no'></iframe>
 
                     </div>
 
-                    <div class="col-md-4 mt-2">
-                        <h1>{{ $work->name }}</h1>
+                    <div class="col-md-4 p-3 text-start" style="background-color: rgba(0,0,0,0.01);border-radius: 0 25px 25px 0;">
 
-                        <p>
-                            {{ $work->description }}
-                        </p>
+                        <section class="sticky-top" style="background-color: rgba(0,0,0,0.01);border-radius: 0 25px 25px 0;">
+                            <h2>Artists</h2>
+                            @foreach($work->artists as $artist)
+                                <figure class="figure">
+                                    <a href="{{ route('artist', $artist->code) }}">
+                                        <div class="card my-card" style="border-radius: 10px;">
+                                            <img src="{{ Storage::url($artist->image) }}"
+                                                 class="img-fluid"
+                                                 style="border-radius: 10px;"
+                                                 width="100px"
+                                            />
+                                            <div class="my-overlay"><small style="font-size: 15px;">{{ $artist->name }}</small></div>
+                                        </div>
+                                    </a>
+                                </figure>
 
-                        <hr>
-                        <h2>Artists</h2>
-                        @foreach($work->artists as $artist)
-                            <figure class="figure">
-                                <img
-                                    src="{{ Storage::url($artist->image) }}"
-                                    class="figure-img img-fluid rounded shadow-3 mb-3"
-                                    alt="..."
-                                    width="50px"
-                                />
-                                <figcaption class="figure-caption">{{ $artist->name }}</figcaption>
-                            </figure>
-                        @endforeach
 
-                        <hr>
+                            @endforeach
 
-                        <h3>Software Used</h3>
+                            <hr size="5" class="w-50">
 
-                        @foreach($work->software as $soft)
-                            <figure class="figure">
-                                <img
-                                    src="{{ Storage::url($soft->image) }}"
-                                    class="figure-img img-fluid rounded shadow-3 mb-3"
-                                    alt="..."
-                                    width="50px"
-                                />
-                                <figcaption class="figure-caption">{{ $soft->name }}</figcaption>
-                            </figure>
-                        @endforeach
+                            <h1>{{ $work->name }}</h1>
+
+                            <p>
+                                {{ $work->description }}
+                            </p>
+
+                            <hr size="5" class="w-50">
+
+                            <h2>Software Used</h2>
+
+                            @foreach($work->software as $soft)
+                                <figure class="figure m-1">
+                                    <img
+                                        src="{{ Storage::url($soft->image) }}"
+                                        class="figure-img img-fluid rounded shadow-3 mb-3"
+                                        alt="..."
+                                        width="50px"
+                                    />
+                                    <figcaption class="figure-caption">{{ $soft->name }}</figcaption>
+                                </figure>
+                            @endforeach
+
+                        </section>
+
+
 
                     </div>
 
