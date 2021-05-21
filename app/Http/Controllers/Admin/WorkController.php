@@ -47,7 +47,8 @@ class WorkController extends Controller
         $image_path_1 = null;
         $image_path_2 = null;
         $image_path_3 = null;
-        $video_path = null;
+        $video_path_mp4 = null;
+        $video_path_webm = null;
 
         if ($request->file('image_1')){
             $image_path_1 = $request->file('image_1')->store('works');
@@ -61,15 +62,20 @@ class WorkController extends Controller
             $image_path_3 = $request->file('image_3')->store('works');
         }
 
-        if ($request->file('video')){
-            $video_path = $request->file('video')->store('works');
+        if ($request->file('video_mp4')){
+            $video_path_mp4 = $request->file('video_mp4')->store('works');
+        }
+
+        if ($request->file('video_webm')){
+            $video_path_webm = $request->file('video_webm')->store('works');
         }
 
         $parameters = $request->all();
         $parameters['image_1'] = $image_path_1;
         $parameters['image_2'] = $image_path_2;
         $parameters['image_3'] = $image_path_3;
-        $parameters['video'] = $video_path;
+        $parameters['video_mp4'] = $video_path_mp4;
+        $parameters['video_webm'] = $video_path_webm;
         $work = Work::create($parameters);
 
         if (isset($request->soft)) {
@@ -148,7 +154,8 @@ class WorkController extends Controller
         $image_path_1 = $work->image_1;
         $image_path_2 = $work->image_2;
         $image_path_3 = $work->image_3;
-        $video_path = null;
+        $video_path_mp4 = $work->video_mp4;
+        $video_path_webm = $work->video_webm;
 
         if ($request->file('image_1')){
             Storage::delete($work->image_1);
@@ -165,16 +172,22 @@ class WorkController extends Controller
             $image_path_3 = $request->file('image_3')->store('works');
         }
 
-        if ($request->file('video')){
-            Storage::delete($work->video);
-            $video_path = $request->file('video')->store('works');
+        if ($request->file('video_mp4')){
+            Storage::delete($work->video_mp4);
+            $video_path_mp4 = $request->file('video_mp4')->store('works');
+        }
+
+        if ($request->file('video_webm')){
+            Storage::delete($work->video_webm);
+            $video_path_webm = $request->file('video_webm')->store('works');
         }
 
         $parameters = $request->all();
         $parameters['image_1'] = $image_path_1;
         $parameters['image_2'] = $image_path_2;
         $parameters['image_3'] = $image_path_3;
-        $parameters['video'] = $video_path;
+        $parameters['video_mp4'] = $video_path_mp4;
+        $parameters['video_webm'] = $video_path_webm;
         $work->update($parameters);
         return redirect()->route('works.index');
     }

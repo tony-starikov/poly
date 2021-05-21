@@ -18,11 +18,13 @@ class CreateWorksTable extends Migration
             $table->string('name');
             $table->string('code');
             $table->string('title')->nullable();
+            $table->string('small_description')->nullable();
             $table->text('description')->nullable();
             $table->text('image_1')->nullable();
             $table->text('image_2')->nullable();
             $table->text('image_3')->nullable();
-            $table->text('video')->nullable();
+            $table->text('video_mp4')->nullable();
+            $table->text('video_webm')->nullable();
             $table->text('marmoset')->nullable();
             $table->timestamps();
         });

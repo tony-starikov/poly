@@ -20,14 +20,19 @@
                             class="mb-1"
                         />
 
-                        <video class="mb-1" width="100%" height="auto" controls="controls" poster="/images/ocean.jpg" loop autoplay>
-                            <source src="/images/ocean.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                            <source src="/images/ocean.webm" type='video/webm; codecs="vp8, vorbis"'>
-                            Тег video не поддерживается вашим браузером.
+                        <video class="mb-1"
+                               width="100%"
+                               height="auto"
+                               controls="controls"
+{{--                               poster="/images/ocean.jpg"--}}
+                               loop autoplay>
+                            <source src="{{ Storage::url($work->video_mp4) }}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                            <source src="{{ Storage::url($work->video_webm) }}" type='video/webm; codecs="vp8, vorbis"'>
+                            Video error
                         </video>
 
                         <img
-                            src="{{ Storage::url($work->image_1) }}"
+                            src="{{ Storage::url($work->image_2) }}"
                             alt="..."
                             width="100%"
                             class="mb-1"
@@ -36,7 +41,7 @@
                         <iframe
                             width='100%'
                             height='400px'
-                            src='https://www.artstation.com/embed/665067'
+                            src='{{ $work->marmoset }}'
                             frameborder='0' allowfullscreen
                             mozallowfullscreen='true'
                             webkitallowfullscreen='true'
@@ -45,7 +50,7 @@
                         </iframe>
 
                         <img
-                            src="{{ Storage::url($work->image_1) }}"
+                            src="{{ Storage::url($work->image_3) }}"
                             alt="..."
                             width="100%"
                             style="background-color: rgba(0, 0, 0, 0.90);border-radius: 0 0 0 25px;"

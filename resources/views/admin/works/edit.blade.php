@@ -47,6 +47,13 @@
                     <input type="text" name="title" id="title" value="{{ $work->title }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">SMALL DESCRIPTION</span>
+                    </div>
+                    <input type="text" name="small_description" id="small_description" value="{{ $work->small_description }}" class="form-control" aria-describedby="addon-wrapping">
+                </div>
+
                 <div class="form-row">
                     <div class="form-floating mb-3 col-md-6">
                         <label for="marmoset">DESCRIPTION</label>
