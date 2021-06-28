@@ -24,7 +24,6 @@
                                width="100%"
                                height="auto"
                                controls="controls"
-{{--                               poster="/images/ocean.jpg"--}}
                                loop autoplay>
                             <source src="{{ Storage::url($work->video_mp4) }}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
                             <source src="{{ Storage::url($work->video_webm) }}" type='video/webm; codecs="vp8, vorbis"'>

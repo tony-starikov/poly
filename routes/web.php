@@ -25,17 +25,17 @@ Route::group([
 
     Route::get('locale/{locale}', 'PageController@changeLocale')->name('locale');
 
-    Route::get('/works', 'PageController@works')->name('works');
-    Route::get('/works/{code}', 'PageController@work')->name('work');
+    Route::get('/works', 'PageController@main')->name('works');
+    Route::get('/works/{code}', 'PageController@main')->name('work');
 
-    Route::get('/artists', 'PageController@artists')->name('artists');
-    Route::get('/artists/{code}', 'PageController@artist')->name('artist');
+    Route::get('/artists', 'PageController@main')->name('artists');
+    Route::get('/artists/{code}', 'PageController@main')->name('artist');
 
-    Route::get('/about', 'PageController@about')->name('about');
+    Route::get('/about', 'PageController@main')->name('about');
 
-    Route::get('/recruit', 'PageController@recruit')->name('recruit');
+    Route::get('/recruit', 'PageController@main')->name('recruit');
 
-    Route::get('/contact', 'PageController@contact')->name('contact');
+    Route::get('/contact', 'PageController@main')->name('contact');
 });
 
 Route::group([

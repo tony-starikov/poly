@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script>window.Laravel = { csrfToken: '{{ csrf_token() }}' }</script>
+
     <!-- Font Awesome -->
     <link
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -14,21 +17,37 @@
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         rel="stylesheet"
     />
-    <!-- MDB -->
-    <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
-        rel="stylesheet"
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+          crossorigin="anonymous"
     />
 
-    <title>@yield('title')</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vidage@1.0.0/dist/vidage.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vidage@1.0.0/dist/vidage.min.css">
+
+    <title>PolygoNerds</title>
 
     <style>
+        .vidage::before {
+            background-image: url('/images/poly.jpg');
+        }
+
+        html { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+
+        html { min-height: 100%; }
+        body { min-height: 100%; }
+
         html, body {
+            font-family: 'Roboto', sans-serif;
             font-weight: 400;
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100%;
             color:white;
         }
 
@@ -53,32 +72,37 @@
         }
     </style>
 </head>
-<body class="text-center">
+<body class="bg-dark">
 
-<!-- Easy as hell -->
-<div id="block" style="width: 100%; height: 100%; z-index: -1; position: fixed;" data-vide-bg="/images/poly"></div>
+<div class="vidage">
+    <video id="vidage" class="vidage-video" preload="metadata" loop autoplay muted>
+        <source src="/images/poly.webm" type="video/webm">
+        <source src="/images/poly.mp4" type="video/mp4">
+    </video>
+</div>
 
-<div class="container pt-2 pb-2 d-flex w-100 h-100 flex-column">
+<div id="app" class="container-fluid text-center" style="width: 83%;">
 
-    <header class="mb-auto">
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
-            <div class="container">
-                <a class="navbar-brand" href="{{ route('main') }}">
+    <header class="p-2" style="width: 100%; height: 20%;">
+
+        <nav class="navbar navbar-expand-lg p-0 m-0" style="height: 100%; width: 100%; background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
+            <div class="container-fluid mx-4" style="height: 100%;">
+                <router-link class="navbar-brand" to="/">
+                    <img
+                        src="/images/font.png"
+                        class="me-2 d-none d-lg-block d-xl-block img-fluid"
+                        style="height: 15vh;"
+                        alt=""
+                        loading="lazy"
+                    />
                     <img
                         src="/images/logo.png"
-                        class="me-2 d-none d-lg-block d-xl-block"
-                        width="350"
+                        class="me-2 d-block d-lg-none d-xl-none img-fluid"
+                        style="height: 10vh;"
                         alt=""
                         loading="lazy"
                     />
-                    <img
-                        src="/images/logo-s.png"
-                        class="me-2 d-block d-lg-none d-xl-none"
-                        height="100"
-                        alt=""
-                        loading="lazy"
-                    />
-                </a>
+                </router-link>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -92,83 +116,118 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link h3 text-white" href="{{ route('works') }}">@lang('main.works')</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link h3 text-white" href="{{ route('artists') }}">@lang('main.artists')</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link h3 text-white" href="{{ route('about') }}">@lang('main.about')</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link h3 text-white" href="{{ route('recruit') }}">@lang('main.recruit')</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link h3 text-white" href="{{ route('contact') }}">@lang('main.contact')</a>
-                        </li>
-                        @auth()
-                            <li class="nav-item">
-                                <a class="nav-link h3 text-white" href="{{ route('admin') }}">Admin</a>
-                            </li>
-                        @endauth
-                        <li class="nav-item h3 text-white dropdown">
-                            <a
-                                class="nav-link text-white dropdown-toggle"
-                                href="#"
-                                id="navbarDropdown"
-                                role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                @lang('main.current_locale')
-                            </a>
-                            <!-- Dropdown menu -->
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li>
-                                    <a class="dropdown-item" href="{{ route('locale', 'ua') }}">UA</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{{ route('locale', 'ru') }}">RU</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{{ route('locale', 'en') }}">EN</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{{ route('locale', 'de') }}">DE</a>
-                                </li>
 
-                            </ul>
+                        <li class="nav-item">
+                            <router-link class="nav-link h3 text-white" to="/works">@lang('main.works')</router-link>
                         </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link h3 text-white" to="/artists">@lang('main.artists')</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link h3 text-white" to="/about">@lang('main.about')</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link h3 text-white" to="/recruit">@lang('main.recruit')</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link h3 text-white" to="/contact">@lang('main.contact')</router-link>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link h3 text-white" href="#">|</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link h3 text-white" style="font-weight: bolder;" href="#">EN</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    @yield('main')
+    <!-- route outlet -->
+    <!-- component matched by the route will render here -->
+    <main class="p-2">
+        <router-view></router-view>
+    </main>
 
-    <footer class="mt-auto p-1">
-        <div class="inner">
+    <footer class="p-2" style="height: 2vh; width: 100%; color: rgba(255,255,255,0.7); font-family: Roboto, sans-serif;">
+        <div>
             <p>PolygoNerds &copy; 2021 Ukraine</p>
         </div>
     </footer>
+
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="/js/jquery.vide.js"></script>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous">
+</script>
 
-<!-- MDB -->
-<script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
-></script>
+<script>
+    new Vidage('#vidage');
+</script>
 
-<!-- Masonry -->
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
-        crossorigin="anonymous"
-        async>
+<script src="/js/main.vue.js"></script>
+<script src="/js/works.vue.js"></script>
+<script src="/js/about.vue.js"></script>
+<script src="/js/contact.vue.js"></script>
+<script src="/js/artists.vue.js"></script>
+<script src="/js/recruit.vue.js"></script>
+<script src="/js/work.vue.js"></script>
+<script src="/js/artist.vue.js"></script>
+
+<script>
+    // 0. If using a module system, call Vue.use(VueRouter)
+
+    // 1. Define route components.
+    // These can be imported from other files
+
+    Vue.component('Main', Main);
+    Vue.component('Works', Works);
+    Vue.component('Work', Work);
+    Vue.component('About', About);
+    Vue.component('Contact', Contact);
+    Vue.component('Artists', Artists);
+    Vue.component('Artist', Artist);
+    Vue.component('Recruit', Recruit);
+
+    // 2. Define some routes
+    // Each route should map to a component. The "component" can
+    // either be an actual component constructor created via
+    // Vue.extend(), or just a component options object.
+    // We'll talk about nested routes later.
+    const routes = [
+        { path: '/', component: Main },
+        { path: '/works', component: Works },
+        { path: '/artists', component: Artists },
+        { path: '/about', component: About },
+        { path: '/recruit', component: Recruit },
+        { path: '/contact', component: Contact },
+        { path: '/work/:code', component: Work },
+        { path: '/artist/:code', component: Artist },
+    ]
+
+    // 3. Create the router instance and pass the `routes` option
+    // You can pass in additional options here, but let's
+    // keep it simple for now.
+    const router = new VueRouter({
+        routes: routes,
+        mode: 'history',
+        base: '/'
+    })
+
+    // 4. Create and mount the root instance.
+    // Make sure to inject the router with the router option to make the
+    // whole app router-aware.
+    const app = new Vue({
+        router: router
+    }).$mount('#app')
+
+    // Now the app has started!
 </script>
 
 </body>

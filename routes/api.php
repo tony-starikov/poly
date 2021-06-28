@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('main', 'PageController@mainApi');
+Route::get('about', 'PageController@aboutApi');
+Route::get('works', 'PageController@worksApi');
+Route::get('contact', 'PageController@contactApi');
+Route::get('artists', 'PageController@artistsApi');
+Route::get('recruit', 'PageController@recruitApi');
+Route::get('work/{code}', 'PageController@workApi');
+Route::get('artist/{code}', 'PageController@artistApi');
