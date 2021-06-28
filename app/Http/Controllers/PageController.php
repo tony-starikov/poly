@@ -17,6 +17,66 @@ class PageController extends Controller
         App::setLocale($locale);
         return redirect()->back();
     }
+
+    public function mainApi()
+    {
+        $data = Page::where('name', 'main')->first()->toArray();
+
+        return response()->json(['data'=>$data]);
+    }
+
+    public function aboutApi()
+    {
+        $data = Page::where('name', 'about')->first()->toArray();
+
+        return response()->json(['data'=>$data]);
+    }
+
+    public function contactApi()
+    {
+        $data = Page::where('name', 'contact')->first()->toArray();
+
+        return response()->json(['data'=>$data]);
+    }
+
+    public function worksApi()
+    {
+        $data = Page::where('name', 'works')->first()->toArray();
+        $works = Work::get()->toArray();
+        return response()->json(['data'=>$data, 'works'=>$works]);
+    }
+
+    public function artistsApi()
+    {
+        $data = Page::where('name', 'artists')->first()->toArray();
+        $artists = Artist::get()->toArray();
+        return response()->json(['data'=>$data, 'artists'=>$artists]);
+    }
+
+    public function recruitApi()
+    {
+        $data = Page::where('name', 'recruit')->first()->toArray();
+
+        $positions = Position::all()->toArray();
+
+        return response()->json(['data'=>$data, 'positions'=>$positions]);
+    }
+
+    public function workApi($code)
+    {
+        $work = Work::where('code', $code)->first()->toArray();
+        $artists = Work::where('code', $code)->first()->artists->toArray();
+        $software = Work::where('code', $code)->first()->software->toArray();
+
+        return response()->json(['work'=>$work, 'artists'=>$artists, 'software'=>$software]);
+    }
+
+    public function artistApi($code)
+    {
+        $artist = Artist::where('code', $code)->first()->toArray();
+        return response()->json(['artist'=>$artist]);
+    }
+
     public function main()
     {
         $page_info = Page::where('name', 'main')->first();
