@@ -1,15 +1,15 @@
 const Recruit = {
     template:
-        '<div class="container-fluid d-inline-block p-4 d-flex justify-content-center" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">' +
-                '<div class="row p-0 overflow-hidden text-center d-flex justify-content-center text-dark" style="box-sizing: border-box; width: 85%; background-color: rgba(255,255,255,0.7);border-radius: 25px;">' +
+        '<div class="container-fluid d-inline-block p-4 d-flex justify-content-center" style="background-color: rgba(255,255,255,0.07);border-radius: 25px;">' +
+                '<div class="row p-0 overflow-hidden text-center d-flex justify-content-center text-dark" style="color: rgb(0,0,0); box-sizing: border-box; width: 85%; background-color: rgba(255,255,255,0.7);border-radius: 25px;">' +
 
                     '<img src="/images/recruit.png" style="border-radius: 25px 25px 0 0;" alt="" class="img-responsive w-100 p-0 m-0">' +
 
-                    '<p class="h5 w-75 mx-auto mt-4 text-dark">\n' +
-                        '{{ description }} <u><a class="text-dark" href = "mailto: {{ email }}">{{ email }}</a></u>\n' +
-                    '</p>\n' +
+                    '<p class="mx-auto mt-4" style="color: rgb(0,0,0); width: 80%; font-weight: 400; font-size: larger;">' +
+                        '{{ description }}<a style="color: rgb(0,0,0); font-weight: 700;" href = "mailto: {{ email }}">{{ email }}</a>' +
+                    '</p>' +
 
-                    '<hr size="4" class="w-50 mx-auto my-2 rounded-pill" style="opacity: 1;">' +
+                    '<hr size="4" class="mx-auto my-2 rounded-pill" style="width: 40%; opacity: 1;">' +
 
                     '<h2 class="mb-2 fw-bolder">Positions Available</h2>' +
 
@@ -25,29 +25,29 @@ const Recruit = {
                         '</div>\n' +
                     '</div>' +
 
-                    '<h2 class="mb-2 fw-bolder">Jobs Description</h2>' +
+                    '<h2 class="mb-2 fw-bolder">Job Description</h2>' +
 
-                    '<div class="row w-75 d-flex justify-content-center">\n' +
+                    '<div class="row w-75 mx-auto text-center d-flex justify-content-center">\n' +
                         '<div class="col-3 text-start"><h5 class="fw-bolder">Employment status: </h5></div>\n' +
-                        '<div class="col-6 text-start"><h5>permanent employee</h5></div>\n' +
+                        '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">permanent employee</p></div>\n' +
                     '</div>' +
 
-                    '<div class="row w-75 d-flex justify-content-center">\n' +
+                    '<div class="row w-75 mx-auto text-center d-flex justify-content-center">\n' +
                         '<div class="col-3 text-start"><h5 class="fw-bolder">Location: </h5></div>\n' +
-                        '<div class="col-6 text-start"><h5>Location: Chernyshevska St, 66, Kharkiv</h5></div>\n' +
+                        '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">Location: Chernyshevska St, 66, Kharkiv</p></div>\n' +
                     '</div>' +
 
-                    '<div class="row w-75 d-flex justify-content-center">\n' +
+                    '<div class="row w-75 mx-auto text-center d-flex justify-content-center">\n' +
                         '<div class="col-3 text-start"><h5 class="fw-bolder">Salary, benefits: </h5></div>\n' +
-                        '<div class="col-6 text-start"><h5>negotiable; flexible work hours; cookies</h5></div>\n' +
+                        '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">negotiable; flexible work hours; cookies</p></div>\n' +
                     '</div>' +
 
-                    '<div class="row w-75 d-flex justify-content-center">\n' +
+                    '<div class="row w-75 mx-auto text-center d-flex justify-content-center">\n' +
                         '<div class="col-3 text-start"><h5 class="fw-bolder">Workdays/Holidays: </h5></div>\n' +
-                        '<div class="col-6 text-start"><h5>2 full days off a week; summer holiday; new year holiday; wedding and funeral leave</h5></div>\n' +
+                        '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">2 full days off a week; summer holiday; new year holiday; wedding and funeral leave</p></div>\n' +
                     '</div>' +
 
-                    '<hr size="4" class="w-50 mx-auto my-2 rounded-pill" style="opacity: 1;">' +
+                    '<hr size="4" class="mx-auto my-2 rounded-pill" style="width: 40%; opacity: 1;">' +
 
                     '<h2 class="mb-2 fw-bolder">Recruiting process</h2>' +
 
@@ -60,7 +60,7 @@ const Recruit = {
 
                     '<small class="fw-bolder">applicant will be informed regardless of the outcome</small>' +
 
-                    '<hr size="3" class="w-50 mx-auto my-2 rounded-pill" style="opacity: 1;">' +
+                    '<hr size="3" class="mx-auto my-2 mb-4 rounded-pill" style="width: 40%; opacity: 1;">' +
 
                 '</div>' +
         '</div>',

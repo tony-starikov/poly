@@ -1,6 +1,6 @@
 const Contact = {
     template:
-        '<div class="container-fluid d-inline-block p-4 d-flex justify-content-center" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">' +
+        '<div class="container-fluid d-inline-block p-4 d-flex justify-content-center" style="background-color: rgba(255,255,255,0.07);border-radius: 25px;">' +
             '<div class="row p-0 text-start" style="box-sizing: border-box; min-height: 70vh; width: 85%; background-color: rgba(0,0,0,0.6);border-radius: 25px;">' +
 
                 '<div class="col-md-4 p-3 my-5">' +
@@ -10,15 +10,13 @@ const Contact = {
 
                             '<h1 class="mb-2 fw-bolder">Contact Us</h1>\n' +
 
-                            '<hr size="5" class="w-25 my-2">\n' +
+                            '<hr size="5" class="w-25 my-1 mb-4 rounded-pill" style="opacity: 1;">\n' +
 
-                            '<p>{{ company_name }}</p>\n' +
+                            '<p class="w-50 m-0">{{ company_name }}<br>{{ location_text }}</p>\n' +
 
-                            '<p>{{ location_text }}</p>\n' +
+                            '<hr size="5" class="w-25 my-1 mb-4 rounded-pill" style="opacity: 1;">\n' +
 
-                            '<hr size="5" class="w-25 my-2">\n' +
-
-                            '<a class="text-white" href = "mailto: {{ email }}">E-mail: {{ email }}</a>\n' +
+                            '<a class="text-white text-decoration-none" href = "mailto: {{ email }}">Email: {{ email }}</a>\n' +
 
                         '</div>\n' +
                     '</div>' +
@@ -65,13 +63,9 @@ const Contact = {
                 .then(res => res.json())
                 .then(res => {
                     console.log(res.data);
-                    this.description = res.data.description;
                     this.company_name = res.data.company_name;
                     this.location_text = res.data.location_text;
-                    this.establishment = res.data.establishment;
-                    this.employee = res.data.employee;
-                    this.ceo = res.data.ceo;
-                    this.director = res.data.director;
+                    this.email = res.data.email;
                 })
         }
     }

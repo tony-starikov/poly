@@ -45,6 +45,7 @@
         html, body {
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
+            color: rgb(255,255,255);
             margin: 0;
             padding: 0;
             width: 100%;
@@ -70,6 +71,10 @@
         .my-card:hover .my-overlay {
             opacity: 1;
         }
+
+        .nav-link {
+            color: rgba(255,255,255,0.93);
+        }
     </style>
 </head>
 <body class="bg-dark">
@@ -85,7 +90,7 @@
 
     <header class="p-2" style="width: 100%; height: 20%;">
 
-        <nav class="navbar navbar-expand-lg p-0 m-0" style="height: 100%; width: 100%; background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">
+        <nav class="navbar navbar-expand-lg p-0 m-0" style="height: 100%; width: 100%; background-color: rgba(255,255,255,0.07);border-radius: 25px;">
             <div class="container-fluid mx-4" style="height: 100%;">
                 <router-link class="navbar-brand" to="/">
                     <img
@@ -118,27 +123,31 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <router-link class="nav-link h3 text-white" to="/works">@lang('main.works')</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link class="nav-link h3 text-white" to="/artists">@lang('main.artists')</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link class="nav-link h3 text-white" to="/about">@lang('main.about')</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link class="nav-link h3 text-white" to="/recruit">@lang('main.recruit')</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link class="nav-link h3 text-white" to="/contact">@lang('main.contact')</router-link>
+                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);" to="/works">@lang('main.works')</router-link>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link h3 text-white" href="#">|</a>
+                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);" to="/artists">@lang('main.artists')</router-link>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link h3 text-white" style="font-weight: bolder;" href="#">EN</a>
+                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);" to="/about">@lang('main.about')</router-link>
+                        </li>
+
+                        <li class="nav-item">
+                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);" to="/recruit">@lang('main.recruit')</router-link>
+                        </li>
+
+                        <li class="nav-item">
+                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);" to="/contact">@lang('main.contact')</router-link>
+                        </li>
+
+                        <li class="nav-item">
+                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);"  to="/">|</router-link>
+                        </li>
+
+                        <li class="nav-item">
+                            <router-link class="nav-link h3 fw-bolder" style="color: rgba(255,255,255,1);"  to="/">EN</router-link>
                         </li>
 
                     </ul>
