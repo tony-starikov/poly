@@ -23,10 +23,22 @@
           crossorigin="anonymous"
     />
 
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router@3.5.2/dist/vue-router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
 
+    <!-- vuebar -->
+    <script src="https://unpkg.com/vuebar"></script>
+
+    <!-- simplebar -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/simplebar@5.3.3/dist/simplebar.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@5.3.3/dist/simplebar.min.js"></script>
+
+    <!-- vidage -->
     <script src="https://cdn.jsdelivr.net/npm/vidage@1.0.0/dist/vidage.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vidage@1.0.0/dist/vidage.min.css">
 
@@ -65,7 +77,7 @@
             font-size: 20px;
             padding: 5px;
             text-align: left;
-            border-radius: 0 0 10px 10px;
+            /*border-radius: 0 0 10px 10px;*/
         }
 
         .my-card:hover .my-overlay {
@@ -75,6 +87,70 @@
         .nav-link {
             color: rgba(255,255,255,0.93);
         }
+
+        .vuebar-element {
+            height: 250px;
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255,255,255,0.7);
+            /*background: #dfe9fe;*/
+        }
+
+        .vb > .vb-dragger {
+            z-index: 5;
+            width: 5vh;
+            right: 0;
+            margin-right: 40px;
+            margin-top: 30px;
+        }
+
+        .vb > .vb-dragger > .vb-dragger-styler {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform: rotate3d(0,0,0,0);
+            transform: rotate3d(0,0,0,0);
+            -webkit-transition:
+                background-color 100ms ease-out,
+                margin 100ms ease-out,
+                height 100ms ease-out;
+            transition:
+                background-color 100ms ease-out,
+                margin 100ms ease-out,
+                height 100ms ease-out;
+            background-color: rgba(255,255,255,0.7);
+            /*margin: 5px 5px 5px 0;*/
+            border-radius: 20px;
+            height: 100%;
+            display: block;
+        }
+
+        .vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
+            /*background-color: rgba(48, 121, 244,.3);*/
+            background-color: rgba(255,255,255,0.7);
+        }
+
+        .vb > .vb-dragger:hover > .vb-dragger-styler {
+            background-color: rgba(255,255,255,1);
+            margin: 0px;
+            height: 100%;
+        }
+
+        .vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
+            background-color: rgba(255,255,255,0.7);
+            margin: 0px;
+            height: 100%;
+        }
+
+        .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
+            background-color: rgba(255,255,255,0.7);
+        }
+
+        /*.simplebar-scrollbar::before {*/
+        /*    z-index: 5;*/
+        /*    background-color: white;*/
+        /*    border-radius: 25px;*/
+        /*    width: 2vh;*/
+        /*}*/
     </style>
 </head>
 <body class="bg-dark">
@@ -86,9 +162,9 @@
     </video>
 </div>
 
-<div id="app" class="container-fluid text-center" style="width: 83%;">
+<div id="app" class="container-fluid text-center" style="height: 99vh; width: 83%;">
 
-    <header class="p-2" style="width: 100%; height: 20%;">
+    <header class="p-2" style="width: 100%; height: 19vh;">
 
         <nav class="navbar navbar-expand-lg p-0 m-0" style="height: 100%; width: 100%; background-color: rgba(255,255,255,0.07);border-radius: 25px;">
             <div class="container-fluid mx-4" style="height: 100%;">
@@ -162,7 +238,7 @@
         <router-view></router-view>
     </main>
 
-    <footer class="p-2" style="height: 2vh; width: 100%; color: rgba(255,255,255,0.7); font-family: Roboto, sans-serif;">
+    <footer style="height: 2vh; width: 100%; color: rgba(255,255,255,0.7); font-family: Roboto, sans-serif;">
         <div>
             <p>PolygoNerds &copy; 2021 Ukraine</p>
         </div>
@@ -191,6 +267,9 @@
 
 <script>
     // 0. If using a module system, call Vue.use(VueRouter)
+    Vue.use(VueRouter);
+
+    Vue.use(Vuebar);
 
     // 1. Define route components.
     // These can be imported from other files
@@ -233,7 +312,7 @@
     // Make sure to inject the router with the router option to make the
     // whole app router-aware.
     const app = new Vue({
-        router: router
+        router: router,
     }).$mount('#app')
 
     // Now the app has started!

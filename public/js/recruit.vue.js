@@ -1,7 +1,7 @@
 const Recruit = {
     template:
-        '<div class="container-fluid d-inline-block p-4 d-flex justify-content-center" style="background-color: rgba(255,255,255,0.07);border-radius: 25px;">' +
-                '<div class="row p-0 overflow-hidden text-center d-flex justify-content-center text-dark" style="color: rgb(0,0,0); box-sizing: border-box; width: 85%; background-color: rgba(255,255,255,0.7);border-radius: 25px;">' +
+        '<div v-bar="{useScrollbarPseudo: true}" class="container-fluid d-inline-block p-4 d-flex justify-content-center" style="height: 75vh; background-color: rgba(255,255,255,0.07);border-radius: 25px;">' +
+                '<div class="row p-0 text-center d-flex justify-content-center overflow-auto" style="scrollbar-width: none; height: 60vh; color: rgb(0,0,0); box-sizing: border-box; max-width: 85%; background-color: rgba(255,255,255,0.7);border-radius: 25px;">' +
 
                     '<img src="/images/recruit.png" style="border-radius: 25px 25px 0 0;" alt="" class="img-responsive w-100 p-0 m-0">' +
 

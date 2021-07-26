@@ -1,7 +1,7 @@
 const Contact = {
     template:
-        '<div class="container-fluid d-inline-block p-4 d-flex justify-content-center" style="background-color: rgba(255,255,255,0.07);border-radius: 25px;">' +
-            '<div class="row p-0 text-start" style="box-sizing: border-box; min-height: 70vh; width: 85%; background-color: rgba(0,0,0,0.6);border-radius: 25px;">' +
+        '<div v-bar="{useScrollbarPseudo: true}" class="container-fluid d-inline-block p-4 d-flex justify-content-center" style="height: 75vh; background-color: rgba(255,255,255,0.07);border-radius: 25px;">' +
+            '<div class="row p-0 text-start d-flex justify-content-center overflow-auto" style="scrollbar-width: none; height: 60vh; color: rgb(255,255,255); box-sizing: border-box; max-width: 85%; background-color: rgba(0,0,0,0.6);border-radius: 25px;">' +
 
                 '<div class="col-md-4 p-3 my-5">' +
 
