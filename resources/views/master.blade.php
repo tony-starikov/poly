@@ -31,13 +31,6 @@
     <!-- vuebar -->
     <script src="https://unpkg.com/vuebar"></script>
 
-    <!-- simplebar -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/simplebar@5.3.3/dist/simplebar.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@5.3.3/dist/simplebar.min.js"></script>
-
     <!-- vidage -->
     <script src="https://cdn.jsdelivr.net/npm/vidage@1.0.0/dist/vidage.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vidage@1.0.0/dist/vidage.min.css">
@@ -84,24 +77,35 @@
             opacity: 1;
         }
 
+        .showMe {
+            opacity:0;
+        }
+        .hoverMe:hover + div {
+            opacity:1;
+            filter: brightness(100%);
+        }
+        .hoverMe{
+            filter: brightness(50%);
+        }
+
         .nav-link {
             color: rgba(255,255,255,0.93);
         }
 
-        .vuebar-element {
-            height: 250px;
-            width: 100%;
-            max-width: 500px;
-            background: rgba(255,255,255,0.7);
-            /*background: #dfe9fe;*/
+        .nav-item {
+            height: 100%;
         }
 
         .vb > .vb-dragger {
             z-index: 5;
-            width: 5vh;
+            width: 3%;
             right: 0;
-            margin-right: 40px;
-            margin-top: 30px;
+            margin: 2.5%;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 25px;
+            /*margin-top: 2%;*/
+            /*height: 50px;*/
+            /*border: 10px solid rgba(255, 255, 255, 0.3);*/
         }
 
         .vb > .vb-dragger > .vb-dragger-styler {
@@ -117,40 +121,32 @@
                 background-color 100ms ease-out,
                 margin 100ms ease-out,
                 height 100ms ease-out;
-            background-color: rgba(255,255,255,0.7);
+            background-color: rgba(255, 255, 255, 1);
             /*margin: 5px 5px 5px 0;*/
-            border-radius: 20px;
-            height: 100%;
+            border-radius: 25px;
+            /*height: calc(100% - 10px);*/
             display: block;
         }
 
         .vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
-            /*background-color: rgba(48, 121, 244,.3);*/
-            background-color: rgba(255,255,255,0.7);
+            background-color: rgba(255, 255, 255, 1);
         }
 
         .vb > .vb-dragger:hover > .vb-dragger-styler {
-            background-color: rgba(255,255,255,1);
-            margin: 0px;
-            height: 100%;
+            background-color: rgba(255, 255, 255, 1);
+            /*margin: 0px;*/
+            /*height: 100%;*/
         }
 
         .vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
-            background-color: rgba(255,255,255,0.7);
-            margin: 0px;
-            height: 100%;
+            background-color: rgba(255, 255, 255, 1);
+            /*margin: 0px;*/
+            /*height: 100%;*/
         }
 
         .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
-            background-color: rgba(255,255,255,0.7);
+            background-color: rgba(255, 255, 255, 1);
         }
-
-        /*.simplebar-scrollbar::before {*/
-        /*    z-index: 5;*/
-        /*    background-color: white;*/
-        /*    border-radius: 25px;*/
-        /*    width: 2vh;*/
-        /*}*/
     </style>
 </head>
 <body class="bg-dark">
@@ -235,10 +231,12 @@
     <!-- route outlet -->
     <!-- component matched by the route will render here -->
     <main class="p-2">
-        <router-view></router-view>
+        <router-view>
+
+        </router-view>
     </main>
 
-    <footer style="height: 2vh; width: 100%; color: rgba(255,255,255,0.7); font-family: Roboto, sans-serif;">
+    <footer style="width: 100%; color: rgba(255,255,255,0.7); font-family: Roboto, sans-serif;">
         <div>
             <p>PolygoNerds &copy; 2021 Ukraine</p>
         </div>
@@ -270,7 +268,6 @@
     Vue.use(VueRouter);
 
     Vue.use(Vuebar);
-
     // 1. Define route components.
     // These can be imported from other files
 

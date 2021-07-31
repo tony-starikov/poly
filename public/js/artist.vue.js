@@ -1,47 +1,48 @@
 const Artist = {
     template:
-        '<div class="container-fluid d-inline-block p-4 d-flex justify-content-center" style="background-color: rgba(251, 251, 251, 0.15);border-radius: 25px;">' +
-            '<div class="row p-0 overflow-hidden" style="box-sizing: border-box; width: 85%; background-color: rgba(0,0,0,1);border-radius: 25px;">' +
+        '<div v-bar="{useScrollbarPseudo: true}" ' +
+            'class="container-fluid d-inline-block p-4 d-flex justify-content-center" ' +
+            'style="' +
+        // 'height: 74vh; ' +
+        'background-color: rgba(255,255,255,0.07); border-radius: 25px;"' +
+        '>' +
+            '<div ' +
+                'class="row p-0 text-center d-flex overflow-auto" ' +
+                'style="scrollbar-width: none; ' +
+                        // 'height: 60vh; ' +
+                        'color: rgb(255,255,255); ' +
+                        'box-sizing: border-box; ' +
+                        'border: 10px solid black; ' +
+                        'max-width: 85%; ' +
+                        'background-color: rgba(0,0,0,0.5);' +
+                        'border-radius: 25px;"' +
+            '>' +
+                '<div class="col-md-8 text-start" style="background-color: rgba(0, 0, 0, 0);">' +
 
-                '<div class="col-md-8 p-0" style="background-color: rgba(0, 0, 0, 0.1);border-radius: 25px;">' +
+                    '<h4 class="fw-bolder pt-2">{{ name }}</h4>' +
 
-                    '<h1>\n' +
-                        '{{ name }}\n' +
-                    '</h1>' +
+                    '<h5 class="fw-bolder">{{ position }}</h5>' +
 
-                    '<hr>\n' +
+                    '<hr size="4" class="rounded-pill" style="width: 60%; opacity: 1;">' +
 
-                    '<h2>\n' +
-                        '{{ position }}\n' +
-                    '</h2>\n' +
+                    '<p class="text-white" style="width: 80%;opacity: 0.8">\n' +
+                        '{{ description }}\n' +
+                    '</p>' +
 
-                    '<hr>\n' +
-
-                    '<p>' +
-                        '{{ description }}' +
-                    '</p>\n' +
-
-                    '<hr>\n' +
+                    '<hr size="4" class="rounded-pill" style="width: 60%; opacity: 1;">' +
 
                     '<p>' +
                         '{{ social }}' +
                     '</p>\n' +
 
-                    '<hr>' +
-
                 '</div>' +
 
-                '<div class="col-md-4 p-2">' +
-
-                    '<div class="card" style="border-radius: 5px;">\n' +
-                        '<img\n' +
+                '<div class="col-md-4 p-0">' +
+                    '<img\n' +
                         'v-bind:src="/images/ + image"\n' +
                         'class="card-img img-fluid"\n' +
                         'alt="..."\n' +
-                        'style="border-radius: 5px;"\n' +
-                        '/>\n' +
-                    '</div>' +
-
+                    '/>\n' +
                 '</div>' +
 
             '</div>' +
