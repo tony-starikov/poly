@@ -71,7 +71,7 @@ const Work = {
                         '<h4 class="fw-bolder pt-2">Artists</h4>' +
 
                         '<div class="row p-0">' +
-                            '<div v-for="artist in artists" v-bind:key="artist.id" class="col-lg-3 col-md-3 p-0 ms-2">' +
+                            '<div v-for="artist in artists" v-bind:key="artist.id" class="col-lg-4 col-md-4 p-0 ms-2">' +
                                     '<router-link :to="/artist/ + artist.code" class="text-decoration-none">\n' +
                                         '<div class="card rounded border-0 hoverMe" style="background-color: rgba(0,0,0,0.01);">\n' +
                                             '<img ' +

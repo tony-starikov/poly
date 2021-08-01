@@ -82,14 +82,22 @@
         }
         .hoverMe:hover + div {
             opacity:1;
-            filter: brightness(100%);
+            filter: brightness(100%) !important;
         }
+
+        .hoverMe:hover{
+            opacity:1;
+            filter: brightness(100%) !important;
+        }
+
         .hoverMe{
             filter: brightness(50%);
         }
 
         .nav-link {
-            color: rgba(255,255,255,0.93);
+            color: rgba(255,255,255,1);
+            height: 100%;
+            vertical-align: middle;
         }
 
         .nav-item {
@@ -147,6 +155,11 @@
         .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
             background-color: rgba(255, 255, 255, 1);
         }
+
+        .router-link-exact-active{
+            background-color: white;
+            color: black !important;
+        }
     </style>
 </head>
 <body class="bg-dark">
@@ -162,9 +175,9 @@
 
     <header class="p-2" style="width: 100%; height: 19vh;">
 
-        <nav class="navbar navbar-expand-lg p-0 m-0" style="height: 100%; width: 100%; background-color: rgba(255,255,255,0.07);border-radius: 25px;">
+        <nav class="navbar navbar-expand-lg p-0 m-0" style="height: 100%; width: 100%; background-color: rgba(255,255,255,0.07); border-radius: 25px;">
             <div class="container-fluid mx-4" style="height: 100%;">
-                <router-link class="navbar-brand" to="/">
+                <router-link class="navbar-brand" style="background-color: rgba(255,255,255,0)" to="/">
                     <img
                         src="/images/font.png"
                         class="me-2 d-none d-lg-block d-xl-block img-fluid"
@@ -191,35 +204,35 @@
                 >
                     <i class="fas fa-bars text-white"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="height: 100%">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="height: 100%">
 
-                        <li class="nav-item">
-                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);" to="/works">@lang('main.works')</router-link>
+                        <li class="nav-item d-flex align-items-center">
+                            <router-link class="nav-link h3 m-0 d-flex align-items-center" style="color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/works">@lang('main.works')</router-link>
                         </li>
 
                         <li class="nav-item">
-                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);" to="/artists">@lang('main.artists')</router-link>
+                            <router-link class="nav-link h3 m-0 d-flex align-items-center" style="color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/artists">@lang('main.artists')</router-link>
                         </li>
 
                         <li class="nav-item">
-                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);" to="/about">@lang('main.about')</router-link>
+                            <router-link class="nav-link h3 m-0 d-flex align-items-center" style="color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/about">@lang('main.about')</router-link>
                         </li>
 
                         <li class="nav-item">
-                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);" to="/recruit">@lang('main.recruit')</router-link>
+                            <router-link class="nav-link h3 m-0 d-flex align-items-center" style="color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/recruit">@lang('main.recruit')</router-link>
                         </li>
 
                         <li class="nav-item">
-                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);" to="/contact">@lang('main.contact')</router-link>
+                            <router-link class="nav-link h3 m-0 d-flex align-items-center" style="color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/contact">@lang('main.contact')</router-link>
                         </li>
 
                         <li class="nav-item">
-                            <router-link class="nav-link h3" style="color: rgba(255,255,255,1);"  to="/">|</router-link>
+                            <router-link class="h3 m-0 d-flex align-items-center" style="background-color: rgba(255,255,255,0); color: rgba(255,255,255,1) !important; height: 100%; vertical-align: middle;"  to="/">|</router-link>
                         </li>
 
                         <li class="nav-item">
-                            <router-link class="nav-link h3 fw-bolder" style="color: rgba(255,255,255,1);"  to="/">EN</router-link>
+                            <router-link class="nav-link h3 fw-bolder m-0 d-flex align-items-center" style="background-color: rgba(255,255,255,0); color: rgba(255,255,255,1) !important; height: 100%; vertical-align: middle;"  to="/">EN</router-link>
                         </li>
 
                     </ul>
