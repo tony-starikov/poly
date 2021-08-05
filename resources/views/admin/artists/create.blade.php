@@ -68,6 +68,16 @@
                     </div>
                 </div>
 
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon02">IMAGE_SQR</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" name="image_sqr" id="image_sqr" class="custom-file-input" aria-describedby="inputGroupFileAddon02">
+                        <label class="custom-file-label" for="image_sqr">Choose file</label>
+                    </div>
+                </div>
+
                 <button class="btn btn-success">CREATE</button>
 
                 <hr>

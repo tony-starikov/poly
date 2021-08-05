@@ -19,7 +19,7 @@
             @foreach($works as $work)
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="{{ Storage::url($work->image_1) }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ Storage::url($work->cover) }}" alt="Card image cap">
                         <div class="card-body">
                             <p>id: {{ $work->id }} | name: {{ $work->name }}</p>
                             <div class="d-flex justify-content-between align-items-center">

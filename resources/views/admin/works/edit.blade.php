@@ -68,6 +68,16 @@
                 <div class="form-row">
                     <div class="input-group mb-3 col-md-6">
                         <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon05">COVER IMAGE</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" name="cover" id="cover" class="custom-file-input" aria-describedby="inputGroupFileAddon05">
+                            <label class="custom-file-label" for="cover">Choose file</label>
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3 col-md-6">
+                        <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroupFileAddon01">IMAGE 1</span>
                         </div>
                         <div class="custom-file">
@@ -75,7 +85,9 @@
                             <label class="custom-file-label" for="image_1">Choose file</label>
                         </div>
                     </div>
+                </div>
 
+                <div class="form-row">
                     <div class="input-group mb-3 col-md-6">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroupFileAddon02">IMAGE 2</span>
@@ -85,9 +97,7 @@
                             <label class="custom-file-label" for="image_2">Choose file</label>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-row">
                     <div class="input-group mb-3 col-md-6">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroupFileAddon03">IMAGE 3</span>
@@ -97,7 +107,9 @@
                             <label class="custom-file-label" for="image_3">Choose file</label>
                         </div>
                     </div>
+                </div>
 
+                <div class="form-row">
                     <div class="input-group mb-3 col-md-6">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroupFileAddon">VIDEO MP4</span>
@@ -107,15 +119,15 @@
                             <label class="custom-file-label" for="video_mp4">Choose file</label>
                         </div>
                     </div>
-                </div>
 
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroupFileAddon04">VIDEO WEBM</span>
-                    </div>
-                    <div class="custom-file">
-                        <input type="file" name="video_webm" id="video_webm" class="custom-file-input" aria-describedby="inputGroupFileAddon04">
-                        <label class="custom-file-label" for="video_webm">Choose file</label>
+                    <div class="input-group mb-3 col-md-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon04">VIDEO WEBM</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" name="video_webm" id="video_webm" class="custom-file-input" aria-describedby="inputGroupFileAddon04">
+                            <label class="custom-file-label" for="video_webm">Choose file</label>
+                        </div>
                     </div>
                 </div>
 

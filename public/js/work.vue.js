@@ -5,7 +5,7 @@ const Work = {
             'style="height: 74vh; background-color: rgba(255,255,255,0.07); border-radius: 25px;"' +
         '>' +
             '<div ' +
-                'class="row p-0 text-center d-flex overflow-auto" ' +
+                'class="row p-0 m-0 text-center d-flex overflow-auto" ' +
                 'style="scrollbar-width: none; ' +
                         'height: 60vh; ' +
                         'color: rgb(255,255,255); ' +
@@ -16,14 +16,14 @@ const Work = {
                         'border-radius: 25px;"' +
             '>' +
 
-                '<div class="col-md-9 p-0" style="background-color: rgba(0,0,0,1);">' +
+                '<div class="col-md-9 m-0 p-0" style="background-color: rgba(0,0,0,0);">' +
 
                     '<img\n' +
                         'v-bind:src="/images/ + image_1"\n' +
                         'alt="..."\n' +
                         'width="100%"\n' +
-                        'style="border-radius: 25px 0 0 0;"\n' +
-                        'class="mb-1"\n' +
+                        'style="border-radius: 0 0 0 0;"\n' +
+                        'class="p-0 m-0"\n' +
                     '/>' +
 
                     '<video class="mb-1"\n' +
@@ -31,8 +31,8 @@ const Work = {
                             'height="auto"\n' +
                             'controls="controls"\n' +
                             'loop autoplay>\n' +
-                        '<source src="{{ video_mp4 }}" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\'>\n' +
-                        '<source src="{{ video_webm }}" type=\'video/webm; codecs="vp8, vorbis"\'>\n' +
+                        '<source v-bind:src="/images/ + video_mp4" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\'>\n' +
+                        '<source v-bind:src="/images/ + video_webm" type=\'video/webm; codecs="vp8, vorbis"\'>\n' +
                         'Video error\n' +
                     '</video>' +
 
@@ -65,18 +65,19 @@ const Work = {
 
                 '</div>' +
 
-                '<div class="col-md-3 text-start" style="background-color: rgba(0,0,0,0); border-radius: 0 25px 25px 0;">' +
-                    '<div class="sticky-top text-start">' +
+                '<div class="col-md-3 m-0 text-start" style="background-color: rgba(0,0,0,0.6);">' +
+                    '<div class="sticky-top text-start m-0 p-2">' +
 
-                        '<h4 class="fw-bolder pt-2">Artists</h4>' +
+                        '<h4 class="fw-bolder">Artists</h4>' +
 
-                        '<div class="row p-0">' +
-                            '<div v-for="artist in artists" v-bind:key="artist.id" class="col-lg-4 col-md-4 p-0 ms-2">' +
+                        '<div class="row px-1">' +
+                            '<div v-for="artist in artists" v-bind:key="artist.id" class="col-4 p-0 px-1">' +
                                     '<router-link :to="/artist/ + artist.code" class="text-decoration-none">\n' +
-                                        '<div class="card rounded border-0 hoverMe" style="background-color: rgba(0,0,0,0.01);">\n' +
+                                        '<div class="card hoverMe" style="border-radius: 10px; background-color: rgba(0,0,0,0.01);">\n' +
                                             '<img ' +
-                                                'v-bind:src="/images/ + artist.image"\n' +
-                                                'class="img-fluid rounded"\n' +
+                                                'v-bind:src="/images/ + artist.image_sqr"\n' +
+                                                'class="img-fluid"\n' +
+                                                'style="border-radius: 10px;"' +
                                             '/>\n' +
                                         '</div>\n' +
                                         '<div class="showMe">' +
@@ -135,7 +136,7 @@ const Work = {
                 id: '',
                 code: '',
                 name: '',
-                image: '',
+                image_sqr: '',
             },
             software: [],
             soft: {

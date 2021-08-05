@@ -6,8 +6,6 @@ const Recruit = {
                     'style="scrollbar-width: none; ' +
                         'height: 60vh; ' +
                         'color: rgb(0,0,0); ' +
-                        'border: 10px solid; ' +
-                        'border-color: rgba(255,255,255,0); ' +
                         'max-width: 85%; ' +
                         'background-color: rgba(255,255,255,0.7);' +
                         'border-radius: 25px;"' +

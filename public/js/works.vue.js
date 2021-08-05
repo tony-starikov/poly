@@ -13,8 +13,11 @@ const Works = {
                     '<div v-for="work in works" v-bind:key="work.id" class="col-lg-4 col-md-6 p-0" style="border-radius: 25px;">' +
                         '<router-link :to="/work/ + work.code">' +
                             '<div class="card bg-dark my-card">' +
-                                '<img v-bind:src="/images/ + work.image_1" class="img-fluid"/>' +
-                                '<div class="my-overlay">{{ work.name }}</div>' +
+                                '<img v-bind:src="/images/ + work.cover" class="img-fluid"/>' +
+                                '<div class="my-overlay">' +
+                                    '<h4 class="m-0 mx-1" style="color: rgba(255,255,255,0.8);">{{ work.name }}</h4>' +
+                                    '<h6 class="p-0 mx-1" style="color: rgba(255,255,255,0.4);">{{ work.small_description }}</h6>' +
+                                '</div>' +
                             '</div>' +
                         '</router-link>' +
                     '</div>' +
@@ -27,8 +30,9 @@ const Works = {
             work: {
                 id: '',
                 name: '',
-                image_1: '',
+                cover: '',
                 code: '',
+                small_description: '',
             },
             work_id: '',
         }

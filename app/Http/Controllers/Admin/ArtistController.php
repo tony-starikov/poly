@@ -41,13 +41,19 @@ class ArtistController extends Controller
     public function store(ArtistRequest $request)
     {
         $image_path = null;
+        $image_sqr = null;
 
         if ($request->file('image')){
             $image_path = $request->file('image')->store('artists');
         }
 
+        if ($request->file('image_sqr')){
+            $image_sqr = $request->file('image_sqr')->store('artists');
+        }
+
         $parameters = $request->all();
         $parameters['image'] = $image_path;
+        $parameters['image_sqr'] = $image_sqr;
         Artist::create($parameters);
         return redirect()->route('artists.index');
     }
@@ -89,14 +95,21 @@ class ArtistController extends Controller
         ]);
 
         $image_path = $artist->image;
+        $image_sqr = $artist->image_sqr;
 
         if ($request->file('image')) {
             Storage::delete($artist->image);
             $image_path = $request->file('image')->store('artists');
         }
 
+        if ($request->file('image_sqr')) {
+            Storage::delete($artist->image_sqr);
+            $image_sqr = $request->file('image_sqr')->store('artists');
+        }
+
         $parameters = $request->all();
         $parameters['image'] = $image_path;
+        $parameters['image_sqr'] = $image_sqr;
         $artist->update($parameters);
         return redirect()->route('artists.index');
     }
