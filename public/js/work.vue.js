@@ -81,7 +81,7 @@ const Work = {
                                             '/>\n' +
                                         '</div>\n' +
                                         '<div class="showMe">' +
-                                            '<small class="text-decoration-none text-white" style="opacity: 0.7">{{ artist.name }}</small>' +
+                                            '<small class="text-decoration-none lh-1 text-white" style="opacity: 0.7">{{ artist.name }}</small>' +
                                         '</div>' +
                                     '</router-link>\n' +
                             '</div>' +
@@ -164,7 +164,8 @@ const Work = {
                     this.name = res.work.name;
                     this.description = res.work.description;
                     this.image_1 = res.work.image_1;
-
+                    this.video_mp4 = res.work.video_mp4;
+                    this.video_webm = res.work.video_webm;
                 })
         }
     }
