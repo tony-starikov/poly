@@ -80,8 +80,8 @@ const Work = {
                                                 'style="border-radius: 10px;"' +
                                             '/>\n' +
                                         '</div>\n' +
-                                        '<div class="showMe">' +
-                                            '<small class="text-decoration-none lh-1 text-white" style="opacity: 0.7">{{ artist.name }}</small>' +
+                                        '<div class="py-1 showMe">' +
+                                            '<p class="text-decoration-none m-0 text-white" style="font-size: .8rem; line-height: normal; opacity: 0.7">{{ artist.name }}</p>' +
                                         '</div>' +
                                     '</router-link>\n' +
                             '</div>' +

@@ -110,7 +110,7 @@
             height: 30%;
             right: 0;
             margin-top: 2rem;
-            margin-right: 2rem;
+            margin-right: 3rem;
             background-color: rgba(255, 255, 255, 0.7);
             border-radius: 25px;
             /*margin-top: 2%;*/
