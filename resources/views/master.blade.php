@@ -107,7 +107,6 @@
         .vb > .vb-dragger {
             z-index: 5;
             width: 3%;
-            height: 30%;
             right: 0;
             margin-top: 2rem;
             margin-right: 3rem;
@@ -161,6 +160,7 @@
         .router-link-exact-active{
             background-image: url("/images/menu.png");
             color: black !important;
+            background-color: rgba(255, 255, 255, 0);
         }
     </style>
 </head>
@@ -230,7 +230,9 @@
                         </li>
 
                         <li class="nav-item">
-                            <router-link class="m-0 mx-2 d-flex align-items-center" style="font-weight: 200;font-size: 70px; background-image: none; color: rgba(255,255,255,1) !important; height: 100%; vertical-align: middle;"  to="/">|</router-link>
+                            <router-link class="m-0 mx-2 d-flex align-items-center" style="font-weight: 200;font-size: 70px; background-image: none; color: rgba(255,255,255,1) !important; height: 100%; vertical-align: middle;"  to="/">
+                                <span style="height: 55px; width: 2px; background-color: white; border-radius: 25px; margin: 0 5px;"></span>
+                            </router-link>
                         </li>
 
                         <li class="nav-item">

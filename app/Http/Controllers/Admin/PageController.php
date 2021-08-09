@@ -19,23 +19,23 @@ class PageController extends Controller
     {
         $page_info = Page::where('name', 'main')->first();
 
-        $image_path = $page_info->image;
-        $video_path = $page_info->video;
+//        $image_path = $page_info->image;
+//        $video_path = $page_info->video;
 
 
-        if ($request->file('image')){
-            Storage::delete($page_info->image);
-            $image_path = $request->file('image')->store('pages/main');
-        }
-
-        if ($request->file('video')){
-            Storage::delete($page_info->video);
-            $video_path = $request->file('video')->store('pages/main');
-        }
+//        if ($request->file('image')){
+//            Storage::delete($page_info->image);
+//            $image_path = $request->file('image')->store('pages/main');
+//        }
+//
+//        if ($request->file('video')){
+//            Storage::delete($page_info->video);
+//            $video_path = $request->file('video')->store('pages/main');
+//        }
 
         $parameters = $request->all();
-        $parameters['image'] = $image_path;
-        $parameters['video'] = $video_path;
+//        $parameters['image'] = $image_path;
+//        $parameters['video'] = $video_path;
         $page_info->update($parameters);
 
         return redirect()->route('admin.main.page');
