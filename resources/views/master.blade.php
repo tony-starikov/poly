@@ -104,62 +104,156 @@
             height: 100%;
         }
 
+        /*new*/
         .vb > .vb-dragger {
+            background-color: rgba(255, 255, 255, 0.5);
+            /*border: 10px solid;*/
+            /*border-color: rgba(255, 255, 255, 0.8);*/
             z-index: 5;
-            width: 3%;
+            width: 3rem;
+            height: 100%;
             right: 0;
+            margin-right: 4rem;
             margin-top: 2rem;
-            margin-right: 3rem;
-            background-color: rgba(255, 255, 255, 0.7);
             border-radius: 25px;
-            /*margin-top: 2%;*/
-            /*height: 50px;*/
-            /*border: 10px solid rgba(255, 255, 255, 0.3);*/
-        }
-
-        .vb > .vb-dragger > .vb-dragger-styler {
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            -webkit-transform: rotate3d(0,0,0,0);
-            transform: rotate3d(0,0,0,0);
-            -webkit-transition:
-                background-color 100ms ease-out,
-                margin 100ms ease-out,
-                height 100ms ease-out;
-            transition:
-                background-color 100ms ease-out,
-                margin 100ms ease-out,
-                height 100ms ease-out;
-            background-color: rgba(255, 255, 255, 1);
-            /*margin: 5px 5px 5px 0;*/
-            border-radius: 25px;
-            /*height: calc(100% - 10px);*/
             display: block;
         }
 
-        .vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
-            background-color: rgba(255, 255, 255, 1);
-        }
+        /*.vb > .vb-dragger > .vb-dragger-styler {*/
+        /*    !*-webkit-backface-visibility: hidden;*!*/
+        /*    !*backface-visibility: hidden;*!*/
+        /*    !*-webkit-transform: rotate3d(0,0,0,0);*!*/
+        /*    !*transform: rotate3d(0,0,0,0);*!*/
+        /*    !*-webkit-transition:*!*/
+        /*    !*    background-color 100ms ease-out,*!*/
+        /*    !*    margin 100ms ease-out,*!*/
+        /*    !*    height 100ms ease-out;*!*/
+        /*    !*transition:*!*/
+        /*    !*    background-color 100ms ease-out,*!*/
+        /*    !*    margin 100ms ease-out,*!*/
+        /*    !*    height 100ms ease-out;*!*/
+        /*    !*background-color: rgba(255, 255, 255, 0.5);*!*/
+        /*    !*border: 10px solid;*!*/
+        /*    !*border-color: rgba(255, 255, 255, 0.2);*!*/
+        /*    background-color: rgba(255, 255, 255, 0.5);*/
+        /*    margin-right: 3rem;*/
+        /*    margin-top: 2rem;*/
+        /*    border-radius: 25px;*/
+        /*    height: 100%;*/
+        /*    display: block;*/
+        /*}*/
 
-        .vb > .vb-dragger:hover > .vb-dragger-styler {
-            background-color: rgba(255, 255, 255, 1);
-            /*margin: 0px;*/
-            /*height: 100%;*/
-        }
+        /*.vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {*/
+        /*    background-color: rgba(255, 255, 255, 0.8);*/
+        /*}*/
 
-        .vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
-            background-color: rgba(255, 255, 255, 1);
-            /*margin: 0px;*/
-            /*height: 100%;*/
-        }
+        /*.vb > .vb-dragger:hover > .vb-dragger-styler {*/
+        /*    background-color: rgba(255, 255, 255, 0.8);*/
+        /*    !*margin: 0px;*!*/
+        /*    height: 100%;*/
+        /*}*/
 
-        .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
-            background-color: rgba(255, 255, 255, 1);
-        }
+        /*.vb.vb-dragging > .vb-dragger > .vb-dragger-styler {*/
+        /*    background-color: rgba(255, 255, 255, 0.8);*/
+        /*    !*margin: 0px;*!*/
+        /*    height: 100%;*/
+        /*}*/
+
+        /*.vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {*/
+        /*    background-color: rgba(255, 255, 255, 0.8);*/
+        /*}*/
+
+        /*new*/
+
+        /*old*/
+        /*.vb > .vb-dragger {*/
+        /*    z-index: 5;*/
+        /*    width: 3%;*/
+        /*    right: 0;*/
+        /*    margin-top: 2rem;*/
+        /*    margin-right: 3rem;*/
+        /*    background-color: rgba(255, 255, 255, 0.7);*/
+        /*    border-radius: 25px;*/
+        /*    !*margin-top: 2%;*!*/
+        /*    !*height: 50px;*!*/
+        /*    !*border: 10px solid rgba(255, 255, 255, 0.3);*!*/
+        /*}*/
+
+        /*.vb > .vb-dragger > .vb-dragger-styler {*/
+        /*    -webkit-backface-visibility: hidden;*/
+        /*    backface-visibility: hidden;*/
+        /*    -webkit-transform: rotate3d(0,0,0,0);*/
+        /*    transform: rotate3d(0,0,0,0);*/
+        /*    -webkit-transition:*/
+        /*        background-color 100ms ease-out,*/
+        /*        margin 100ms ease-out,*/
+        /*        height 100ms ease-out;*/
+        /*    transition:*/
+        /*        background-color 100ms ease-out,*/
+        /*        margin 100ms ease-out,*/
+        /*        height 100ms ease-out;*/
+        /*    background-color: rgba(255, 255, 255, 1);*/
+        /*    !*margin: 5px 5px 5px 0;*!*/
+        /*    border-radius: 25px;*/
+        /*    !*height: calc(100% - 10px);*!*/
+        /*    display: block;*/
+        /*}*/
+
+        /*.vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {*/
+        /*    background-color: rgba(255, 255, 255, 1);*/
+        /*}*/
+
+        /*.vb > .vb-dragger:hover > .vb-dragger-styler {*/
+        /*    background-color: rgba(255, 255, 255, 1);*/
+        /*    !*margin: 0px;*!*/
+        /*    !*height: 100%;*!*/
+        /*}*/
+
+        /*.vb.vb-dragging > .vb-dragger > .vb-dragger-styler {*/
+        /*    background-color: rgba(255, 255, 255, 1);*/
+        /*    !*margin: 0px;*!*/
+        /*    !*height: 100%;*!*/
+        /*}*/
+
+        /*.vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {*/
+        /*    background-color: rgba(255, 255, 255, 1);*/
+        /*}*/
+        /*old*/
 
         .router-link-exact-active{
             background-image: url("/images/menu.png");
             color: black !important;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            border-radius: 35px;
+            font-size: 24px;
+            line-height: 1.33;
+        }
+
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            padding: 6px 0px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.42857;
+        }
+
+        .dropdown-toggle::after {
+            content: none;
+        }
+
+        .dropdown-menu {
+            border-radius: 0px 25px 25px 25px;
+        }
+
+        .dropdown-item:hover{
             background-color: rgba(255, 255, 255, 0);
         }
     </style>
@@ -181,9 +275,9 @@
             <div class="container-fluid mx-4" style="height: 100%;">
                 <router-link class="navbar-brand" style="background-image: none;" to="/">
                     <img
-                        src="/images/font.png"
+                        src="/images/font-logo.png"
                         class="me-2 d-none d-lg-block d-xl-block img-fluid"
-                        style="height: 15vh;"
+                        style="max-height: 12vh;"
                         alt=""
                         loading="lazy"
                     />
@@ -231,13 +325,26 @@
 
                         <li class="nav-item">
                             <router-link class="m-0 mx-2 d-flex align-items-center" style="font-weight: 200;font-size: 70px; background-image: none; color: rgba(255,255,255,1) !important; height: 100%; vertical-align: middle;"  to="/">
-                                <span style="height: 55px; width: 2px; background-color: white; border-radius: 25px; margin: 0 5px;"></span>
+                                <span style="height: 55px; width: 2px; background-color: white; border-radius: 25px; margin: 0 8px 5px 0;"></span>
                             </router-link>
                         </li>
 
-                        <li class="nav-item">
-                            <router-link class="nav-link h3 fw-bolder m-0 d-flex align-items-center" style="font-weight: 400; background-image: none; color: rgba(255,255,255,1) !important; height: 100%; vertical-align: middle;"  to="/">EN</router-link>
+                        <li class="nav-item dropdown my-auto" style="height: 30px;">
+                            <a class="nav-link h3 fw-bolder p-0 m-0 d-flex align-items-center dropdown-toggle" style="font-weight: 400; background-image: none; color: rgba(255,255,255,1) !important; vertical-align: middle;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                @lang('main.current_locale')
+                            </a>
+                            <ul class="dropdown-menu m-0 ps-4 pe-2 overflow-hidden" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'ua') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'ua') }}">Українська</a></li>
+                                <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'en') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'en') }}">English</a></li>
+                                <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'ru') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'ru') }}">Русский</a></li>
+                                <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'de') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'de') }}">Deutsch</a></li>
+                            </ul>
                         </li>
+
+
+{{--                        <li class="nav-item">--}}
+{{--                            <router-link class="nav-link h3 fw-bolder m-0 d-flex align-items-center" style="font-weight: 400; background-image: none; color: rgba(255,255,255,1) !important; height: 100%; vertical-align: middle;"  to="/">EN</router-link>--}}
+{{--                        </li>--}}
 
                     </ul>
                 </div>
