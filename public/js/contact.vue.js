@@ -1,9 +1,9 @@
 const Contact = {
     template:
         '<div v-bar="{useScrollbarPseudo: true}" class="container-fluid d-inline-block p-4 d-flex justify-content-center" style="height: 75vh; background-color: rgba(255,255,255,0.07);border-radius: 25px;">' +
-            '<div id="container" class="row p-0 text-start d-flex justify-content-center overflow-auto" style="scrollbar-width: none; height: 60vh; color: rgb(255,255,255); box-sizing: border-box; max-width: 85%; background-color: rgba(0,0,0,0.6);border-radius: 25px;">' +
+            '<div id="container" class="row p-0 text-start d-flex justify-content-center flex-wrap overflow-auto" style="scrollbar-width: none; color: rgb(255,255,255); box-sizing: border-box; max-width: 85%; background-color: rgba(0,0,0,0.6);border-radius: 25px;">' +
 
-                '<div class="col-md-4 p-3 my-5">' +
+                '<div class="col-lg-4" style="margin-top: 5%; margin-bottom: 0; height: max-content;">' +
 
                     '<div class="row my-2">\n' +
                         '<div class="col-12">\n' +
@@ -22,34 +22,59 @@ const Contact = {
                     '</div>' +
 
                     '<div class="row">\n' +
-                        '<div class="col-12">\n' +
+                        '<div class="col-2">\n' +
                             '<a class="text-white" href="{{ social_1 }}"><i class="fab fa-telegram fa-4x m-1"></i></a>\n' +
+                        '</div>\n' +
+
+                        '<div class="col-2">\n' +
+                            '<a class="text-white" href="{{ social_1 }}"><i class="fab fa-telegram fa-4x m-1"></i></a>\n' +
+                        '</div>\n' +
+
+                        '<div class="col-2">\n' +
                             '<a class="text-white" href="{{ social_2 }}"><i class="fab fa-artstation fa-4x m-1"></i></a>\n' +
+                        '</div>\n' +
+
+                        '<div class="col-2">\n' +
                             '<a class="text-white" href="{{ social_3 }}"><i class="fab fa-instagram fa-4x m-1"></i></a>\n' +
+                        '</div>\n' +
+
+                        '<div class="col-2">\n' +
                             '<a class="text-white" href="{{ social_4 }}"><i class="fab fa-linkedin fa-4x m-1"></i></a>\n' +
+                        '</div>\n' +
+
+                        '<div class="col-2">\n' +
                             '<a class="text-white" href="{{ social_5 }}"><i class="fab fa-facebook fa-4x m-1"></i></a>\n' +
                         '</div>\n' +
+
                     '</div>' +
 
                 '</div>' +
 
-                '<div class="col-md-8 p-0 m-0">\n' +
+                '<div class="col-lg-8 p-0 m-0">\n' +
                     '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.2737549872563!2d36.23957601571529!3d50.00622397941642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a0dc47438cc1%3A0xf22dc050706eb082!2z0LLRg9C70LjRhtGPINCn0LXRgNC90LjRiNC10LLRgdGM0LrQsCwgNjYsINCl0LDRgNC60ZbQsiwg0KXQsNGA0LrRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDYxMDAw!5e0!3m2!1suk!2sua!4v1621517762524!5m2!1suk!2sua" width="100%" height="100%" style="border-radius: 0 25px 25px 0;" allowfullscreen="" loading="lazy"></iframe>\n' +
                 '</div>' +
 
             '</div>' +
 
-        '<div class="m-5 position-absolute top-0 start-0">' +
-            '<button type="button" @click="hasHistory() ? $router.go(-1) : $router.push(\'/\')" class="btn btn-circle btn-xl btn-light m-0 p-0 border-0" style="background-color: rgba(255, 255, 255, 0.3);">' +
-                '<i class="fas fa-chevron-left fa-2x pe-1" style="color: rgba(255, 255, 255, 0.5);"></i>' +
-            '</button>' +
-        '</div>' +
+            '<div class="ms-xxl-4 ms-xl-3 ms-lg-3 ms-md-3 ms-sm-2 ms-1 mt-5 position-absolute top-0 start-0">' +
+                '<button type="button" @click="hasHistory() ? $router.go(-1) : $router.push(\'/\')" class="d-none d-lg-block d-xl-block d-xxl-block btn btn-circle btn-xl btn-light m-0 p-0 border-0" style="background-color: rgba(255, 255, 255, 0.3);">' +
+                    '<i class="fas fa-chevron-left fa-2x pe-1" style="color: rgba(255, 255, 255, 0.5);"></i>' +
+                '</button>' +
 
-        '<div class="m-5 position-absolute bottom-0 start-0">' +
-            '<button type="button" @click="scrollToTop()" class="btn btn-circle btn-xl btn-light m-0 p-0 border-0" style="background-color: rgba(255, 255, 255, 0.3);">' +
-                '<i class="fas fa-chevron-up fa-2x pb-1" style="color: rgba(255, 255, 255, 0.5);"></i>' +
-            '</button>' +
-        '</div>' +
+                '<button type="button" @click="hasHistory() ? $router.go(-1) : $router.push(\'/\')" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none btn btn-circle btn-light m-0 p-0 border-0" style="background-color: rgba(255, 255, 255, 0.3);">' +
+                    '<i class="fas fa-chevron-left fa-2x pe-1" style="color: rgba(255, 255, 255, 0.5);"></i>' +
+                '</button>' +
+            '</div>' +
+
+            '<div class="ms-xxl-4 ms-xl-3 ms-lg-3 ms-md-3 ms-sm-2 ms-1 mb-5 position-absolute bottom-0 start-0">' +
+                '<button type="button" @click="scrollToTop()" class="d-none d-lg-block d-xl-block d-xxl-block btn btn-circle btn-xl btn-light m-0 p-0 border-0" style="background-color: rgba(255, 255, 255, 0.3);">' +
+                    '<i class="fas fa-chevron-up fa-2x pb-1" style="color: rgba(255, 255, 255, 0.5);"></i>' +
+                '</button>' +
+
+                '<button type="button" @click="scrollToTop()" class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none btn btn-circle btn-light m-0 p-0 border-0" style="background-color: rgba(255, 255, 255, 0.3);">' +
+                    '<i class="fas fa-chevron-up fa-2x pb-1" style="color: rgba(255, 255, 255, 0.5);"></i>' +
+                '</button>' +
+            '</div>' +
 
         '</div>',
 

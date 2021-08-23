@@ -16,7 +16,12 @@ class SetLocale
      */
     public function handle($request, Closure $next)
     {
-        App::setLocale(session('locale'));
+        if (!session('locale')) {
+            App::setLocale('en');
+        } else {
+            App::setLocale(session('locale'));
+        }
+
         return $next($request);
     }
 }

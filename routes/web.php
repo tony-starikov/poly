@@ -26,10 +26,10 @@ Route::group([
     Route::get('locale/{locale}', 'PageController@changeLocale')->name('locale');
 
     Route::get('/works', 'PageController@main')->name('works');
-    Route::get('/works/{code}', 'PageController@main')->name('work');
+    Route::get('/work/{code}', 'PageController@main')->name('work');
 
     Route::get('/artists', 'PageController@main')->name('artists');
-    Route::get('/artists/{code}', 'PageController@main')->name('artist');
+    Route::get('/artist/{code}', 'PageController@main')->name('artist');
 
     Route::get('/about', 'PageController@main')->name('about');
 

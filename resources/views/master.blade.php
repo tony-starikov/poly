@@ -110,115 +110,15 @@
             /*border: 10px solid;*/
             /*border-color: rgba(255, 255, 255, 0.8);*/
             z-index: 5;
-            width: 3rem;
+            width: 3vw;
             height: 100%;
             right: 0;
-            margin-right: 4rem;
-            margin-top: 2rem;
+            margin-right: 2.5vw;
+            margin-top: 4vh;
             border-radius: 25px;
             display: block;
         }
-
-        /*.vb > .vb-dragger > .vb-dragger-styler {*/
-        /*    !*-webkit-backface-visibility: hidden;*!*/
-        /*    !*backface-visibility: hidden;*!*/
-        /*    !*-webkit-transform: rotate3d(0,0,0,0);*!*/
-        /*    !*transform: rotate3d(0,0,0,0);*!*/
-        /*    !*-webkit-transition:*!*/
-        /*    !*    background-color 100ms ease-out,*!*/
-        /*    !*    margin 100ms ease-out,*!*/
-        /*    !*    height 100ms ease-out;*!*/
-        /*    !*transition:*!*/
-        /*    !*    background-color 100ms ease-out,*!*/
-        /*    !*    margin 100ms ease-out,*!*/
-        /*    !*    height 100ms ease-out;*!*/
-        /*    !*background-color: rgba(255, 255, 255, 0.5);*!*/
-        /*    !*border: 10px solid;*!*/
-        /*    !*border-color: rgba(255, 255, 255, 0.2);*!*/
-        /*    background-color: rgba(255, 255, 255, 0.5);*/
-        /*    margin-right: 3rem;*/
-        /*    margin-top: 2rem;*/
-        /*    border-radius: 25px;*/
-        /*    height: 100%;*/
-        /*    display: block;*/
-        /*}*/
-
-        /*.vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {*/
-        /*    background-color: rgba(255, 255, 255, 0.8);*/
-        /*}*/
-
-        /*.vb > .vb-dragger:hover > .vb-dragger-styler {*/
-        /*    background-color: rgba(255, 255, 255, 0.8);*/
-        /*    !*margin: 0px;*!*/
-        /*    height: 100%;*/
-        /*}*/
-
-        /*.vb.vb-dragging > .vb-dragger > .vb-dragger-styler {*/
-        /*    background-color: rgba(255, 255, 255, 0.8);*/
-        /*    !*margin: 0px;*!*/
-        /*    height: 100%;*/
-        /*}*/
-
-        /*.vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {*/
-        /*    background-color: rgba(255, 255, 255, 0.8);*/
-        /*}*/
-
         /*new*/
-
-        /*old*/
-        /*.vb > .vb-dragger {*/
-        /*    z-index: 5;*/
-        /*    width: 3%;*/
-        /*    right: 0;*/
-        /*    margin-top: 2rem;*/
-        /*    margin-right: 3rem;*/
-        /*    background-color: rgba(255, 255, 255, 0.7);*/
-        /*    border-radius: 25px;*/
-        /*    !*margin-top: 2%;*!*/
-        /*    !*height: 50px;*!*/
-        /*    !*border: 10px solid rgba(255, 255, 255, 0.3);*!*/
-        /*}*/
-
-        /*.vb > .vb-dragger > .vb-dragger-styler {*/
-        /*    -webkit-backface-visibility: hidden;*/
-        /*    backface-visibility: hidden;*/
-        /*    -webkit-transform: rotate3d(0,0,0,0);*/
-        /*    transform: rotate3d(0,0,0,0);*/
-        /*    -webkit-transition:*/
-        /*        background-color 100ms ease-out,*/
-        /*        margin 100ms ease-out,*/
-        /*        height 100ms ease-out;*/
-        /*    transition:*/
-        /*        background-color 100ms ease-out,*/
-        /*        margin 100ms ease-out,*/
-        /*        height 100ms ease-out;*/
-        /*    background-color: rgba(255, 255, 255, 1);*/
-        /*    !*margin: 5px 5px 5px 0;*!*/
-        /*    border-radius: 25px;*/
-        /*    !*height: calc(100% - 10px);*!*/
-        /*    display: block;*/
-        /*}*/
-
-        /*.vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {*/
-        /*    background-color: rgba(255, 255, 255, 1);*/
-        /*}*/
-
-        /*.vb > .vb-dragger:hover > .vb-dragger-styler {*/
-        /*    background-color: rgba(255, 255, 255, 1);*/
-        /*    !*margin: 0px;*!*/
-        /*    !*height: 100%;*!*/
-        /*}*/
-
-        /*.vb.vb-dragging > .vb-dragger > .vb-dragger-styler {*/
-        /*    background-color: rgba(255, 255, 255, 1);*/
-        /*    !*margin: 0px;*!*/
-        /*    !*height: 100%;*!*/
-        /*}*/
-
-        /*.vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {*/
-        /*    background-color: rgba(255, 255, 255, 1);*/
-        /*}*/
-        /*old*/
 
         .router-link-exact-active{
             background-image: url("/images/menu.png");
@@ -236,10 +136,10 @@
         }
 
         .btn-circle {
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
             padding: 6px 0px;
-            border-radius: 15px;
+            border-radius: 25px;
             text-align: center;
             font-size: 12px;
             line-height: 1.42857;
@@ -250,11 +150,74 @@
         }
 
         .dropdown-menu {
-            border-radius: 0px 25px 25px 25px;
+            border-radius: 0px 15px 15px 15px;
         }
 
         .dropdown-item:hover{
-            background-color: rgba(255, 255, 255, 0);
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        /* The Overlay (background) */
+        .overlay {
+            /* Height & width depends on how you want to reveal the overlay (see JS below) */
+            display: none;
+            height: 100%;
+            width: 100%;
+            position: fixed; /* Stay in place */
+            z-index: 100; /* Sit on top */
+            left: 0;
+            top: 0;
+            background-color: rgb(0,0,0); /* Black fallback color */
+            background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+            overflow-x: hidden; /* Disable horizontal scroll */
+            transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+        }
+
+        /* Position the content inside the overlay */
+        .overlay-content {
+            position: relative;
+            top: 20%; /* 25% from the top */
+            width: 100%; /* 100% width */
+            text-align: center; /* Centered text/links */
+            margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+        }
+
+        /* The navigation links inside the overlay */
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block; /* Display block instead of inline */
+            transition: 0.3s; /* Transition effects on hover (color) */
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .overlay a:hover, .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        /* Position the close button (top right corner) */
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+        @media screen and (max-height: 450px) {
+            .overlay a {font-size: 20px}
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        .row-eq-height {
+            display: flex;
+            flex-flow: row wrap;
         }
     </style>
 </head>
@@ -267,106 +230,283 @@
     </video>
 </div>
 
-<div id="app" class="container-fluid text-center" style="height: 99vh; width: 83%;">
+<div id="app">
+    <div  class="container-fluid text-center d-none d-xl-block d-xxl-block" style="height: 98vh; width: 83%;">
 
-    <header class="p-2" style="width: 100%; height: 19vh;">
+        <header class="p-2" style="width: 100%; height: 18vh;">
 
-        <nav class="navbar navbar-expand-lg p-0 m-0" style="height: 100%; width: 100%; background-color: rgba(255,255,255,0.07); border-radius: 25px;">
-            <div class="container-fluid mx-4" style="height: 100%;">
-                <router-link class="navbar-brand" style="background-image: none;" to="/">
-                    <img
-                        src="/images/font-logo.png"
-                        class="me-2 d-none d-lg-block d-xl-block img-fluid"
-                        style="max-height: 12vh;"
-                        alt=""
-                        loading="lazy"
-                    />
-                    <img
-                        src="/images/logo.png"
-                        class="me-2 d-block d-lg-none d-xl-none img-fluid"
-                        style="height: 10vh;"
-                        alt=""
-                        loading="lazy"
-                    />
-                </router-link>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-mdb-toggle="collapse"
-                    data-mdb-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <i class="fas fa-bars text-white"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="height: 100%">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="height: 100%">
+            <nav class="navbar navbar-expand-xl p-0 m-0" style="height: 100%; width: 100%; background-color: rgba(255,255,255,0.07); border-radius: 25px;">
+                <div class="container-fluid mx-4" style="height: 100%;">
+                    <router-link class="navbar-brand" style="background-image: none;" to="/">
+                        <img
+                            src="/images/font-logo.png"
+                            class="d-none d-xl-block d-xxl-block img-fluid"
+                            style="max-height: 13vh;"
+                            alt=""
+                            loading="lazy"
+                        />
+                    </router-link>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars text-white"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="height: 100%">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="height: 100%">
+                            <li class="nav-item d-flex align-items-center">
+                                <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/works">@lang('main.works')</router-link>
+                            </li>
 
-                        <li class="nav-item d-flex align-items-center">
-                            <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/works">@lang('main.works')</router-link>
-                        </li>
+                            <li class="nav-item">
+                                <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/artists">@lang('main.artists')</router-link>
+                            </li>
 
-                        <li class="nav-item">
-                            <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/artists">@lang('main.artists')</router-link>
-                        </li>
+                            <li class="nav-item">
+                                <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/about">@lang('main.about')</router-link>
+                            </li>
 
-                        <li class="nav-item">
-                            <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/about">@lang('main.about')</router-link>
-                        </li>
+                            <li class="nav-item">
+                                <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/recruit">@lang('main.recruit')</router-link>
+                            </li>
 
-                        <li class="nav-item">
-                            <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/recruit">@lang('main.recruit')</router-link>
-                        </li>
+                            <li class="nav-item">
+                                <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/contact">@lang('main.contact')</router-link>
+                            </li>
 
-                        <li class="nav-item">
-                            <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/contact">@lang('main.contact')</router-link>
-                        </li>
+                            <li class="nav-item">
+                                <router-link class="m-0 mx-2 d-flex align-items-center" style="font-weight: 200;font-size: 70px; background-image: none; color: rgba(255,255,255,1) !important; height: 100%; vertical-align: middle;"  to="/">
+                                    <span style="height: 55px; width: 2px; background-color: white; border-radius: 25px; margin: 0 8px 5px 0;"></span>
+                                </router-link>
+                            </li>
 
-                        <li class="nav-item">
-                            <router-link class="m-0 mx-2 d-flex align-items-center" style="font-weight: 200;font-size: 70px; background-image: none; color: rgba(255,255,255,1) !important; height: 100%; vertical-align: middle;"  to="/">
-                                <span style="height: 55px; width: 2px; background-color: white; border-radius: 25px; margin: 0 8px 5px 0;"></span>
-                            </router-link>
-                        </li>
+                            <li class="nav-item dropdown my-auto" style="height: 30px;">
+                                <a class="nav-link h3 fw-bolder p-0 m-0 d-flex align-items-center dropdown-toggle" style="font-weight: 400; background-image: none; color: rgba(255,255,255,1) !important; vertical-align: middle;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    @lang('main.current_locale')
+                                </a>
+                                <ul class="dropdown-menu m-0 ps-4 pe-2 overflow-hidden" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'ua') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'ua') }}">Українська</a></li>
+                                    <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'en') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'en') }}">English</a></li>
+                                    <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'ru') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'ru') }}">Русский</a></li>
+                                    <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'de') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'de') }}">Deutsch</a></li>
+                                </ul>
+                            </li>
 
-                        <li class="nav-item dropdown my-auto" style="height: 30px;">
-                            <a class="nav-link h3 fw-bolder p-0 m-0 d-flex align-items-center dropdown-toggle" style="font-weight: 400; background-image: none; color: rgba(255,255,255,1) !important; vertical-align: middle;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                @lang('main.current_locale')
-                            </a>
-                            <ul class="dropdown-menu m-0 ps-4 pe-2 overflow-hidden" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'ua') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'ua') }}">Українська</a></li>
-                                <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'en') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'en') }}">English</a></li>
-                                <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'ru') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'ru') }}">Русский</a></li>
-                                <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'de') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'de') }}">Deutsch</a></li>
-                            </ul>
-                        </li>
+                            {{--                        <li class="nav-item dropdown my-auto" style="height: 30px;">--}}
+                            {{--                            <a class="nav-link h3 fw-bolder p-0 m-0 d-flex align-items-center dropdown-toggle" style="font-weight: 400; background-image: none; color: rgba(255,255,255,1) !important; vertical-align: middle;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">--}}
+                            {{--                                @lang('main.current_locale')--}}
+                            {{--                            </a>--}}
+                            {{--                            <ul class="dropdown-menu m-0 p-0 overflow-hidden" aria-labelledby="navbarDropdown">--}}
+                            {{--                                <li>--}}
+                            {{--                                    <a--}}
+                            {{--                                        class="dropdown-item h5 w-100 m-0 p-0 @if(App::getLocale() === 'ua') text-white @endif "--}}
+                            {{--                                        href="{{ route('locale', 'ua') }}"--}}
+                            {{--                                    >--}}
+                            {{--                                        <div class="row p-0 m-0">--}}
+                            {{--                                            <div class="col-3 p-0 m-0"></div>--}}
+                            {{--                                            <div class="col-9 py-0 px-2 m-0 text-white bg-secondary text-start" style="border-radius: 15px 0 0 15px;">--}}
+                            {{--                                                Українська--}}
+                            {{--                                            </div>--}}
+                            {{--                                        </div>--}}
+                            {{--                                    </a>--}}
+                            {{--                                </li>--}}
+                            {{--                                <li>--}}
+                            {{--                                    <a--}}
+                            {{--                                        class="dropdown-item h5 w-100 m-0 p-0 @if(App::getLocale() === 'en') text-white @endif "--}}
+                            {{--                                        style="border-radius: 15px 0 0 15px" href="{{ route('locale', 'en') }}"--}}
+                            {{--                                    >--}}
+                            {{--                                        <div class="row p-0 m-0">--}}
+                            {{--                                            <div class="col-3 p-0 m-0"></div>--}}
+                            {{--                                            <div class="col-9 py-0 px-2 m-0 text-white bg-secondary text-start" style="border-radius: 15px 0 0 15px;">--}}
+                            {{--                                                English--}}
+                            {{--                                            </div>--}}
+                            {{--                                        </div>--}}
+                            {{--                                    </a>--}}
+                            {{--                                </li>--}}
+                            {{--                                <li>--}}
+                            {{--                                    <a--}}
+                            {{--                                        class="dropdown-item h5 w-100 m-0 p-0 @if(App::getLocale() === 'ru') text-white @endif "--}}
+                            {{--                                        style="border-radius: 15px 0 0 15px" href="{{ route('locale', 'ru') }}"--}}
+                            {{--                                    >--}}
+                            {{--                                        <div class="row p-0 m-0">--}}
+                            {{--                                            <div class="col-3 p-0 m-0"></div>--}}
+                            {{--                                            <div class="col-9 py-0 px-2 m-0 text-white bg-secondary text-start" style="border-radius: 15px 0 0 15px;">--}}
+                            {{--                                                Русский--}}
+                            {{--                                            </div>--}}
+                            {{--                                        </div>--}}
+                            {{--                                    </a>--}}
+                            {{--                                </li>--}}
+                            {{--                                <li>--}}
+                            {{--                                    <a--}}
+                            {{--                                        class="dropdown-item h5 w-100 m-0 p-0 @if(App::getLocale() === 'de') text-white @endif "--}}
+                            {{--                                        style="border-radius: 15px 0 0 15px" href="{{ route('locale', 'de') }}"--}}
+                            {{--                                    >--}}
+                            {{--                                        <div class="row p-0 m-0">--}}
+                            {{--                                            <div class="col-3 p-0 m-0"></div>--}}
+                            {{--                                            <div class="col-9 py-0 px-2 m-0 text-white bg-secondary text-start" style="border-radius: 15px 0 0 15px;">--}}
+                            {{--                                                Deutsch--}}
+                            {{--                                            </div>--}}
+                            {{--                                        </div>--}}
+                            {{--                                    </a>--}}
+                            {{--                                </li>--}}
+                            {{--                                --}}{{-- <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'de') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'de') }}">Deutsch</a></li>--}}
+                            {{--                            </ul>--}}
+                            {{--                        </li>--}}
 
-
-{{--                        <li class="nav-item">--}}
-{{--                            <router-link class="nav-link h3 fw-bolder m-0 d-flex align-items-center" style="font-weight: 400; background-image: none; color: rgba(255,255,255,1) !important; height: 100%; vertical-align: middle;"  to="/">EN</router-link>--}}
-{{--                        </li>--}}
-
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
+            </nav>
+
+        </header>
+
+        <!-- route outlet -->
+        <!-- component matched by the route will render here -->
+        <main class="p-2">
+            <router-view>
+
+            </router-view>
+        </main>
+
+        <footer style="width: 100%; color: rgba(255,255,255,0.7); font-family: Roboto, sans-serif;">
+            <div>
+                <p>PolygoNerds &copy; 2021 Ukraine</p>
             </div>
-        </nav>
-    </header>
+        </footer>
 
-    <!-- route outlet -->
-    <!-- component matched by the route will render here -->
-    <main class="p-2">
-        <router-view>
+    </div>
 
-        </router-view>
-    </main>
+    <div  class="container-fluid text-center d-block d-sm-block d-md-block d-lg-block d-xl-none d-xxl-none" style="height: 98vh; width: 100%;">
 
-    <footer style="width: 100%; color: rgba(255,255,255,0.7); font-family: Roboto, sans-serif;">
-        <div>
-            <p>PolygoNerds &copy; 2021 Ukraine</p>
+        <header class="p-2" style="width: 100%; height: 14vh;">
+
+            <nav class="navbar navbar-expand-xl p-0 m-0" style="height: 100%; width: 100%; background-color: rgba(255,255,255,0.07); border-radius: 25px;">
+                <div class="container-fluid mx-4" style="height: 100%;">
+                    <router-link class="navbar-brand" style="background-image: none;" to="/">
+                        <img
+                            src="/images/font-logo.png"
+                            class="d-none d-md-block d-lg-block img-fluid"
+                            style="max-height: 11vh;"
+                            alt=""
+                            loading="lazy"
+                        />
+                        <img
+                            src="/images/logo.png"
+                            class="d-block d-sm-block d-md-none img-fluid"
+                            style="max-height: 11vh;"
+                            alt=""
+                            loading="lazy"
+                        />
+                    </router-link>
+                    <button class="bg-transparent border-0">
+                        <i onclick="openNav()" class="fas fa-bars fa-2x text-white"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="height: 100%">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="height: 100%">
+                            <li class="nav-item d-flex align-items-center">
+                                <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/works">@lang('main.works')</router-link>
+                            </li>
+
+                            <li class="nav-item">
+                                <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/artists">@lang('main.artists')</router-link>
+                            </li>
+
+                            <li class="nav-item">
+                                <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/about">@lang('main.about')</router-link>
+                            </li>
+
+                            <li class="nav-item">
+                                <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/recruit">@lang('main.recruit')</router-link>
+                            </li>
+
+                            <li class="nav-item">
+                                <router-link class="nav-link h3 m-0 d-flex align-items-center" style="font-weight: 400; color: rgba(255,255,255,1); height: 100%; vertical-align: middle;" to="/contact">@lang('main.contact')</router-link>
+                            </li>
+
+                            <li class="nav-item">
+                                <router-link class="m-0 mx-2 d-flex align-items-center" style="font-weight: 200;font-size: 70px; background-image: none; color: rgba(255,255,255,1) !important; height: 100%; vertical-align: middle;"  to="/">
+                                    <span style="height: 55px; width: 2px; background-color: white; border-radius: 25px; margin: 0 8px 5px 0;"></span>
+                                </router-link>
+                            </li>
+
+                            <li class="nav-item dropdown my-auto" style="height: 30px;">
+                                <a class="nav-link h3 fw-bolder p-0 m-0 d-flex align-items-center dropdown-toggle" style="font-weight: 400; background-image: none; color: rgba(255,255,255,1) !important; vertical-align: middle;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    @lang('main.current_locale')
+                                </a>
+                                <ul class="dropdown-menu m-0 ps-4 pe-2 overflow-hidden" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'ua') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'ua') }}">Українська</a></li>
+                                    <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'en') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'en') }}">English</a></li>
+                                    <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'ru') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'ru') }}">Русский</a></li>
+                                    <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'de') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'de') }}">Deutsch</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <!-- route outlet -->
+        <!-- component matched by the route will render here -->
+        <main class="p-2">
+            <router-view>
+
+            </router-view>
+        </main>
+
+        <footer style="width: 100%; color: rgba(255,255,255,0.7); font-family: Roboto, sans-serif;">
+            <div>
+                <p>PolygoNerds &copy; 2021 Ukraine</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Menu overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <router-link onclick="closeNav()" to="/works">@lang('main.works')</router-link>
+            <router-link onclick="closeNav()" to="/artists">@lang('main.artists')</router-link>
+            <router-link onclick="closeNav()" to="/about">@lang('main.about')</router-link>
+            <router-link onclick="closeNav()" to="/recruit">@lang('main.recruit')</router-link>
+            <router-link onclick="closeNav()" to="/contact">@lang('main.contact')</router-link>
+
+            <hr class="w-50 m-0 p-0 mx-auto">
+            <a class=" @if(App::getLocale() === 'ua') text-white @endif " href="{{ route('locale', 'ua') }}">Українська</a>
+
+            <hr class="w-50 m-0 p-0 mx-auto">
+            <a class=" @if(App::getLocale() === 'en') text-white @endif " href="{{ route('locale', 'en') }}">English</a>
+
+            <hr class="w-50 m-0 p-0 mx-auto">
+            <a class=" @if(App::getLocale() === 'ru') text-white @endif " href="{{ route('locale', 'ru') }}">Русский</a>
+
+            <hr class="w-50 m-0 p-0 mx-auto">
+            <a class=" @if(App::getLocale() === 'de') text-white @endif " href="{{ route('locale', 'de') }}">Deutsch</a>
+
         </div>
-    </footer>
 
+    </div>
+    <!-- Menu overlay -->
 </div>
+
+
+
+<script>
+    /* Open */
+    function openNav() {
+        document.getElementById("myNav").style.display = "block";
+    }
+
+    /* Close */
+    function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+    }
+</script>
+
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
