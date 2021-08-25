@@ -42,7 +42,7 @@ class SoftwareController extends Controller
     {
         $image_path = null;
         if ($request->file('image')) {
-            $image_path = $request->file('image')->store('soft');
+            $image_path = $request->file('image')->store('software');
         }
 
         $parameters = $request->all();
