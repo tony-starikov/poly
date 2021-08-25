@@ -25,6 +25,6 @@ class Page extends Model
         'social_3',
         'social_4',
         'social_5',
-        'social_6',
+//        'social_6',
     ];
 }

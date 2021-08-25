@@ -27,11 +27,11 @@ const Contact = {
 
         '<div class="row">\n' +
         '<div class="col-12">\n' +
-        '<a class="text-white" href="{{ social_1 }}"><i class="fab fa-telegram fa-4x m-1"></i></a>\n' +
-        '<a class="text-white" href="{{ social_2 }}"><i class="fab fa-artstation fa-4x m-1"></i></a>\n' +
-        '<a class="text-white" href="{{ social_3 }}"><i class="fab fa-instagram fa-4x m-1"></i></a>\n' +
-        '<a class="text-white" href="{{ social_4 }}"><i class="fab fa-linkedin fa-4x m-1"></i></a>\n' +
-        '<a class="text-white" href="{{ social_5 }}"><i class="fab fa-facebook fa-4x m-1"></i></a>\n' +
+        '<a class="text-white" target="_blank" v-bind:href="social_1"><i class="fab fa-telegram fa-4x m-1"></i></a>\n' +
+        '<a class="text-white" target="_blank" v-bind:href="social_2"><i class="fab fa-artstation fa-4x m-1"></i></a>\n' +
+        '<a class="text-white" target="_blank" v-bind:href="social_3"><i class="fab fa-instagram fa-4x m-1"></i></a>\n' +
+        '<a class="text-white" target="_blank" v-bind:href="social_4"><i class="fab fa-linkedin fa-4x m-1"></i></a>\n' +
+        '<a class="text-white" target="_blank" v-bind:href="social_5"><i class="fab fa-facebook fa-4x m-1"></i></a>\n' +
         '</div>\n' +
         '</div>' +
 
@@ -93,11 +93,11 @@ const Contact = {
 
         '<div class="row">\n' +
         '<div class="col-12">\n' +
-        '<a class="text-white" href="{{ social_1 }}"><i class="fab fa-telegram fa-4x m-1"></i></a>\n' +
-        '<a class="text-white" href="{{ social_2 }}"><i class="fab fa-artstation fa-4x m-1"></i></a>\n' +
-        '<a class="text-white" href="{{ social_3 }}"><i class="fab fa-instagram fa-4x m-1"></i></a>\n' +
-        '<a class="text-white" href="{{ social_4 }}"><i class="fab fa-linkedin fa-4x m-1"></i></a>\n' +
-        '<a class="text-white" href="{{ social_5 }}"><i class="fab fa-facebook fa-4x m-1"></i></a>\n' +
+        '<a class="text-white" v-bind:href="social_1"><i class="fab fa-telegram fa-4x m-1"></i></a>\n' +
+        '<a class="text-white" v-bind:href="social_2"><i class="fab fa-artstation fa-4x m-1"></i></a>\n' +
+        '<a class="text-white" v-bind:href="social_3"><i class="fab fa-instagram fa-4x m-1"></i></a>\n' +
+        '<a class="text-white" v-bind:href="social_4"><i class="fab fa-linkedin fa-4x m-1"></i></a>\n' +
+        '<a class="text-white" v-bind:href="social_5"><i class="fab fa-facebook fa-4x m-1"></i></a>\n' +
         '</div>\n' +
         '</div>' +
 
@@ -150,6 +150,11 @@ const Contact = {
                     this.company_name = res.data.company_name;
                     this.location_text = res.data.location_text;
                     this.email = res.data.email;
+                    this.social_1 = res.data.social_1;
+                    this.social_2 = res.data.social_2;
+                    this.social_3 = res.data.social_3;
+                    this.social_4 = res.data.social_4;
+                    this.social_5 = res.data.social_5;
                 })
         }
     }

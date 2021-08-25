@@ -6,7 +6,7 @@ const About = {
         'style="height: 75vh; background-color: rgba(255,255,255,0.07);border-radius: 25px;"' +
         '>' +
         '<div id="container"' +
-        'class="row p-0 text-center d-flex justify-content-center overflow-auto" ' +
+        'class="row p-0 text-center d-flex justify-content-center overflow-hidden" ' +
         'style="scrollbar-width: none; ' +
         'height: 60vh; ' +
         'color: rgb(255,255,255); ' +
@@ -175,54 +175,54 @@ const About = {
 
                 // Company name
 
-                '<div class="row w-100 mx-auto justify-content-evenly d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 text-start"><h5 class="fw-bolder">Company name: </h5></div>\n' +
-                    '<div class="col-6 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ company_name }}</p></div>\n' +
+                '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
+                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">Company name: </h5></div>\n' +
+                    '<div class="col-7 ms-1 p-0 ps-4 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ company_name }}</p></div>\n' +
                 '</div>' +
 
                 // Company name
 
                 // Location
 
-                '<div class="row w-100 mx-auto justify-content-evenly d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 text-start"><h5 class="fw-bolder">Location: </h5></div>\n' +
-                    '<div class="col-6 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ location_text }}</p></div>\n' +
+                '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
+                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">Location: </h5></div>\n' +
+                    '<div class="col-7 ms-1 p-0 ps-4 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ location_text }}</p></div>\n' +
                 '</div>' +
 
                 // Location
 
                 // Establishment
 
-                '<div class="row w-100 mx-auto justify-content-evenly d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 text-start"><h5 class="fw-bolder">Establishment: </h5></div>\n' +
-                    '<div class="col-6 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ establishment }}</p></div>\n' +
+                '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
+                    '<div class="col-4 p-0 m-0 text-start"><h5 class="fw-bolder">Establishment: </h5></div>\n' +
+                    '<div class="col-7 ms-1 p-0 ps-4 m-0 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ establishment }}</p></div>\n' +
                 '</div>' +
 
                 // Establishment
 
                 // Employee
 
-                '<div class="row w-100 mx-auto justify-content-evenly d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 text-start"><h5 class="fw-bolder">Employee: </h5></div>\n' +
-                    '<div class="col-6 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ employee }}</p></div>\n' +
+                '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
+                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">Employee: </h5></div>\n' +
+                    '<div class="col-7 ms-1 p-0 ps-4 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ employee }}</p></div>\n' +
                 '</div>' +
 
                 // Employee
 
                 // CEO
 
-                '<div class="row w-100 mx-auto justify-content-evenly d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 text-start"><h5 class="fw-bolder">CEO: </h5></div>\n' +
-                    '<div class="col-6 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ ceo }}</p></div>\n' +
+                '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
+                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">CEO: </h5></div>\n' +
+                    '<div class="col-7 ms-1 p-0 ps-4 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ ceo }}</p></div>\n' +
                 '</div>' +
 
                 // CEO
 
                 // Director
 
-                '<div class="row w-100 mx-auto justify-content-evenly d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 text-start"><h5 class="fw-bolder">Director: </h5></div>\n' +
-                    '<div class="col-6 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ director }}</p></div>\n' +
+                '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
+                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">Director: </h5></div>\n' +
+                    '<div class="col-7 ms-1 p-0 ps-4 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ director }}</p></div>\n' +
                 '</div>' +
 
                 // Director

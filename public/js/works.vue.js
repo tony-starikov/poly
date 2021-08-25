@@ -52,9 +52,9 @@ const Works = {
 
                     '<div v-for="work in works" v-bind:key="work.id" class="col-12 col-md-6 col-xl-4 p-0 bg-dark" style="border-radius: 25px; height: max-content;">' +
                         '<router-link :to="/work/ + work.code">' +
-                            '<div class="card my-card" style="border: none;">' +
-                                '<img v-bind:src="/images/ + work.cover" class="w-100" style="border: none;"/>' +
-                                '<div class="my-overlay">' +
+                            '<div class="card my-card border-0"">' +
+                                '<img v-bind:src="/images/ + work.cover" class="w-100 border-0"/>' +
+                                '<div class="my-overlay-mobile">' +
                                     '<h4 class="m-0 mx-1" style="color: rgba(255,255,255,0.8);">{{ work.name }}</h4>' +
                                     '<h6 class="p-0 mx-1" style="color: rgba(255,255,255,0.4);">{{ work.small_description }}</h6>' +
                                 '</div>' +

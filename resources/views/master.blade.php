@@ -42,11 +42,10 @@
         html, body {
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
-            color: rgb(255,255,255);
             margin: 0;
             padding: 0;
             width: 100%;
-            color:white;
+            color: white;
         }
 
         .my-overlay {
@@ -54,10 +53,24 @@
             bottom: 0;
             background: rgb(0, 0, 0);
             background: rgba(0, 0, 0, 0.5); /* Black see-through */
-            color: #f1f1f1;
             width: 100%;
             transition: .5s ease;
             opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+            text-align: left;
+            /*border-radius: 0 0 10px 10px;*/
+        }
+
+        .my-overlay-mobile {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5); /* Black see-through */
+            width: 100%;
+            transition: .5s ease;
+            opacity:1;
             color: white;
             font-size: 20px;
             padding: 5px;

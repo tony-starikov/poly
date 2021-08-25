@@ -85,14 +85,14 @@ const Artists = {
 
                 '<div v-for="artist in artists" v-bind:key="artist.id" class="d-block d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none col-12 p-1 px-0">' +
                     '<router-link :to="/artist/ + artist.code">' +
-                        '<div class="card my-card border-0" v-bind:style="{ borderTopLeftRadius: artist.top_left_corner + \'px\', borderTopRightRadius: artist.top_right_corner + \'px\', borderBottomRightRadius: artist.bottom_right_corner + \'px\', borderBottomLeftRadius: artist.bottom_left_corner + \'px\' }">' +
+                        '<div class="card my-card bg-transparent border-0" v-bind:style="{ borderTopLeftRadius: artist.top_left_corner + \'px\', borderTopRightRadius: artist.top_right_corner + \'px\', borderBottomRightRadius: artist.bottom_right_corner + \'px\', borderBottomLeftRadius: artist.bottom_left_corner + \'px\' }">' +
                             '<img ' +
                             'v-bind:src="/images/ + artist.image" class="img-fluid border-0" ' +
                             // 'style="border: none; border-radius: artist.top_left_corner artist.top_right_corner artist.bottom_right_corner artist.bottom_left_corner;"' +
                             'v-bind:style="{ borderTopLeftRadius: artist.small_top_left_corner + \'px\', borderTopRightRadius: artist.small_top_right_corner + \'px\', borderBottomRightRadius: artist.small_bottom_right_corner + \'px\', borderBottomLeftRadius: artist.small_bottom_left_corner + \'px\' }"' +
                             '/>' +
 
-                            '<div class="my-overlay" v-bind:style="{ borderBottomRightRadius: artist.small_bottom_right_corner + \'px\', borderBottomLeftRadius: artist.small_bottom_left_corner + \'px\' }">' +
+                            '<div class="my-overlay-mobile" v-bind:style="{ borderBottomRightRadius: artist.small_bottom_right_corner + \'px\', borderBottomLeftRadius: artist.small_bottom_left_corner + \'px\' }">' +
                                 '<h4 class="m-0">{{ artist.name }}</h4>' +
                                 '<h6 class="p-0">{{ artist.position }}</h6>' +
                             '</div>' +

@@ -58,36 +58,36 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="addon-wrapping">ARTSTATION</span>
                     </div>
-                    <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_2 }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="social_2" id="social_2" value="{{ $page_info->social_2 }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="addon-wrapping">INSTAGRAM</span>
                     </div>
-                    <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_3 }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="social_3" id="social_3" value="{{ $page_info->social_3 }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="addon-wrapping">LINKEDIN</span>
                     </div>
-                    <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_4 }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="social_4" id="social_4" value="{{ $page_info->social_4 }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="addon-wrapping">FACEBOOK</span>
                     </div>
-                    <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_5 }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="social_5" id="social_5" value="{{ $page_info->social_5 }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
-                <div class="input-group flex-nowrap mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">SOCIAL LINK 6</span>
-                    </div>
-                    <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_6 }}" class="form-control" aria-describedby="addon-wrapping">
-                </div>
+{{--                <div class="input-group flex-nowrap mb-3">--}}
+{{--                    <div class="input-group-prepend">--}}
+{{--                        <span class="input-group-text" id="addon-wrapping">SOCIAL LINK 6</span>--}}
+{{--                    </div>--}}
+{{--                    <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_6 }}" class="form-control" aria-describedby="addon-wrapping">--}}
+{{--                </div>--}}
 
                 <button class="btn btn-success my-3">EDIT</button>
             </div>
