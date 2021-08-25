@@ -243,7 +243,7 @@ const Work = {
 
         '<h4 class="fw-bolder">Software Used</h4>' +
 
-        '<div class="row">' +
+        '<div class="row p-2">' +
             '<div v-for="soft in software" v-bind:key="soft.id" class="col-3 col-sm-3 p-0 m-0">' +
                 '<figure class="figure m-0">\n' +
                 '<img\n' +
