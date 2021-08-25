@@ -132,4 +132,42 @@ class PageController extends Controller
 
         return redirect()->route('admin.contact.page');
     }
+
+    public function bgVideo()
+    {
+        $page_info = Page::where('name', 'video')->first();
+        return view('admin.video', compact('page_info'));
+    }
+
+    public function bgVideoEdit(Request $request)
+    {
+        $page = Page::where('name', 'video')->first();
+
+        $video_path_mp4 = $page->video_mp4;
+        $video_path_webm = $page->video_webm;
+        $bg_image_path_jpg = $page->bg_image_jpg;
+
+        if ($request->file('video_mp4')){
+            Storage::disk('public')->delete($page->video_mp4);
+            $video_path_mp4 = $request->file('video_mp4')->store('video');
+        }
+
+        if ($request->file('video_webm')){
+            Storage::disk('public')->delete($page->video_webm);
+            $video_path_webm = $request->file('video_webm')->store('video');
+        }
+
+        if ($request->file('bg_image_jpg')){
+            Storage::disk('public')->delete($page->bg_image_jpg);
+            $bg_image_path_jpg = $request->file('bg_image_jpg')->store('video');
+        }
+
+        $parameters = $request->all();
+        $parameters['bg_image_jpg'] = $bg_image_path_jpg;
+        $parameters['video_mp4'] = $video_path_mp4;
+        $parameters['video_webm'] = $video_path_webm;
+
+        $page->update($parameters);
+        return redirect()->route('admin.video.page');
+    }
 }

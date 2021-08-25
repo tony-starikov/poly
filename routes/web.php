@@ -64,6 +64,9 @@ Route::group([
 
             Route::get('contact', 'PageController@contact')->name('admin.contact.page');
             Route::post('contact/edit', 'PageController@contactEdit')->name('admin.contact.page.edit');
+
+            Route::get('video', 'PageController@bgVideo')->name('admin.video.page');
+            Route::post('video/edit', 'PageController@bgVideoEdit')->name('admin.video.page.edit');
         });
 
         Route::resource('software', 'SoftwareController');

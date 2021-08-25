@@ -238,9 +238,9 @@
 </head>
 <body class="bg-dark">
 
-<video class="video" poster="/images/poly.jpg" autoplay playsinline muted loop>
-    <source src="/images/poly.webm" type="video/webm">
-    <source src="/images/poly.mp4" type="video/mp4">
+<video class="video" poster="/images/{{ \App\Page::where('name', 'video')->first()->bg_image_jpg }}" autoplay playsinline muted loop>
+    <source src="/images/{{ \App\Page::where('name', 'video')->first()->video_webm }}" type="video/webm">
+    <source src="/images/{{ \App\Page::where('name', 'video')->first()->video_mp4 }}" type="video/mp4">
 </video>
 
 <div id="app" style="min-width: 300px">
