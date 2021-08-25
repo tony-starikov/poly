@@ -46,6 +46,9 @@ Route::group([
     Route::group(['middleware' => 'is_admin'], function () {
         Route::get('', 'AdminController@index')->name('admin');
 
+        Route::post('/change_password','AdminController@changePassword')->name('admin.change.password');
+        Route::post('/change_email','AdminController@changeEmail')->name('admin.change.email');
+
         Route::group(['prefix' => 'page'], function () {
             Route::get('main', 'PageController@main')->name('admin.main.page');
             Route::post('main/edit', 'PageController@mainEdit')->name('admin.main.page.edit');
