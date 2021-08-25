@@ -82,6 +82,13 @@
                     <input type="text" name="social_5" id="social_5" value="{{ $page_info->social_5 }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">MAP LINK</span>
+                    </div>
+                    <input type="text" name="map_src" id="map_src" value="{{ $page_info->map_src }}" class="form-control" aria-describedby="addon-wrapping">
+                </div>
+
 {{--                <div class="input-group flex-nowrap mb-3">--}}
 {{--                    <div class="input-group-prepend">--}}
 {{--                        <span class="input-group-text" id="addon-wrapping">SOCIAL LINK 6</span>--}}

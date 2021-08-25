@@ -28,5 +28,6 @@ class Page extends Model
         'video_mp4',
         'video_webm',
         'bg_image_jpg',
+        'map_src',
     ];
 }
