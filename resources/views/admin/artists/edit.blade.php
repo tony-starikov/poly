@@ -83,14 +83,14 @@
                 <div class="form-row">
                     <div class="input-group flex-nowrap mb-3 col-md-6">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="addon-wrapping">top_left_corner</span>
+                            <span class="input-group-text" id="addon-wrapping">large_top_left_corner</span>
                         </div>
                         <input type="text" name="top_left_corner" id="top_left_corner" value="{{ $artist->top_left_corner }}" class="form-control" aria-describedby="addon-wrapping">
                     </div>
 
                     <div class="input-group flex-nowrap mb-3 col-md-6">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="addon-wrapping">top_right_corner</span>
+                            <span class="input-group-text" id="addon-wrapping">large_top_right_corner</span>
                         </div>
                         <input type="text" name="top_right_corner" id="top_right_corner" value="{{ $artist->top_right_corner }}" class="form-control" aria-describedby="addon-wrapping">
                     </div>
@@ -99,14 +99,14 @@
                 <div class="form-row">
                     <div class="input-group flex-nowrap mb-3 col-md-6">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="addon-wrapping">bottom_left_corner</span>
+                            <span class="input-group-text" id="addon-wrapping">large_bottom_left_corner</span>
                         </div>
                         <input type="text" name="bottom_left_corner" id="bottom_left_corner" value="{{ $artist->bottom_left_corner }}" class="form-control" aria-describedby="addon-wrapping">
                     </div>
 
                     <div class="input-group flex-nowrap mb-3 col-md-6">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="addon-wrapping">bottom_right_corner</span>
+                            <span class="input-group-text" id="addon-wrapping">large_bottom_right_corner</span>
                         </div>
                         <input type="text" name="bottom_right_corner" id="bottom_right_corner" value="{{ $artist->bottom_right_corner }}" class="form-control" aria-describedby="addon-wrapping">
                     </div>
