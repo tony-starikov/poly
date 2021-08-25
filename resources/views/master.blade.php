@@ -31,17 +31,9 @@
     <!-- vuebar -->
     <script src="https://unpkg.com/vuebar"></script>
 
-    <!-- vidage -->
-    <script src="https://cdn.jsdelivr.net/npm/vidage@1.0.0/dist/vidage.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vidage@1.0.0/dist/vidage.min.css">
-
     <title>PolygoNerds</title>
 
     <style>
-        .vidage::before {
-            background-image: url('/images/poly.jpg');
-        }
-
         html { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
 
         html { min-height: 100%; }
@@ -176,7 +168,7 @@
         /* Position the content inside the overlay */
         .overlay-content {
             position: relative;
-            top: 20%; /* 25% from the top */
+            top: 10%; /* 25% from the top */
             width: 100%; /* 100% width */
             text-align: center; /* Centered text/links */
             margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
@@ -219,18 +211,26 @@
             display: flex;
             flex-flow: row wrap;
         }
+
+        .video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
     </style>
 </head>
 <body class="bg-dark">
 
-<div class="vidage">
-    <video id="vidage" class="vidage-video" preload="metadata" loop autoplay muted>
-        <source src="/images/poly.webm" type="video/webm">
-        <source src="/images/poly.mp4" type="video/mp4">
-    </video>
-</div>
+<video class="video" poster="/images/poly.jpg" autoplay playsinline muted loop>
+    <source src="/images/poly.webm" type="video/webm">
+    <source src="/images/poly.mp4" type="video/mp4">
+</video>
 
-<div id="app">
+<div id="app" style="min-width: 300px">
     <div  class="container-fluid text-center d-none d-xl-block d-xxl-block" style="height: 98vh; width: 83%;">
 
         <header class="p-2" style="width: 100%; height: 18vh;">
@@ -375,7 +375,7 @@
 
     <div  class="container-fluid text-center d-block d-sm-block d-md-block d-lg-block d-xl-none d-xxl-none" style="height: 98vh; width: 100%;">
 
-        <header class="p-2" style="width: 100%; height: 14vh;">
+        <header class="p-1 p-sm-1 p-md-1 p-lg-1" style="width: 100%; height: max-content;">
 
             <nav class="navbar navbar-expand-xl p-0 m-0" style="height: 100%; width: 100%; background-color: rgba(255,255,255,0.07); border-radius: 25px;">
                 <div class="container-fluid mx-4" style="height: 100%;">
@@ -447,13 +447,13 @@
 
         <!-- route outlet -->
         <!-- component matched by the route will render here -->
-        <main class="p-2">
+        <main class="p-1 p-sm-1 p-md-1 p-lg-1 p-xl-2 p-xxl-2">
             <router-view>
 
             </router-view>
         </main>
 
-        <footer style="width: 100%; color: rgba(255,255,255,0.7); font-family: Roboto, sans-serif;">
+        <footer class="mt-auto" style="width: 100%; color: rgba(255,255,255,0.7); font-family: Roboto, sans-serif;">
             <div>
                 <p>PolygoNerds &copy; 2021 Ukraine</p>
             </div>
