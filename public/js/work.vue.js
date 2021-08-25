@@ -17,7 +17,7 @@ const Work = {
         'border-radius: 25px;"' +
         '>' +
 
-        '<div class="col-md-9 m-0 p-0" style="background-color: rgba(0,0,0,0);">' +
+        '<div class="col-md-9 m-0 p-0" style="background-color: black;">' +
 
         '<img\n' +
         'v-bind:src="/images/ + image_1"\n' +
