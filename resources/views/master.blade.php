@@ -531,7 +531,7 @@
     new Vidage('#vidage');
 </script>
 
-<script src="/js/main.vue.js"></script>
+<script src="/js/main_{{ App::getLocale() }}.vue.js"></script>
 <script src="/js/works.vue.js"></script>
 <script src="/js/about_{{ App::getLocale() }}.vue.js"></script>
 <script src="/js/contact_{{ App::getLocale() }}.vue.js"></script>

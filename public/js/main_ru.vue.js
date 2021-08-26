@@ -10,17 +10,6 @@ const Main = {
             '</div>' +
         '</div>',
 
-        // ' <div data-simplebar data-simplebar-auto-hide="true" style="max-height: 100px;">\n' +
-        // '    <div v-for="n in 100" :key="n">Example content</div>\n' +
-        // '  </div>',
-
-    // default: {
-    //     components: {
-    //         simplebar: () => import('child-with-velocity.vue')
-    //     }
-    // },
-    //
-
     data() {
         return {
             slogan: '',
@@ -36,8 +25,7 @@ const Main = {
             fetch('api/main')
                 .then(res => res.json())
                 .then(res => {
-                    console.log(res.data.slogan);
-                    this.slogan = res.data.slogan;
+                    this.slogan = res.data.field_slogan_ru;
                 })
         }
     }

@@ -184,5 +184,12 @@ class Page extends Model
         'workdays_ru',
         'workdays_de',
 
+        // MAIN
+
+        'field_slogan_en',
+        'field_slogan_ua',
+        'field_slogan_ru',
+        'field_slogan_de',
+
     ];
 }
