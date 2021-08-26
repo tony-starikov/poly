@@ -104,15 +104,15 @@ class PageController extends Controller
     {
         $page_info = Page::where('name', 'recruit')->first();
 
-        $image_path = $page_info->image;
+//        $image_path = $page_info->image;
 
-        if (!is_null($request->file('image'))) {
-            Storage::delete($page_info->image);
-            $image_path = $request->file('image')->store('pages/recruit');
-        }
+//        if (!is_null($request->file('image'))) {
+//            Storage::delete($page_info->image);
+//            $image_path = $request->file('image')->store('pages/recruit');
+//        }
 
         $parameters = $request->all();
-        $parameters['image'] = $image_path;
+//        $parameters['image'] = $image_path;
         $page_info->update($parameters);
 
         return redirect()->route('admin.recruit.page');
