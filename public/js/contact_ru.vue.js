@@ -12,7 +12,7 @@ const Contact = {
         '<div class="row my-2">\n' +
         '<div class="col-12">\n' +
 
-        '<h1 class="mb-2 fw-bolder">Contact Us</h1>\n' +
+        '<h1 class="mb-2 fw-bolder">{{ field_contact_us }}</h1>\n' +
 
         '<hr size="5" class="w-25 my-1 mb-4 rounded-pill" style="opacity: 1;">\n' +
 
@@ -78,7 +78,7 @@ const Contact = {
         '<div class="row my-2">\n' +
         '<div class="col-12">\n' +
 
-        '<h1 class="mb-2 fw-bolder">Contact Us</h1>\n' +
+        '<h1 class="mb-2 fw-bolder">{{ field_contact_us }}</h1>\n' +
 
         '<hr size="5" class="w-25 my-1 mb-4 rounded-pill" style="opacity: 1;">\n' +
 
@@ -128,6 +128,7 @@ const Contact = {
             social_4: '',
             social_5: '',
             map_src: '',
+            field_contact_us: '',
         }
     },
 
@@ -148,8 +149,8 @@ const Contact = {
                 .then(res => res.json())
                 .then(res => {
                     console.log(res.data);
-                    this.company_name = res.data.company_name;
-                    this.location_text = res.data.location_text;
+                    this.company_name = res.data.company_name_ru;
+                    this.location_text = res.data.location_text_ru;
                     this.email = res.data.email;
                     this.social_1 = res.data.social_1;
                     this.social_2 = res.data.social_2;
@@ -157,6 +158,7 @@ const Contact = {
                     this.social_4 = res.data.social_4;
                     this.social_5 = res.data.social_5;
                     this.map_src = res.data.map_src;
+                    this.field_contact_us = res.data.field_contact_us_ru;
                 })
         }
     }

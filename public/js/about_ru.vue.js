@@ -33,17 +33,17 @@ const About = {
         '<hr size="4" class="mx-auto my-2 rounded-pill" style="width: 40%; opacity: 1;">' +
 
 
-        '<h2 class="fw-bolder">Company Profile</h2>' +
+        '<h2 class="fw-bolder">{{ field_company_profile }}</h2>' +
 
         // Company name
 
         '<div class="row w-75 mx-auto justify-content-around d-none d-sm-none d-md-flex d-lg-flex d-xl-none d-xxl-none">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">Company name: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_company_name }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ company_name }}</p></div>\n' +
         '</div>' +
 
         '<div class="row w-75 mx-auto justify-content-center d-none d-sm-none d-md-none d-lg-none d-xl-flex d-xxl-flex">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">Company name: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_company_name }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ company_name }}</p></div>\n' +
         '</div>' +
 
@@ -52,12 +52,12 @@ const About = {
         // Location
 
         '<div class="row w-75 mx-auto justify-content-around d-none d-sm-none d-md-flex d-lg-flex d-xl-none d-xxl-none">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">Location: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_location }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ location_text }}</p></div>\n' +
         '</div>' +
 
         '<div class="row w-75 mx-auto justify-content-center d-none d-sm-none d-md-none d-lg-none d-xl-flex d-xxl-flex">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">Location: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_location }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ location_text }}</p></div>\n' +
         '</div>' +
 
@@ -66,12 +66,12 @@ const About = {
         // Establishment
 
         '<div class="row w-75 mx-auto justify-content-around d-none d-sm-none d-md-flex d-lg-flex d-xl-none d-xxl-none">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">Establishment: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_establishment }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ establishment }}</p></div>\n' +
         '</div>' +
 
         '<div class="row w-75 mx-auto justify-content-center d-none d-sm-none d-md-none d-lg-none d-xl-flex d-xxl-flex">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">Establishment: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_establishment }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ establishment }}</p></div>\n' +
         '</div>' +
 
@@ -80,12 +80,12 @@ const About = {
         // Employee
 
         '<div class="row w-75 mx-auto justify-content-around d-none d-sm-none d-md-flex d-lg-flex d-xl-none d-xxl-none">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">Employee: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_employee }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ employee }}</p></div>\n' +
         '</div>' +
 
         '<div class="row w-75 mx-auto justify-content-center d-none d-sm-none d-md-none d-lg-none d-xl-flex d-xxl-flex">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">Employee: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_employee }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ employee }}</p></div>\n' +
         '</div>' +
 
@@ -94,12 +94,12 @@ const About = {
         // CEO
 
         '<div class="row w-75 mx-auto justify-content-around d-none d-sm-none d-md-flex d-lg-flex d-xl-none d-xxl-none">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">CEO: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_ceo }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ ceo }}</p></div>\n' +
         '</div>' +
 
         '<div class="row w-75 mx-auto justify-content-center d-none d-sm-none d-md-none d-lg-none d-xl-flex d-xxl-flex">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">CEO: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_ceo }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ ceo }}</p></div>\n' +
         '</div>' +
 
@@ -108,12 +108,12 @@ const About = {
         // Director
 
         '<div class="row w-75 mx-auto justify-content-around d-none d-sm-none d-md-flex d-lg-flex d-xl-none d-xxl-none">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">Director: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_director }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ director }}</p></div>\n' +
         '</div>' +
 
         '<div class="row w-75 mx-auto justify-content-center d-none d-sm-none d-md-none d-lg-none d-xl-flex d-xxl-flex">\n' +
-        '<div class="col-3 text-start"><h5 class="fw-bolder">Director: </h5></div>\n' +
+        '<div class="col-3 text-start"><h5 class="fw-bolder">{{ field_director }}: </h5></div>\n' +
         '<div class="col-7 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ director }}</p></div>\n' +
         '</div>' +
 
@@ -171,12 +171,12 @@ const About = {
                 '<hr size="4" class="mx-auto my-2 rounded-pill" style="width: 40%; opacity: 1;">' +
 
 
-                '<h2 class="fw-bolder">Company Profile</h2>' +
+                '<h2 class="fw-bolder">{{ field_company_profile }}</h2>' +
 
                 // Company name
 
                 '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">Company name: </h5></div>\n' +
+                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">{{ field_company_name }}: </h5></div>\n' +
                     '<div class="col-7 ms-1 p-0 ps-4 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ company_name }}</p></div>\n' +
                 '</div>' +
 
@@ -185,7 +185,7 @@ const About = {
                 // Location
 
                 '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">Location: </h5></div>\n' +
+                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">{{ field_location }}: </h5></div>\n' +
                     '<div class="col-7 ms-1 p-0 ps-4 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ location_text }}</p></div>\n' +
                 '</div>' +
 
@@ -194,7 +194,7 @@ const About = {
                 // Establishment
 
                 '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 p-0 m-0 text-start"><h5 class="fw-bolder">Establishment: </h5></div>\n' +
+                    '<div class="col-4 p-0 m-0 text-start"><h5 class="fw-bolder">{{ field_establishment }}: </h5></div>\n' +
                     '<div class="col-7 ms-1 p-0 ps-4 m-0 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ establishment }}</p></div>\n' +
                 '</div>' +
 
@@ -203,7 +203,7 @@ const About = {
                 // Employee
 
                 '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">Employee: </h5></div>\n' +
+                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">{{ field_employee }}: </h5></div>\n' +
                     '<div class="col-7 ms-1 p-0 ps-4 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ employee }}</p></div>\n' +
                 '</div>' +
 
@@ -212,7 +212,7 @@ const About = {
                 // CEO
 
                 '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">CEO: </h5></div>\n' +
+                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">{{ field_ceo }}: </h5></div>\n' +
                     '<div class="col-7 ms-1 p-0 ps-4 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ ceo }}</p></div>\n' +
                 '</div>' +
 
@@ -221,7 +221,7 @@ const About = {
                 // Director
 
                 '<div class="row w-100 p-0 ps-1 mx-0 justify-content-around d-flex d-sm-flex d-md-none d-lg-none d-xl-none d-xxl-none">\n' +
-                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">Director: </h5></div>\n' +
+                    '<div class="col-4 p-0 text-start"><h5 class="fw-bolder">{{ field_director }}: </h5></div>\n' +
                     '<div class="col-7 ms-1 p-0 ps-4 text-start"><p class="m-0" style="font-weight: 400; font-size: larger;">{{ director }}</p></div>\n' +
                 '</div>' +
 
@@ -243,6 +243,13 @@ const About = {
             employee: '',
             ceo: '',
             director: '',
+            field_company_profile: '',
+            field_company_name: '',
+            field_location: '',
+            field_establishment: '',
+            field_employee: '',
+            field_ceo: '',
+            field_director: '',
         }
     },
 
@@ -267,13 +274,20 @@ const About = {
                 .then(res => res.json())
                 .then(res => {
                     console.log(res.data);
-                    this.description = res.data.description;
-                    this.company_name = res.data.company_name;
-                    this.location_text = res.data.location_text;
-                    this.establishment = res.data.establishment;
-                    this.employee = res.data.employee;
-                    this.ceo = res.data.ceo;
-                    this.director = res.data.director;
+                    this.description = res.data.description_ru;
+                    this.company_name = res.data.company_name_ru;
+                    this.location_text = res.data.location_text_ru;
+                    this.establishment = res.data.establishment_ru;
+                    this.employee = res.data.employee_ru;
+                    this.ceo = res.data.ceo_ru;
+                    this.director = res.data.director_ru;
+                    this.field_company_profile = res.data.field_company_profile_ru;
+                    this.field_company_name = res.data.field_company_name_ru;
+                    this.field_location = res.data.field_location_ru;
+                    this.field_establishment = res.data.field_establishment_ru;
+                    this.field_employee = res.data.field_employee_ru;
+                    this.field_ceo = res.data.field_ceo_ru;
+                    this.field_director = res.data.field_director_ru;
                 })
         }
     }

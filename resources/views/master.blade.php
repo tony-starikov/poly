@@ -533,8 +533,8 @@
 
 <script src="/js/main.vue.js"></script>
 <script src="/js/works.vue.js"></script>
-<script src="/js/about.vue.js"></script>
-<script src="/js/contact.vue.js"></script>
+<script src="/js/about_{{ App::getLocale() }}.vue.js"></script>
+<script src="/js/contact_{{ App::getLocale() }}.vue.js"></script>
 <script src="/js/artists.vue.js"></script>
 <script src="/js/recruit.vue.js"></script>
 <script src="/js/work.vue.js"></script>
