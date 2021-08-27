@@ -26,8 +26,8 @@ const Artists = {
                                 'v-bind:style="{ borderTopLeftRadius: artist.top_left_corner + \'px\', borderTopRightRadius: artist.top_right_corner + \'px\', borderBottomRightRadius: artist.bottom_right_corner + \'px\', borderBottomLeftRadius: artist.bottom_left_corner + \'px\' }"' +
                                 '/>' +
                                 '<div class="my-overlay" v-bind:style="{ borderBottomRightRadius: artist.bottom_right_corner + \'px\', borderBottomLeftRadius: artist.bottom_left_corner + \'px\' }">' +
-                                    '<h4 class="m-0">{{ artist.name }}</h4>' +
-                                    '<h6 class="p-0">{{ artist.position }}</h6>' +
+                                    '<h4 class="m-0">{{ artist.name_en }}</h4>' +
+                                    '<h6 class="p-0">{{ artist.position_en }}</h6>' +
                                 '</div>' +
                             '</div>' +
                         '</router-link>' +
@@ -42,8 +42,8 @@ const Artists = {
                                 'v-bind:style="{ borderTopLeftRadius: artist.top_left_corner + \'px\', borderTopRightRadius: artist.top_right_corner + \'px\', borderBottomRightRadius: artist.bottom_right_corner + \'px\', borderBottomLeftRadius: artist.bottom_left_corner + \'px\' }"' +
                                 '/>' +
                                 '<div class="my-overlay" v-bind:style="{ borderBottomRightRadius: artist.bottom_right_corner + \'px\', borderBottomLeftRadius: artist.bottom_left_corner + \'px\' }">' +
-                                    '<h4 class="m-0">{{ artist.name }}</h4>' +
-                                    '<h6 class="p-0">{{ artist.position }}</h6>' +
+                                    '<h4 class="m-0">{{ artist.name_en }}</h4>' +
+                                    '<h6 class="p-0">{{ artist.position_en }}</h6>' +
                                 '</div>' +
                             '</div>' +
                         '</router-link>' +
@@ -93,8 +93,8 @@ const Artists = {
                             '/>' +
 
                             '<div class="my-overlay-mobile" v-bind:style="{ borderBottomRightRadius: artist.small_bottom_right_corner + \'px\', borderBottomLeftRadius: artist.small_bottom_left_corner + \'px\' }">' +
-                                '<h4 class="m-0">{{ artist.name }}</h4>' +
-                                '<h6 class="p-0">{{ artist.position }}</h6>' +
+                                '<h4 class="m-0">{{ artist.name_en }}</h4>' +
+                                '<h6 class="p-0">{{ artist.position_en }}</h6>' +
                             '</div>' +
                         '</div>' +
                     '</router-link>' +
@@ -110,8 +110,8 @@ const Artists = {
             artists: [],
             artist: {
                 id: '',
-                name: '',
-                position: '',
+                name_en: '',
+                position_en: '',
                 code: '',
                 image: '',
                 top_left_corner: '',

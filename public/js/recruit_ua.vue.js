@@ -39,9 +39,9 @@ const Recruit = {
         '<div v-for="position in positions" v-bind:key="position.id" class="col-lg-4 col-md-12 mb-4 text-dark text-start">\n' +
         '<div class="card" style="border-radius: 10px;">\n' +
         '<div class="card-body">\n' +
-        '<h5 class="card-title">{{ position.name }}</h5>\n' +
-        '<p class="card-text">{{ position.description }}</p>\n' +
-        '<p class="card-text">{{ position.software }}</p>\n' +
+        '<h5 class="card-title">{{ position.name_ua }}</h5>\n' +
+        '<p class="card-text">{{ position.description_ua }}</p>\n' +
+        '<p class="card-text">{{ position.software_ua }}</p>\n' +
         '</div>\n' +
         '</div>\n' +
         '</div>\n' +
@@ -205,9 +205,9 @@ const Recruit = {
             '<div v-for="position in positions" v-bind:key="position.id" class="col-lg-4 col-md-12 mb-4 text-dark text-start">\n' +
                 '<div class="card" style="border-radius: 10px;">\n' +
                     '<div class="card-body">\n' +
-                        '<h5 class="card-title">{{ position.name }}</h5>\n' +
-                        '<p class="card-text">{{ position.description }}</p>\n' +
-                        '<p class="card-text">{{ position.software }}</p>\n' +
+                        '<h5 class="card-title">{{ position.name_ua }}</h5>\n' +
+                        '<p class="card-text">{{ position.description_ua }}</p>\n' +
+                        '<p class="card-text">{{ position.software_ua }}</p>\n' +
                     '</div>\n' +
                 '</div>\n' +
             '</div>\n' +
@@ -275,9 +275,9 @@ const Recruit = {
         return {
             positions: [],
             position: {
-                name: '',
-                description: '',
-                software: '',
+                name_ua: '',
+                description_ua: '',
+                software_ua: '',
             },
             position_id: '',
             description: '',

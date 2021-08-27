@@ -37,9 +37,11 @@ class PositionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PositionRequest $request)
+    public function store(Request $request)
     {
-        Position::create($request->all());
+        $parameters = $request->all();
+        $parameters['name'] = 'name';
+        Position::create($parameters);
         return redirect()->route('positions.index');
     }
 
@@ -74,9 +76,9 @@ class PositionController extends Controller
      */
     public function update(Request $request, Position $position)
     {
-        $request->validate([
-            'name' => 'required'
-        ]);
+//        $request->validate([
+//            'name' => 'required'
+//        ]);
         $position->update($request->all());
         return redirect()->route('positions.index');
     }

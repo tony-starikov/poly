@@ -38,7 +38,7 @@ class ArtistController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ArtistRequest $request)
+    public function store(Request $request)
     {
         $image_path = null;
         $image_sqr = null;
@@ -53,6 +53,7 @@ class ArtistController extends Controller
 
         $parameters = $request->all();
         $parameters['image'] = $image_path;
+        $parameters['name'] = 'name';
         $parameters['image_sqr'] = $image_sqr;
         Artist::create($parameters);
         return redirect()->route('artists.index');
@@ -89,10 +90,10 @@ class ArtistController extends Controller
      */
     public function update(Request $request, Artist $artist)
     {
-        $request->validate([
-            'name' => 'required',
-            'code' => 'required'
-        ]);
+//        $request->validate([
+//            'name' => 'required',
+//            'code' => 'required'
+//        ]);
 
         $image_path = $artist->image;
         $image_sqr = $artist->image_sqr;

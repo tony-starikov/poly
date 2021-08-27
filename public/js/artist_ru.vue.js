@@ -149,10 +149,10 @@ const Artist = {
                 .then(res => {
                     console.log(res.artist);
                     console.log(this.$route.params);
-                    this.name = res.artist.name;
-                    this.position = res.artist.position;
+                    this.name = res.artist.name_ru;
+                    this.position = res.artist.position_ru;
                     this.social = res.artist.social;
-                    this.description = res.artist.description;
+                    this.description = res.artist.description_ru;
                     this.image = res.artist.image;
                 })
         }
