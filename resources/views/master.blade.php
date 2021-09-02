@@ -533,8 +533,8 @@
 <script src="/js/recruit_{{ App::getLocale() }}.vue.js"></script>
 <script src="/js/artist_{{ App::getLocale() }}.vue.js"></script>
 <script src="/js/artists_{{ App::getLocale() }}.vue.js"></script>
-<script src="/js/work.vue.js"></script>
-<script src="/js/works.vue.js"></script>
+<script src="/js/work_{{ App::getLocale() }}.vue.js"></script>
+<script src="/js/works_{{ App::getLocale() }}.vue.js"></script>
 
 
 <script>

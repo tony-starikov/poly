@@ -42,7 +42,7 @@ class WorkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(WorkRequest $request)
+    public function store(Request $request)
     {
         $cover = null;
 
@@ -51,7 +51,10 @@ class WorkController extends Controller
         }
 
         $parameters = $request->all();
+
+        $parameters['name'] = 'name';
         $parameters['cover'] = $cover;
+
         $work = Work::create($parameters);
 
         if (isset($request->soft)) {
@@ -105,7 +108,6 @@ class WorkController extends Controller
     public function update(Request $request, Work $work)
     {
         $request->validate([
-            'name' => 'required',
             'code' => 'required'
         ]);
         foreach ($work->software as $soft) {
@@ -135,7 +137,10 @@ class WorkController extends Controller
         }
 
         $parameters = $request->all();
+
+        $parameters['name'] = 'name';
         $parameters['cover'] = $cover;
+
         $work->update($parameters);
         return redirect()->route('works.index');
     }

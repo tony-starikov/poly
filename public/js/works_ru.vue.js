@@ -13,8 +13,8 @@ const Works = {
                                 '<div class="card my-card" style="border: none;">' +
                                     '<img v-bind:src="/images/ + work.cover" class="w-100" style="border: none;"/>' +
                                     '<div class="my-overlay">' +
-                                        '<h4 class="m-0 mx-1" style="color: rgba(255,255,255,0.8);">{{ work.name }}</h4>' +
-                                        '<h6 class="p-0 mx-1" style="color: rgba(255,255,255,0.4);">{{ work.small_description }}</h6>' +
+                                        '<h4 class="m-0 mx-1" style="color: rgba(255,255,255,0.8);">{{ work.name_ru }}</h4>' +
+                                        '<h6 class="p-0 mx-1" style="color: rgba(255,255,255,0.4);">{{ work.small_description_ru }}</h6>' +
                                     '</div>' +
                                 '</div>' +
                             '</router-link>' +
@@ -55,8 +55,8 @@ const Works = {
                             '<div class="card my-card border-0"">' +
                                 '<img v-bind:src="/images/ + work.cover" class="w-100 border-0"/>' +
                                 '<div class="my-overlay-mobile">' +
-                                    '<h4 class="m-0 mx-1" style="color: rgba(255,255,255,0.8);">{{ work.name }}</h4>' +
-                                    '<h6 class="p-0 mx-1" style="color: rgba(255,255,255,0.4);">{{ work.small_description }}</h6>' +
+                                    '<h4 class="m-0 mx-1" style="color: rgba(255,255,255,0.8);">{{ work.name_ru }}</h4>' +
+                                    '<h6 class="p-0 mx-1" style="color: rgba(255,255,255,0.4);">{{ work.small_description_ru }}</h6>' +
                                 '</div>' +
                             '</div>' +
                         '</router-link>' +
@@ -73,10 +73,10 @@ const Works = {
             works: [],
             work: {
                 id: '',
-                name: '',
+                name_ru: '',
                 cover: '',
                 code: '',
-                small_description: '',
+                small_description_ru: '',
             },
             work_id: '',
         }

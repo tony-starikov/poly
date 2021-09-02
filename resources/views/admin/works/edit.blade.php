@@ -24,15 +24,36 @@
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
 
-                <div class="form-row">
-                    <div class="input-group flex-nowrap mb-3 col-md-6">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="addon-wrapping">NAME</span>
-                        </div>
-                        <input type="text" name="name" id="name" value="{{ $work->name }}" class="form-control" placeholder="REQUIRED" aria-describedby="addon-wrapping">
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">NAME EN</span>
                     </div>
+                    <input type="text" name="name_en" id="name_en" value="{{ $work->name_en }}" class="form-control" aria-describedby="addon-wrapping">
+                </div>
 
-                    <div class="input-group flex-nowrap mb-3 col-md-6">
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">NAME UA</span>
+                    </div>
+                    <input type="text" name="name_ua" id="name_ua" value="{{ $work->name_ua }}" class="form-control" aria-describedby="addon-wrapping">
+                </div>
+
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">NAME RU</span>
+                    </div>
+                    <input type="text" name="name_ru" id="name_ru" value="{{ $work->name_ru }}" class="form-control" aria-describedby="addon-wrapping">
+                </div>
+
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">NAME DE</span>
+                    </div>
+                    <input type="text" name="name_de" id="name_de" value="{{ $work->name_de }}" class="form-control" aria-describedby="addon-wrapping">
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group flex-nowrap mb-3 col">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="addon-wrapping">CODE</span>
                         </div>
@@ -49,20 +70,62 @@
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">SMALL DESCRIPTION</span>
+                        <span class="input-group-text" id="addon-wrapping">SMALL DESCRIPTION EN</span>
                     </div>
-                    <input type="text" name="small_description" id="small_description" value="{{ $work->small_description }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="small_description_en" id="small_description_en" value="{{ $work->small_description_en }}" class="form-control" aria-describedby="addon-wrapping">
+                </div>
+
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">SMALL DESCRIPTION UA</span>
+                    </div>
+                    <input type="text" name="small_description_ua" id="small_description_ua" value="{{ $work->small_description_ua }}" class="form-control" aria-describedby="addon-wrapping">
+                </div>
+
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">SMALL DESCRIPTION RU</span>
+                    </div>
+                    <input type="text" name="small_description_ru" id="small_description_ru" value="{{ $work->small_description_ru }}" class="form-control" aria-describedby="addon-wrapping">
+                </div>
+
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">SMALL DESCRIPTION DE</span>
+                    </div>
+                    <input type="text" name="small_description_de" id="small_description_de" value="{{ $work->small_description_de }}" class="form-control" aria-describedby="addon-wrapping">
+                </div>
+
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">DESCRIPTION EN</span>
+                    </div>
+                    <textarea class="form-control" name="description_en" id="description_en">{{ $work->description_en }}</textarea>
+                </div>
+
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">DESCRIPTION UA</span>
+                    </div>
+                    <textarea class="form-control" name="description_ua" id="description_ua">{{ $work->description_ua }}</textarea>
+                </div>
+
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">DESCRIPTION RU</span>
+                    </div>
+                    <textarea class="form-control" name="description_ru" id="description_ru">{{ $work->description_ru }}</textarea>
+                </div>
+
+                <div class="input-group flex-nowrap mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">DESCRIPTION DE</span>
+                    </div>
+                    <textarea class="form-control" name="description_de" id="description_de">{{ $work->description_de }}</textarea>
                 </div>
 
                 <div class="form-row">
-                    <div class="form-floating mb-3 col-md-6">
-                        <label for="marmoset">DESCRIPTION</label>
-                        <textarea class="form-control" name="description" id="description" style="height: 100px">{{ $work->description }}</textarea>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="input-group mb-3 col-md-6">
+                    <div class="input-group mb-3 col">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroupFileAddon05">COVER IMAGE</span>
                         </div>

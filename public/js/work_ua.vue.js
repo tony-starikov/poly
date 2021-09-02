@@ -42,25 +42,24 @@ const Work = {
 
             '<div v-else-if="file.type === \'marmoset\'">' +
                 '<iframe\n' +
-                'style="width: 100%; height: 400px;" ' +
-                'v-bind:src="file.src"\n' +
-                'frameborder=\'0\' allowfullscreen\n' +
-                'mozallowfullscreen=\'true\'\n' +
-                'webkitallowfullscreen=\'true\'\n' +
-                'onmousewheel=\'true\'\n' +
-                'scrolling=\'no\'>\n' +
+                    'style="width: 100%; height: 400px;" ' +
+                    'v-bind:src="file.src"\n' +
+                    'frameborder=\'0\' allowfullscreen\n' +
+                    'mozallowfullscreen=\'true\'\n' +
+                    'webkitallowfullscreen=\'true\'\n' +
+                    'onmousewheel=\'true\'\n' +
+                    'scrolling=\'no\'>\n' +
                 '</iframe>' +
             '</div>' +
 
             '<div v-else-if="file.type === \'video\'">' +
                 '<video class="m-0 p-0"\n' +
                 'style="width: 100%; height: auto;" ' +
-                'height="auto"\n' +
-                'controls="controls"\n' +
-                'loop autoplay>\n' +
-                '<source v-bind:src="/images/ + file.video_mp4" type="video/mp4;">\n' +
-                '<source v-bind:src="/images/ + file.video_webm" type="video/webm;">\n' +
-                'Video error\n' +
+                'controls="controls" ' +
+                'loop autoplay >' +
+                    '<source v-bind:src="/images/ + file.video_mp4" type="video/mp4;">\n' +
+                    '<source v-bind:src="/images/ + file.video_webm" type="video/webm;">\n' +
+                    'Video error\n' +
                 '</video>' +
             '</div>' +
 
@@ -84,7 +83,7 @@ const Work = {
         '/>\n' +
         '</div>\n' +
         '<div class="py-1 showMe">' +
-        '<p class="text-decoration-none m-0 text-white" style="font-size: .8rem; line-height: normal; opacity: 0.7">{{ artist.name }}</p>' +
+        '<p class="text-decoration-none m-0 text-white" style="font-size: .8rem; line-height: normal; opacity: 0.7">{{ artist.name_ua }}</p>' +
         '</div>' +
         '</router-link>\n' +
         '</div>' +
@@ -162,52 +161,51 @@ const Work = {
 
         '<div class="col-md-9 m-0 p-0" style="background-color: black;">' +
 
+        '<div v-for="file in files" v-bind:key="file.id" class="p-0 m-0">' +
+        '<div v-if="file.type === \'image\'">' +
         '<img\n' +
-        'v-bind:src="/images/ + image_1"\n' +
+        'v-bind:src="/images/ + file.src"\n' +
         'alt="..."\n' +
         'width="100%"\n' +
         'style="border-radius: 0 0 0 0;"\n' +
         'class="p-0 m-0"\n' +
         '/>' +
+        '</div>' +
 
-        '<video ' +
-        'class="mb-0"\n' +
-        'width="100%"\n' +
-        'height="auto"\n' +
-        'controls="controls"\n' +
-        'loop autoplay>\n' +
-        '<source v-bind:src="/images/ + video_mp4" type="video/mp4;">\n' +
-        '<source v-bind:src="/images/ + video_webm" type="video/webm;">\n' +
-        'Video error\n' +
-        '</video>' +
-
+        '<div v-else-if="file.type === \'gif\'">' +
         '<img\n' +
-        'v-bind:src="/images/ + image_2"\n' +
+        'v-bind:src="/images/ + file.src"\n' +
         'alt="..."\n' +
         'width="100%"\n' +
-        'style="border-radius: 0;"\n' +
-        'class="mb-0"\n' +
+        'style="border-radius: 0 0 0 0;"\n' +
+        'class="p-0 m-0"\n' +
         '/>' +
+        '</div>' +
 
+        '<div v-else-if="file.type === \'marmoset\'">' +
         '<iframe\n' +
-        'class="mb-0"\n' +
-        'width=\'100%\'\n' +
-        'height=\'400px\'\n' +
-        'v-bind:src="marmoset"\n' +
+        'style="width: 100%; height: 400px;" ' +
+        'v-bind:src="file.src"\n' +
         'frameborder=\'0\' allowfullscreen\n' +
         'mozallowfullscreen=\'true\'\n' +
         'webkitallowfullscreen=\'true\'\n' +
         'onmousewheel=\'true\'\n' +
         'scrolling=\'no\'>\n' +
         '</iframe>' +
+        '</div>' +
 
-        '<img\n' +
-        'v-bind:src="/images/ + image_3"\n' +
-        'alt="..."\n' +
-        'width="100%"\n' +
-        'class="mb-0"\n' +
-        'style="background-color: rgba(0, 0, 0, 0.90);border-radius: 0 0 0 25px;"\n' +
-        '/>' +
+        '<div v-else-if="file.type === \'video\'">' +
+        '<video class="m-0 p-0"\n' +
+        'style="width: 100%; height: auto;" ' +
+        'controls="controls" ' +
+        'loop autoplay >' +
+        '<source v-bind:src="/images/ + file.video_mp4" type="video/mp4;">\n' +
+        '<source v-bind:src="/images/ + file.video_webm" type="video/webm;">\n' +
+        'Video error\n' +
+        '</video>' +
+        '</div>' +
+
+        '</div>' +
 
         '</div>' +
 
@@ -227,7 +225,7 @@ const Work = {
         '/>\n' +
         '</div>\n' +
         '<div class="py-1 showMe">' +
-        '<p class="text-decoration-none m-0 text-white" style="font-size: .8rem; line-height: normal; opacity: 0.7">{{ artist.name }}</p>' +
+        '<p class="text-decoration-none m-0 text-white" style="font-size: .8rem; line-height: normal; opacity: 0.7">{{ artist.name_ua }}</p>' +
         '</div>' +
         '</router-link>\n' +
         '</div>' +
@@ -273,17 +271,11 @@ const Work = {
             id: '',
             name: '',
             description: '',
-            image_1: '',
-            image_2: '',
-            image_3: '',
-            video_mp4: '',
-            video_webm: '',
-            marmoset: '',
             artists: [],
             artist: {
                 id: '',
                 code: '',
-                name: '',
+                name_ua: '',
                 image_sqr: '',
             },
             software: [],
@@ -320,19 +312,11 @@ const Work = {
             fetch(page_url)
                 .then(res => res.json())
                 .then(res => {
-                    console.log(res.work);
-                    console.log(this.$route.params);
                     this.files = res.files;
                     this.artists = res.artists;
                     this.software = res.software;
-                    this.name = res.work.name;
-                    this.marmoset = res.work.marmoset;
-                    this.description = res.work.description;
-                    this.image_1 = res.work.image_1;
-                    this.image_2 = res.work.image_2;
-                    this.image_3 = res.work.image_3;
-                    this.video_mp4 = res.work.video_mp4;
-                    this.video_webm = res.work.video_webm;
+                    this.name = res.work.name_ua;
+                    this.description = res.work.description_ua;
                 })
         }
     }
