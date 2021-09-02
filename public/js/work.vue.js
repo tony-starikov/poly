@@ -19,50 +19,52 @@ const Work = {
 
         '<div class="col-md-9 m-0 p-0" style="background-color: black;">' +
 
-        '<img\n' +
-        'v-bind:src="/images/ + image_1"\n' +
-        'alt="..."\n' +
-        'width="100%"\n' +
-        'style="border-radius: 0 0 0 0;"\n' +
-        'class="p-0 m-0"\n' +
-        '/>' +
+        '<div v-for="file in files" v-bind:key="file.id" class="p-0 m-0">' +
+            '<div v-if="file.type === \'image\'">' +
+                '<img\n' +
+                    'v-bind:src="/images/ + file.src"\n' +
+                    'alt="..."\n' +
+                    'width="100%"\n' +
+                    'style="border-radius: 0 0 0 0;"\n' +
+                    'class="p-0 m-0"\n' +
+                '/>' +
+            '</div>' +
 
-        '<video class="mb-1"\n' +
-        'width="100%"\n' +
-        'height="auto"\n' +
-        'controls="controls"\n' +
-        'loop autoplay>\n' +
-        '<source v-bind:src="/images/ + video_mp4" type="video/mp4;">\n' +
-        '<source v-bind:src="/images/ + video_webm" type="video/webm;">\n' +
-        'Video error\n' +
-        '</video>' +
+            '<div v-else-if="file.type === \'gif\'">' +
+                '<img\n' +
+                'v-bind:src="/images/ + file.src"\n' +
+                'alt="..."\n' +
+                'width="100%"\n' +
+                'style="border-radius: 0 0 0 0;"\n' +
+                'class="p-0 m-0"\n' +
+                '/>' +
+            '</div>' +
 
-        '<img\n' +
-        'v-bind:src="/images/ + image_2"\n' +
-        'alt="..."\n' +
-        'style="border-radius: 0; width: 100%;"\n' +
-        'class="mb-1"\n' +
-        '/>' +
+            '<div v-else-if="file.type === \'marmoset\'">' +
+                '<iframe\n' +
+                'style="width: 100%; height: 400px;" ' +
+                'v-bind:src="file.src"\n' +
+                'frameborder=\'0\' allowfullscreen\n' +
+                'mozallowfullscreen=\'true\'\n' +
+                'webkitallowfullscreen=\'true\'\n' +
+                'onmousewheel=\'true\'\n' +
+                'scrolling=\'no\'>\n' +
+                '</iframe>' +
+            '</div>' +
 
-        '<iframe\n' +
-        'width=\'100%\'\n' +
-        'height=\'400px\'\n' +
-        // 'v-bind:src=\'marmoset\'\n' +
-        'src="https://www.artstation.com/embed/665067"\n' +
-        'frameborder=\'0\' allowfullscreen\n' +
-        'mozallowfullscreen=\'true\'\n' +
-        'webkitallowfullscreen=\'true\'\n' +
-        'onmousewheel=\'true\'\n' +
-        'scrolling=\'no\'>\n' +
-        '</iframe>' +
+            '<div v-else-if="file.type === \'video\'">' +
+                '<video class="m-0 p-0"\n' +
+                'style="width: 100%; height: auto;" ' +
+                'height="auto"\n' +
+                'controls="controls"\n' +
+                'loop autoplay>\n' +
+                '<source v-bind:src="/images/ + file.video_mp4" type="video/mp4;">\n' +
+                '<source v-bind:src="/images/ + file.video_webm" type="video/webm;">\n' +
+                'Video error\n' +
+                '</video>' +
+            '</div>' +
 
-        '<img\n' +
-        'v-bind:src="/images/ + image_3"\n' +
-        'alt="..."\n' +
-        'width="100%"\n' +
-        'class="mb-1"\n' +
-        'style="background-color: rgba(0, 0, 0, 0.90);border-radius: 0 0 0 25px;"\n' +
-        '/>' +
+        '</div>' +
 
         '</div>' +
 
@@ -102,15 +104,15 @@ const Work = {
 
         '<div class="row w-100 p-0 m-0">' +
         '<div v-for="soft in software" v-bind:key="soft.id" class="col-md-6 col-xl-4 p-0">' +
-        '<figure class="figure">\n' +
-        '<img\n' +
-        'v-bind:src="/images/ + soft.image"\n' +
-        'class="figure-img img-fluid rounded shadow-3 p-0 m-0"\n' +
-        'alt="..."\n' +
-        'style="max-width: 50px;"\n' +
-        '/>\n' +
-        '<figcaption class="figure-caption">{{ soft.name }}</figcaption>\n' +
-        '</figure>' +
+            '<figure class="figure">\n' +
+            '<img\n' +
+            'v-bind:src="/images/ + soft.image"\n' +
+            'class="figure-img img-fluid rounded shadow-3 p-0 m-0"\n' +
+            'alt="..."\n' +
+            'style="max-width: 50px;"\n' +
+            '/>\n' +
+            '<figcaption class="figure-caption">{{ soft.name }}</figcaption>\n' +
+            '</figure>' +
         '</div>' +
         '</div>' +
 
@@ -290,6 +292,14 @@ const Work = {
                 name: '',
                 image: '',
             },
+            files: [],
+            file: {
+                id: '',
+                type: '',
+                src: '',
+                video_mp4: '',
+                video_webm: '',
+            },
         }
     },
 
@@ -312,6 +322,7 @@ const Work = {
                 .then(res => {
                     console.log(res.work);
                     console.log(this.$route.params);
+                    this.files = res.files;
                     this.artists = res.artists;
                     this.software = res.software;
                     this.name = res.work.name;

@@ -26,6 +26,7 @@
                                 <div class="btn-group">
                                     <a href="{{ route('works.show', $work) }}"><button type="button" class="btn btn-link">SHOW</button></a>
                                     <a href="{{ route('works.edit', $work) }}"><button type="button" class="btn btn-link">EDIT</button></a>
+                                    <a href="{{ route('files.main', $work->id) }}"><button type="button" class="btn btn-link">FILES</button></a>
                                 </div>
                                 <form id="delete-form" action="{{ route('works.destroy', $work) }}" method="POST">
                                     @method('DELETE')

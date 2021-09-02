@@ -59,10 +59,6 @@
                         <label for="marmoset">DESCRIPTION</label>
                         <textarea class="form-control" name="description" id="description" style="height: 100px">{{ $work->description }}</textarea>
                     </div>
-                    <div class="form-floating mb-3 col-md-6">
-                        <label for="marmoset">MARMOSET</label>
-                        <textarea class="form-control" name="marmoset" id="marmoset" style="height: 100px">{{ $work->marmoset }}</textarea>
-                    </div>
                 </div>
 
                 <div class="form-row">
@@ -76,59 +72,6 @@
                         </div>
                     </div>
 
-                    <div class="input-group mb-3 col-md-6">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupFileAddon01">IMAGE 1</span>
-                        </div>
-                        <div class="custom-file">
-                            <input type="file" name="image_1" id="image_1" class="custom-file-input" aria-describedby="inputGroupFileAddon01">
-                            <label class="custom-file-label" for="image_1">Choose file</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="input-group mb-3 col-md-6">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupFileAddon02">IMAGE 2</span>
-                        </div>
-                        <div class="custom-file">
-                            <input type="file" name="image_2" id="image_2" class="custom-file-input" aria-describedby="inputGroupFileAddon02">
-                            <label class="custom-file-label" for="image_2">Choose file</label>
-                        </div>
-                    </div>
-
-                    <div class="input-group mb-3 col-md-6">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupFileAddon03">IMAGE 3</span>
-                        </div>
-                        <div class="custom-file">
-                            <input type="file" name="image_3" id="image_3" class="custom-file-input" aria-describedby="inputGroupFileAddon03">
-                            <label class="custom-file-label" for="image_3">Choose file</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="input-group mb-3 col-md-6">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupFileAddon">VIDEO MP4</span>
-                        </div>
-                        <div class="custom-file">
-                            <input type="file" name="video_mp4" id="video_mp4" class="custom-file-input" aria-describedby="inputGroupFileAddon">
-                            <label class="custom-file-label" for="video_mp4">Choose file</label>
-                        </div>
-                    </div>
-
-                    <div class="input-group mb-3 col-md-6">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupFileAddon04">VIDEO WEBM</span>
-                        </div>
-                        <div class="custom-file">
-                            <input type="file" name="video_webm" id="video_webm" class="custom-file-input" aria-describedby="inputGroupFileAddon04">
-                            <label class="custom-file-label" for="video_webm">Choose file</label>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="form-group">

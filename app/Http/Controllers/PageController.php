@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Artist;
+use App\File;
 use App\Page;
 use App\Position;
 use App\Work;
@@ -65,10 +66,11 @@ class PageController extends Controller
     public function workApi($code)
     {
         $work = Work::where('code', $code)->first()->toArray();
+        $files = Work::where('code', $code)->first()->files->toArray();
         $artists = Work::where('code', $code)->first()->artists->toArray();
         $software = Work::where('code', $code)->first()->software->toArray();
 
-        return response()->json(['work'=>$work, 'artists'=>$artists, 'software'=>$software]);
+        return response()->json(['work'=>$work, 'artists'=>$artists, 'software'=>$software, 'files'=>$files]);
     }
 
     public function artistApi($code)

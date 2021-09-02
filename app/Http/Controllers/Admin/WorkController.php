@@ -45,43 +45,13 @@ class WorkController extends Controller
     public function store(WorkRequest $request)
     {
         $cover = null;
-        $image_path_1 = null;
-        $image_path_2 = null;
-        $image_path_3 = null;
-        $video_path_mp4 = null;
-        $video_path_webm = null;
 
         if ($request->file('cover')){
             $cover = $request->file('cover')->store('works');
         }
 
-        if ($request->file('image_1')){
-            $image_path_1 = $request->file('image_1')->store('works');
-        }
-
-        if ($request->file('image_2')){
-            $image_path_2 = $request->file('image_2')->store('works');
-        }
-
-        if ($request->file('image_3')){
-            $image_path_3 = $request->file('image_3')->store('works');
-        }
-
-        if ($request->file('video_mp4')){
-            $video_path_mp4 = $request->file('video_mp4')->store('works');
-        }
-
-        if ($request->file('video_webm')){
-            $video_path_webm = $request->file('video_webm')->store('works');
-        }
-
         $parameters = $request->all();
         $parameters['cover'] = $cover;
-        $parameters['image_1'] = $image_path_1;
-        $parameters['image_2'] = $image_path_2;
-        $parameters['image_3'] = $image_path_3;
-        $parameters['video_mp4'] = $video_path_mp4;
-        $parameters['video_webm'] = $video_path_webm;
         $work = Work::create($parameters);
 
         if (isset($request->soft)) {
@@ -158,49 +128,14 @@ class WorkController extends Controller
         }
 
         $cover = $work->cover;
-        $image_path_1 = $work->image_1;
-        $image_path_2 = $work->image_2;
-        $image_path_3 = $work->image_3;
-        $video_path_mp4 = $work->video_mp4;
-        $video_path_webm = $work->video_webm;
 
         if ($request->file('cover')){
-            Storage::delete($work->cover);
+            Storage::disk('public')->delete($work->cover);
             $cover = $request->file('cover')->store('works');
-        }
-
-        if ($request->file('image_1')){
-            Storage::delete($work->image_1);
-            $image_path_1 = $request->file('image_1')->store('works');
-        }
-
-        if ($request->file('image_2')){
-            Storage::delete($work->image_2);
-            $image_path_2 = $request->file('image_2')->store('works');
-        }
-
-        if ($request->file('image_3')){
-            Storage::delete($work->image_3);
-            $image_path_3 = $request->file('image_3')->store('works');
-        }
-
-        if ($request->file('video_mp4')){
-            Storage::delete($work->video_mp4);
-            $video_path_mp4 = $request->file('video_mp4')->store('works');
-        }
-
-        if ($request->file('video_webm')){
-            Storage::delete($work->video_webm);
-            $video_path_webm = $request->file('video_webm')->store('works');
         }
 
         $parameters = $request->all();
         $parameters['cover'] = $cover;
-        $parameters['image_1'] = $image_path_1;
-        $parameters['image_2'] = $image_path_2;
-        $parameters['image_3'] = $image_path_3;
-        $parameters['video_mp4'] = $video_path_mp4;
-        $parameters['video_webm'] = $video_path_webm;
         $work->update($parameters);
         return redirect()->route('works.index');
     }
@@ -221,6 +156,8 @@ class WorkController extends Controller
         foreach ($work->artists as $artist) {
             $work->artists()->detach($artist->id);
         }
+
+        Storage::disk('public')->delete($work->cover);
 
         $work->delete();
         return redirect()->route('works.index');

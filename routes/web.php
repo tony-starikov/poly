@@ -49,6 +49,9 @@ Route::group([
         Route::post('/change_password','AdminController@changePassword')->name('admin.change.password');
         Route::post('/change_email','AdminController@changeEmail')->name('admin.change.email');
 
+        Route::get('file/{id}', 'FileController@main')->name('files.main');
+
+
         Route::group(['prefix' => 'page'], function () {
             Route::get('main', 'PageController@main')->name('admin.main.page');
             Route::post('main/edit', 'PageController@mainEdit')->name('admin.main.page.edit');
@@ -76,6 +79,7 @@ Route::group([
         Route::resource('positions', 'PositionController');
         Route::resource('artists', 'ArtistController');
         Route::resource('works', 'WorkController');
+        Route::resource('files', 'FileController');
     });
 });
 

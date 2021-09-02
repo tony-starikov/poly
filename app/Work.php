@@ -17,4 +17,9 @@ class Work extends Model
     {
         return $this->belongsToMany(Artist::class)->withTimestamps();
     }
+
+    public function files()
+    {
+        return $this->hasMany(File::class);
+    }
 }
