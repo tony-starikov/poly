@@ -70,7 +70,7 @@ const Work = {
         '<div class="col-md-3 m-0 p-0 ps-1 text-start" style="background-color: rgba(0,0,0,0.6);">' +
         '<div class="sticky-top text-start w-100 m-0 p-2">' +
 
-        '<h4 class="fw-bolder">Artists</h4>' +
+        '<h4 class="fw-bolder">{{ field_artists }}</h4>' +
 
         '<div class="row px-1">' +
         '<div v-for="artist in artists" v-bind:key="artist.id" class="col-4 p-0 px-1">' +
@@ -99,7 +99,7 @@ const Work = {
 
         '<hr size="4" class="rounded-pill" style="width: 60%; opacity: 1;">' +
 
-        '<h4 class="fw-bolder">Software Used</h4>' +
+        '<h4 class="fw-bolder">{{ field_software }}</h4>' +
 
         '<div class="row w-100 p-0 m-0">' +
         '<div v-for="soft in software" v-bind:key="soft.id" class="col-md-6 col-xl-4 p-0">' +
@@ -212,7 +212,7 @@ const Work = {
         '<div class="col-md-3 m-0 text-start" style="background-color: rgba(0,0,0,0.6);">' +
         '<div class="sticky-top text-start m-0 p-2">' +
 
-        '<h4 class="fw-bolder">Artists</h4>' +
+        '<h4 class="fw-bolder">{{ field_artists }}</h4>' +
 
         '<div class="row px-1">' +
         '<div v-for="artist in artists" v-bind:key="artist.id" class="col-4 p-0 px-1">' +
@@ -241,7 +241,7 @@ const Work = {
 
         '<hr size="4" class="rounded-pill" style="width: 60%; opacity: 1;">' +
 
-        '<h4 class="fw-bolder">Software Used</h4>' +
+        '<h4 class="fw-bolder">{{ field_software }}</h4>' +
 
         '<div class="row p-2">' +
             '<div v-for="soft in software" v-bind:key="soft.id" class="col-3 col-sm-3 p-0 m-0">' +
@@ -271,6 +271,8 @@ const Work = {
             id: '',
             name: '',
             description: '',
+            field_artists: '',
+            field_software: '',
             artists: [],
             artist: {
                 id: '',
@@ -318,6 +320,8 @@ const Work = {
                     this.software = res.software;
                     this.name = res.work.name_en;
                     this.description = res.work.description_en;
+                    this.field_artists = res.works.field_artists_en;
+                    this.field_software = res.works.field_software_en;
                 })
         }
     }

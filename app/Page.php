@@ -191,5 +191,16 @@ class Page extends Model
         'field_slogan_ru',
         'field_slogan_de',
 
+        // WORKS
+
+        'field_artists_en',
+        'field_artists_ua',
+        'field_artists_ru',
+        'field_artists_de',
+
+        'field_software_en',
+        'field_software_ua',
+        'field_software_ru',
+        'field_software_de',
     ];
 }

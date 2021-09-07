@@ -66,11 +66,12 @@ class PageController extends Controller
     public function workApi($code)
     {
         $work = Work::where('code', $code)->first()->toArray();
+        $works = Page::where('name', 'works')->first()->toArray();
         $files = Work::where('code', $code)->first()->files->toArray();
         $artists = Work::where('code', $code)->first()->artists->toArray();
         $software = Work::where('code', $code)->first()->software->toArray();
 
-        return response()->json(['work'=>$work, 'artists'=>$artists, 'software'=>$software, 'files'=>$files]);
+        return response()->json(['work'=>$work, 'works'=>$works, 'artists'=>$artists, 'software'=>$software, 'files'=>$files]);
     }
 
     public function artistApi($code)
