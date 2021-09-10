@@ -51,6 +51,18 @@ Route::group([
 
         Route::get('file/{id}', 'FileController@main')->name('files.main');
 
+        Route::get('menu/en', 'LocaleFileController@readEn')->name('menu.en.settings');
+        Route::post('menu/edit/en', 'LocaleFileController@menuEnEdit')->name('menu.en.edit');
+
+        Route::get('menu/ua', 'LocaleFileController@readUa')->name('menu.ua.settings');
+        Route::post('menu/edit/ua', 'LocaleFileController@menuUaEdit')->name('menu.ua.edit');
+
+        Route::get('menu/ru', 'LocaleFileController@readRu')->name('menu.ru.settings');
+        Route::post('menu/edit/ru', 'LocaleFileController@menuRuEdit')->name('menu.ru.edit');
+
+        Route::get('menu/de', 'LocaleFileController@readDe')->name('menu.de.settings');
+        Route::post('menu/edit/de', 'LocaleFileController@menuDeEdit')->name('menu.de.edit');
+
 
         Route::group(['prefix' => 'page'], function () {
             Route::get('main', 'PageController@main')->name('admin.main.page');

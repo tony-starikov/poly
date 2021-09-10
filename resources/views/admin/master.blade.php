@@ -36,6 +36,17 @@
                             <a class="dropdown-item" href="{{ route('admin.video.page') }}">VIDEO</a>
                         </div>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            MENU
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('menu.en.settings') }}">EN</a>
+                            <a class="dropdown-item" href="{{ route('menu.ua.settings') }}">UA</a>
+                            <a class="dropdown-item" href="{{ route('menu.ru.settings') }}">RU</a>
+                            <a class="dropdown-item" href="{{ route('menu.de.settings') }}">DE</a>
+                        </div>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('software.index') }}">Software</a>
                     </li>
