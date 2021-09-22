@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddMapSrcToPagesTable extends Migration
+class CreateFieldPageTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddMapSrcToPagesTable extends Migration
      */
     public function up()
     {
-        Schema::table('pages', function (Blueprint $table) {
-            $table->text('map_src')->nullable();
+        Schema::create('field_page', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('field_id');
+            $table->integer('page_id');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class AddMapSrcToPagesTable extends Migration
      */
     public function down()
     {
-        Schema::table('pages', function (Blueprint $table) {
-            $table->dropColumn('map_src');
-        });
+        Schema::dropIfExists('field_page');
     }
 }

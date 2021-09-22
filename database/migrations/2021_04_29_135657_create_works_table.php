@@ -15,17 +15,25 @@ class CreateWorksTable extends Migration
     {
         Schema::create('works', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
             $table->string('code');
             $table->string('title')->nullable();
-            $table->string('small_description')->nullable();
-            $table->text('description')->nullable();
-            $table->text('image_1')->nullable();
-            $table->text('image_2')->nullable();
-            $table->text('image_3')->nullable();
-            $table->text('video_mp4')->nullable();
-            $table->text('video_webm')->nullable();
-            $table->text('marmoset')->nullable();
+            $table->text('cover_img')->nullable();
+
+            $table->text('name_en')->nullable();
+            $table->text('name_ua')->nullable();
+            $table->text('name_ru')->nullable();
+            $table->text('name_de')->nullable();
+
+            $table->text('small_description_en')->nullable();
+            $table->text('small_description_ua')->nullable();
+            $table->text('small_description_ru')->nullable();
+            $table->text('small_description_de')->nullable();
+
+            $table->text('description_en')->nullable();
+            $table->text('description_ua')->nullable();
+            $table->text('description_ru')->nullable();
+            $table->text('description_de')->nullable();
+
             $table->timestamps();
         });
     }

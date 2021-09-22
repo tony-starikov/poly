@@ -302,67 +302,6 @@
                                 </ul>
                             </li>
 
-                            {{--                        <li class="nav-item dropdown my-auto" style="height: 30px;">--}}
-                            {{--                            <a class="nav-link h3 fw-bolder p-0 m-0 d-flex align-items-center dropdown-toggle" style="font-weight: 400; background-image: none; color: rgba(255,255,255,1) !important; vertical-align: middle;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">--}}
-                            {{--                                @lang('main.current_locale')--}}
-                            {{--                            </a>--}}
-                            {{--                            <ul class="dropdown-menu m-0 p-0 overflow-hidden" aria-labelledby="navbarDropdown">--}}
-                            {{--                                <li>--}}
-                            {{--                                    <a--}}
-                            {{--                                        class="dropdown-item h5 w-100 m-0 p-0 @if(App::getLocale() === 'ua') text-white @endif "--}}
-                            {{--                                        href="{{ route('locale', 'ua') }}"--}}
-                            {{--                                    >--}}
-                            {{--                                        <div class="row p-0 m-0">--}}
-                            {{--                                            <div class="col-3 p-0 m-0"></div>--}}
-                            {{--                                            <div class="col-9 py-0 px-2 m-0 text-white bg-secondary text-start" style="border-radius: 15px 0 0 15px;">--}}
-                            {{--                                                Українська--}}
-                            {{--                                            </div>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </a>--}}
-                            {{--                                </li>--}}
-                            {{--                                <li>--}}
-                            {{--                                    <a--}}
-                            {{--                                        class="dropdown-item h5 w-100 m-0 p-0 @if(App::getLocale() === 'en') text-white @endif "--}}
-                            {{--                                        style="border-radius: 15px 0 0 15px" href="{{ route('locale', 'en') }}"--}}
-                            {{--                                    >--}}
-                            {{--                                        <div class="row p-0 m-0">--}}
-                            {{--                                            <div class="col-3 p-0 m-0"></div>--}}
-                            {{--                                            <div class="col-9 py-0 px-2 m-0 text-white bg-secondary text-start" style="border-radius: 15px 0 0 15px;">--}}
-                            {{--                                                English--}}
-                            {{--                                            </div>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </a>--}}
-                            {{--                                </li>--}}
-                            {{--                                <li>--}}
-                            {{--                                    <a--}}
-                            {{--                                        class="dropdown-item h5 w-100 m-0 p-0 @if(App::getLocale() === 'ru') text-white @endif "--}}
-                            {{--                                        style="border-radius: 15px 0 0 15px" href="{{ route('locale', 'ru') }}"--}}
-                            {{--                                    >--}}
-                            {{--                                        <div class="row p-0 m-0">--}}
-                            {{--                                            <div class="col-3 p-0 m-0"></div>--}}
-                            {{--                                            <div class="col-9 py-0 px-2 m-0 text-white bg-secondary text-start" style="border-radius: 15px 0 0 15px;">--}}
-                            {{--                                                Русский--}}
-                            {{--                                            </div>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </a>--}}
-                            {{--                                </li>--}}
-                            {{--                                <li>--}}
-                            {{--                                    <a--}}
-                            {{--                                        class="dropdown-item h5 w-100 m-0 p-0 @if(App::getLocale() === 'de') text-white @endif "--}}
-                            {{--                                        style="border-radius: 15px 0 0 15px" href="{{ route('locale', 'de') }}"--}}
-                            {{--                                    >--}}
-                            {{--                                        <div class="row p-0 m-0">--}}
-                            {{--                                            <div class="col-3 p-0 m-0"></div>--}}
-                            {{--                                            <div class="col-9 py-0 px-2 m-0 text-white bg-secondary text-start" style="border-radius: 15px 0 0 15px;">--}}
-                            {{--                                                Deutsch--}}
-                            {{--                                            </div>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </a>--}}
-                            {{--                                </li>--}}
-                            {{--                                --}}{{-- <li><a class="dropdown-item h5 py-0 ps-2 w-100 m-0 ms-2 @if(App::getLocale() === 'de') text-white bg-secondary @endif " style="border-radius: 25px 0 0 25px" href="{{ route('locale', 'de') }}">Deutsch</a></li>--}}
-                            {{--                            </ul>--}}
-                            {{--                        </li>--}}
-
                         </ul>
                     </div>
                 </div>
