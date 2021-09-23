@@ -12,9 +12,13 @@ class WorksTableSeeder extends Seeder
     public function run()
     {
         DB::table('works')->insert([
-            ['name' => 'Work 1', 'code' => 'work_1', 'marmoset' => 'https://www.artstation.com/embed/665067'],
-            ['name' => 'Work 2', 'code' => 'work_2', 'marmoset' => 'https://www.artstation.com/embed/665067'],
-            ['name' => 'Work 3', 'code' => 'work_3', 'marmoset' => 'https://www.artstation.com/embed/665067'],
+            [
+                'name_en' => 'Work 1',
+                'name_ua' => 'Work 1',
+                'name_ru' => 'Work 1',
+                'name_de' => 'Work 1',
+                'code' => 'work_1',
+            ],
         ]);
     }
 }

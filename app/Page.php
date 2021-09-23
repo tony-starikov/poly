@@ -10,6 +10,7 @@ class Page extends Model
     use Translatable;
 
     protected $fillable = [
+        'id',
         'name',
         'title',
         'description',
