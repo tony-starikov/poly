@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Field;
 use App\Http\Controllers\Controller;
 use App\Page;
 use Illuminate\Http\Request;
@@ -11,47 +12,66 @@ class PageController extends Controller
 {
     public function main()
     {
-        $page_info = Page::where('name', 'main')->first();
-        return view('admin.main', compact('page_info'));
+        $fields = Page::where('name', 'main')->first()->fields;
+
+        $arr = [];
+
+        foreach ($fields as $v) {
+            $arr[$v['name']] = $v['value'];
+        }
+
+        $fields = $arr;
+
+        return view('admin.main', compact('fields'));
     }
 
     public function mainEdit(Request $request)
     {
-        $page_info = Page::where('name', 'main')->first();
+        $fields = Page::where('name', 'main')->first()->fields;
 
-//        $image_path = $page_info->image;
-//        $video_path = $page_info->video;
+        foreach ($fields as $field) {
+            foreach ($request->all() as $n => $v) {
 
+                $arr['value'] = $v;
 
-//        if ($request->file('image')){
-//            Storage::delete($page_info->image);
-//            $image_path = $request->file('image')->store('pages/main');
-//        }
-//
-//        if ($request->file('video')){
-//            Storage::delete($page_info->video);
-//            $video_path = $request->file('video')->store('pages/main');
-//        }
-
-        $parameters = $request->all();
-//        $parameters['image'] = $image_path;
-//        $parameters['video'] = $video_path;
-        $page_info->update($parameters);
+                if ($n == $field->name){
+                    $field->update($arr);
+                }
+            }
+        }
 
         return redirect()->route('admin.main.page');
     }
 
     public function works()
     {
-        $page_info = Page::where('name', 'works')->first();
-        return view('admin.works', compact('page_info'));
+        $fields = Page::where('name', 'work')->first()->fields;
+
+        $arr = [];
+
+        foreach ($fields as $v) {
+            $arr[$v['name']] = $v['value'];
+        }
+
+        $fields = $arr;
+
+        return view('admin.works', compact('fields'));
     }
 
     public function worksEdit(Request $request)
     {
-        $page_info = Page::where('name', 'works')->first();
+        $fields = Page::where('name', 'work')->first()->fields;
 
-        $page_info->update($request->all());
+        foreach ($fields as $field) {
+            foreach ($request->all() as $n => $v) {
+
+                $arr['value'] = $v;
+
+                if ($n == $field->name){
+                    $field->update($arr);
+                }
+            }
+        }
 
         return redirect()->route('admin.works.page');
     }
@@ -73,101 +93,158 @@ class PageController extends Controller
 
     public function about()
     {
-        $page_info = Page::where('name', 'about')->first();
-        return view('admin.about', compact('page_info'));
+        $fields = Page::where('name', 'about')->first()->fields;
+
+        $arr = [];
+
+        foreach ($fields as $v) {
+            $arr[$v['name']] = $v['value'];
+        }
+
+        $fields = $arr;
+
+        return view('admin.about', compact('fields'));
     }
 
     public function aboutEdit(Request $request)
     {
-        $page_info = Page::where('name', 'about')->first();
+        $fields = Page::where('name', 'about')->first()->fields;
 
+        foreach ($fields as $field) {
+            foreach ($request->all() as $n => $v) {
 
-//        if ($request->file('image')){
-//            Storage::delete($page_info->image);
-//            $image_path = $request->file('image')->store('pages/about');
-//        }
+                $arr['value'] = $v;
 
-        $parameters = $request->all();
-//        $parameters['image'] = $image_path;
-        $page_info->update($parameters);
+                if ($n == $field->name){
+                    $field->update($arr);
+                }
+            }
+        }
 
         return redirect()->route('admin.about.page');
     }
 
     public function recruit()
     {
-        $page_info = Page::where('name', 'recruit')->first();
-        return view('admin.recruit', compact('page_info'));
+        $fields = Page::where('name', 'recruit')->first()->fields;
+
+        $arr = [];
+
+        foreach ($fields as $v) {
+            $arr[$v['name']] = $v['value'];
+        }
+
+        $fields = $arr;
+
+        return view('admin.recruit', compact('fields'));
     }
 
     public function recruitEdit(Request $request)
     {
-        $page_info = Page::where('name', 'recruit')->first();
+        $fields = Page::where('name', 'recruit')->first()->fields;
 
-//        $image_path = $page_info->image;
+        foreach ($fields as $field) {
+            foreach ($request->all() as $n => $v) {
 
-//        if (!is_null($request->file('image'))) {
-//            Storage::delete($page_info->image);
-//            $image_path = $request->file('image')->store('pages/recruit');
-//        }
+                $arr['value'] = $v;
 
-        $parameters = $request->all();
-//        $parameters['image'] = $image_path;
-        $page_info->update($parameters);
+                if ($n == $field->name){
+                    $field->update($arr);
+                }
+            }
+        }
 
         return redirect()->route('admin.recruit.page');
     }
 
     public function contact()
     {
-        $page_info = Page::where('name', 'contact')->first();
-        return view('admin.contact', compact('page_info'));
+        $fields = Page::where('name', 'contact')->first()->fields;
+
+        $arr = [];
+
+        foreach ($fields as $v) {
+            $arr[$v['name']] = $v['value'];
+        }
+
+        $fields = $arr;
+
+        return view('admin.contact', compact('fields'));
     }
 
     public function contactEdit(Request $request)
     {
-        $page_info = Page::where('name', 'contact')->first();
+        $fields = Page::where('name', 'contact')->first()->fields;
 
-        $page_info->update($request->all());
+        foreach ($fields as $field) {
+            foreach ($request->all() as $n => $v) {
+
+                $arr['value'] = $v;
+
+                if ($n == $field->name){
+                    $field->update($arr);
+                }
+            }
+        }
 
         return redirect()->route('admin.contact.page');
     }
 
     public function bgVideo()
     {
-        $page_info = Page::where('name', 'video')->first();
-        return view('admin.video', compact('page_info'));
+        $fields = Page::where('name', 'video')->first()->fields;
+
+        $arr = [];
+
+        foreach ($fields as $v) {
+            $arr[$v['name']] = $v['value'];
+        }
+
+        $fields = $arr;
+
+        return view('admin.video', compact('fields'));
     }
 
     public function bgVideoEdit(Request $request)
     {
-        $page = Page::where('name', 'video')->first();
-
-        $video_path_mp4 = $page->video_mp4;
-        $video_path_webm = $page->video_webm;
-        $bg_image_path_jpg = $page->bg_image_jpg;
+        $video_path_mp4 = Field::where('name', 'video_mp4')->first();
+        $video_path_webm = Field::where('name', 'video_webm')->first();
+        $bg_image_path_jpg = Field::where('name', 'bg_image_jpg')->first();
 
         if ($request->file('video_mp4')){
-            Storage::disk('public')->delete($page->video_mp4);
+            Storage::disk('public')->delete($video_path_mp4);
             $video_path_mp4 = $request->file('video_mp4')->store('video');
         }
 
         if ($request->file('video_webm')){
-            Storage::disk('public')->delete($page->video_webm);
+            Storage::disk('public')->delete($video_path_webm);
             $video_path_webm = $request->file('video_webm')->store('video');
         }
 
         if ($request->file('bg_image_jpg')){
-            Storage::disk('public')->delete($page->bg_image_jpg);
+            Storage::disk('public')->delete($bg_image_path_jpg);
             $bg_image_path_jpg = $request->file('bg_image_jpg')->store('video');
         }
 
-        $parameters = $request->all();
+        $parameters = [];
+
         $parameters['bg_image_jpg'] = $bg_image_path_jpg;
         $parameters['video_mp4'] = $video_path_mp4;
         $parameters['video_webm'] = $video_path_webm;
 
-        $page->update($parameters);
+        $fields = Page::where('name', 'contact')->first()->fields;
+
+        foreach ($fields as $field) {
+            foreach ($parameters as $n => $v) {
+
+                $arr['value'] = $v;
+
+                if ($n == $field->name){
+                    $field->update($arr);
+                }
+            }
+        }
+
         return redirect()->route('admin.video.page');
     }
 }

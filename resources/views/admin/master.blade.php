@@ -28,12 +28,12 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('admin.main.page') }}">MAIN</a>
-                            <a class="dropdown-item" href="{{ route('admin.works.page') }}">WORKS</a>
-                            <a class="dropdown-item" href="{{ route('admin.artists.page') }}">ARTISTS</a>
+{{--                            <a class="dropdown-item" href="{{ route('admin.artists.page') }}">ARTISTS</a>--}}
                             <a class="dropdown-item" href="{{ route('admin.about.page') }}">ABOUT</a>
                             <a class="dropdown-item" href="{{ route('admin.recruit.page') }}">RECRUIT</a>
                             <a class="dropdown-item" href="{{ route('admin.contact.page') }}">CONTACT</a>
                             <a class="dropdown-item" href="{{ route('admin.video.page') }}">VIDEO</a>
+                            <a class="dropdown-item" href="{{ route('admin.works.page') }}">WORK</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

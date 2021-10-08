@@ -274,20 +274,20 @@ const About = {
                 .then(res => res.json())
                 .then(res => {
                     console.log(res.data);
-                    this.description = res.data.description_en;
-                    this.company_name = res.data.company_name_en;
-                    this.location_text = res.data.location_text_en;
-                    this.establishment = res.data.establishment_en;
-                    this.employee = res.data.employee_en;
-                    this.ceo = res.data.ceo_en;
-                    this.director = res.data.director_en;
-                    this.field_company_profile = res.data.field_company_profile_en;
-                    this.field_company_name = res.data.field_company_name_en;
-                    this.field_location = res.data.field_location_en;
-                    this.field_establishment = res.data.field_establishment_en;
-                    this.field_employee = res.data.field_employee_en;
-                    this.field_ceo = res.data.field_ceo_en;
-                    this.field_director = res.data.field_director_en;
+                    this.description = res.fields.about_description_en;
+                    this.company_name = res.fields.company_name_en;
+                    this.location_text = res.fields.location_text_en;
+                    this.establishment = res.fields.establishment_en;
+                    this.employee = res.fields.employee_en;
+                    this.ceo = res.fields.ceo_en;
+                    this.director = res.fields.director_en;
+                    this.field_company_profile = res.fields.field_company_profile_en;
+                    this.field_company_name = res.fields.field_company_name_en;
+                    this.field_location = res.fields.field_about_location_en;
+                    this.field_establishment = res.fields.field_establishment_en;
+                    this.field_employee = res.fields.field_employee_en;
+                    this.field_ceo = res.fields.field_ceo_en;
+                    this.field_director = res.fields.field_director_en;
                 })
         }
     }

@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
              WorksTableSeeder::class,
              PagesTableSeeder::class,
              FieldsTableSeeder::class,
+             FieldsPagesTableSeeder::class,
          ]);
     }
 }

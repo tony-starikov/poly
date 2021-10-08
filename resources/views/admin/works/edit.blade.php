@@ -130,8 +130,8 @@
                             <span class="input-group-text" id="inputGroupFileAddon05">COVER IMAGE</span>
                         </div>
                         <div class="custom-file">
-                            <input type="file" name="cover" id="cover" class="custom-file-input" aria-describedby="inputGroupFileAddon05">
-                            <label class="custom-file-label" for="cover">Choose file</label>
+                            <input type="file" name="cover_img" id="cover_img" class="custom-file-input" aria-describedby="inputGroupFileAddon05">
+                            <label class="custom-file-label" for="cover_img">Choose file</label>
                         </div>
                     </div>
 
@@ -155,7 +155,7 @@
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="artists[]" value="{{ $artist->id }}" id="flexCheckArtist{{ $artist->id }}" @if($work->artists->contains($artist->id)) checked @endif>
                             <label class="form-check-label" for="flexCheckArtist{{ $artist->id }}">
-                                {{ $artist->name }}
+                                {{ $artist->name_en }}
                             </label>
                         </div>
                     @endforeach

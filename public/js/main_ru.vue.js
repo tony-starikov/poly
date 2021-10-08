@@ -25,7 +25,9 @@ const Main = {
             fetch('api/main')
                 .then(res => res.json())
                 .then(res => {
-                    this.slogan = res.data.field_slogan_ru;
+                    console.log(res.fields);
+                    // this.fields = res.fields;
+                    this.slogan = res.fields.field_slogan_ru;
                 })
         }
     }

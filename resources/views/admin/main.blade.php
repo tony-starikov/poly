@@ -1,13 +1,13 @@
 @extends('admin.master')
 
-@section('title', $page_info->title)
+@section('title')
 
 @section('content')
     <div class="container">
 
         <hr>
 
-        <h1>{{ $page_info->name }}</h1>
+        <h1>MAIN PAGE</h1>
 
         <hr>
 
@@ -16,42 +16,30 @@
                 @csrf
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">TITLE</span>
-                    </div>
-                    <input type="text" name="title" id="title" value="{{ $page_info->title }}" class="form-control" aria-describedby="addon-wrapping">
-                </div>
-
-                <div class="input-group flex-nowrap mb-3">
-                    <div class="input-group-prepend">
                         <span class="input-group-text" id="addon-wrapping">SLOGAN EN</span>
                     </div>
-                    <input type="text" name="field_slogan_en" id="field_slogan_en" value="{{ $page_info->field_slogan_en }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="field_slogan_en" id="field_slogan_en" value="{{ $fields['field_slogan_en'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="addon-wrapping">SLOGAN UA</span>
                     </div>
-                    <input type="text" name="field_slogan_ua" id="field_slogan_ua" value="{{ $page_info->field_slogan_ua }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="field_slogan_ua" id="field_slogan_ua" value="{{ $fields['field_slogan_ua'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="addon-wrapping">SLOGAN RU</span>
                     </div>
-                    <input type="text" name="field_slogan_ru" id="field_slogan_ru" value="{{ $page_info->field_slogan_ru }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="field_slogan_ru" id="field_slogan_ru" value="{{ $fields['field_slogan_ru'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="addon-wrapping">SLOGAN DE</span>
                     </div>
-                    <input type="text" name="field_slogan_de" id="field_slogan_de" value="{{ $page_info->field_slogan_de }}" class="form-control" aria-describedby="addon-wrapping">
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">DESCRIPTION</label>
-                    <textarea class="form-control" name="description" id="description" style="height: 100px">{{ $page_info->description }}</textarea>
+                    <input type="text" name="field_slogan_de" id="field_slogan_de" value="{{ $fields['field_slogan_de'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <button class="btn btn-success my-3">EDIT</button>

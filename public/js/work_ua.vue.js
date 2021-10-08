@@ -319,8 +319,8 @@ const Work = {
                     this.software = res.software;
                     this.name = res.work.name_ua;
                     this.description = res.work.description_ua;
-                    this.field_artists = res.works.field_artists_ua;
-                    this.field_software = res.works.field_software_ua;
+                    this.field_artists = res.fields.field_artists_ua;
+                    this.field_software = res.fields.field_software_ua;
                 })
         }
     }

@@ -15,8 +15,8 @@ class CreateFieldPageTable extends Migration
     {
         Schema::create('field_page', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('field_id');
-            $table->integer('page_id');
+            $table->integer('field_id')->nullable();
+            $table->integer('page_id')->nullable();
             $table->timestamps();
         });
     }

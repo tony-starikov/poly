@@ -20,9 +20,9 @@
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
                         <div class="card-body">
-                            <p>{{ $position->name }}</p>
-                            <p class="card-text">{{ $position->description }}</p>
-                            <p class="card-text">{{ $position->software }}</p>
+                            <p>{{ $position->name_en }}</p>
+                            <p class="card-text">{{ $position->description_en }}</p>
+                            <p class="card-text">{{ $position->software_en }}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <a href="{{ route('positions.show', $position) }}"><button type="button" class="btn btn-link">SHOW</button></a>

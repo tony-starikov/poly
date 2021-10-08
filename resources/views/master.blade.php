@@ -238,9 +238,9 @@
 </head>
 <body class="bg-dark">
 
-<video class="video" poster="/images/{{ \App\Page::where('name', 'video')->first()->bg_image_jpg }}" autoplay playsinline muted loop>
-    <source src="/images/{{ \App\Page::where('name', 'video')->first()->video_webm }}" type="video/webm">
-    <source src="/images/{{ \App\Page::where('name', 'video')->first()->video_mp4 }}" type="video/mp4">
+<video class="video" poster="/images/{{ \App\Field::where('name', 'bg_image_jpg')->first()->value }}" autoplay playsinline muted loop>
+    <source src="/images/{{ \App\Field::where('name', 'video_webm')->first()->value }}" type="video/webm">
+    <source src="/images/{{ \App\Field::where('name', 'video_mp4')->first()->value }}" type="video/mp4">
 </video>
 
 <div id="app" style="min-width: 300px">

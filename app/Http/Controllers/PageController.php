@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Artist;
+use App\Field;
 use App\File;
 use App\Page;
 use App\Position;
@@ -22,22 +23,53 @@ class PageController extends Controller
     public function mainApi()
     {
         $data = Page::where('name', 'main')->first()->toArray();
+//        $data = Page::where('name', 'main')->fields->get()->toArray();
 
-        return response()->json(['data'=>$data]);
+        $fields = Page::where('name', 'main')->first()->fields->toArray();
+
+        $arr = [];
+
+        foreach ($fields as $v) {
+            $arr[$v['name']] = $v['value'];
+        }
+
+        $fields = $arr;
+
+        return response()->json(['data'=>$data, 'fields'=>$fields]);
     }
 
     public function aboutApi()
     {
         $data = Page::where('name', 'about')->first()->toArray();
 
-        return response()->json(['data'=>$data]);
+        $fields = Page::where('name', 'about')->first()->fields->toArray();
+
+        $arr = [];
+
+        foreach ($fields as $v) {
+            $arr[$v['name']] = $v['value'];
+        }
+
+        $fields = $arr;
+
+        return response()->json(['data'=>$data, 'fields'=>$fields]);
     }
 
     public function contactApi()
     {
         $data = Page::where('name', 'contact')->first()->toArray();
 
-        return response()->json(['data'=>$data]);
+        $fields = Page::where('name', 'contact')->first()->fields->toArray();
+
+        $arr = [];
+
+        foreach ($fields as $v) {
+            $arr[$v['name']] = $v['value'];
+        }
+
+        $fields = $arr;
+
+        return response()->json(['data'=>$data, 'fields'=>$fields]);
     }
 
     public function worksApi()
@@ -58,9 +90,19 @@ class PageController extends Controller
     {
         $data = Page::where('name', 'recruit')->first()->toArray();
 
+        $fields = Page::where('name', 'recruit')->first()->fields->toArray();
+
+        $arr = [];
+
+        foreach ($fields as $v) {
+            $arr[$v['name']] = $v['value'];
+        }
+
+        $fields = $arr;
+
         $positions = Position::all()->toArray();
 
-        return response()->json(['data'=>$data, 'positions'=>$positions]);
+        return response()->json(['data'=>$data, 'positions'=>$positions, 'fields'=>$fields]);
     }
 
     public function workApi($code)
@@ -70,8 +112,17 @@ class PageController extends Controller
         $files = Work::where('code', $code)->first()->files->toArray();
         $artists = Work::where('code', $code)->first()->artists->toArray();
         $software = Work::where('code', $code)->first()->software->toArray();
+        $fields = Page::where('name', 'work')->first()->fields->toArray();
 
-        return response()->json(['work'=>$work, 'works'=>$works, 'artists'=>$artists, 'software'=>$software, 'files'=>$files]);
+        $arr = [];
+
+        foreach ($fields as $v) {
+            $arr[$v['name']] = $v['value'];
+        }
+
+        $fields = $arr;
+
+        return response()->json(['work'=>$work, 'works'=>$works, 'artists'=>$artists, 'software'=>$software, 'files'=>$files, 'fields'=>$fields]);
     }
 
     public function artistApi($code)
@@ -82,6 +133,20 @@ class PageController extends Controller
 
     public function main()
     {
+
+//        $fields = Page::where('name', 'about')->first()->fields->toArray();
+//
+//        $arr = [];
+//
+//        foreach ($fields as $v) {
+//            $arr[$v['name']] = $v['value'];
+//        }
+//
+//        dd($arr);
+
+
+
+
         $page_info = Page::where('name', 'main')->first();
 
         return view('main', compact('page_info'));

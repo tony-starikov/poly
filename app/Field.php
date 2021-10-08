@@ -12,7 +12,7 @@ class Field extends Model
         'value',
     ];
 
-    public function fields()
+    public function pages()
     {
         return $this->belongsToMany(Page::class)->withTimestamps();
     }

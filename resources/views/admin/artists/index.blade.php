@@ -21,7 +21,7 @@
                     <div class="card mb-4 box-shadow">
                         <img class="card-img-top" src="{{ Storage::url($artist->image) }}" alt="Card image cap">
                         <div class="card-body">
-                            <p>id: {{ $artist->id }} | name: {{ $artist->name }}</p>
+                            <p>id: {{ $artist->id }} | name: {{ $artist->name_en }}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <a href="{{ route('artists.show', $artist) }}"><button type="button" class="btn btn-link">SHOW</button></a>

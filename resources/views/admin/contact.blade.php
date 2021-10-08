@@ -1,13 +1,13 @@
 @extends('admin.master')
 
-@section('title', 'admin | ' . $page_info->name)
+@section('title', 'CONTACT')
 
 @section('content')
     <div class="container">
 
         <hr>
 
-        <h1>{{ $page_info->name }}</h1>
+        <h1>CONTACT</h1>
 
         <hr>
 
@@ -16,147 +16,135 @@
                 @csrf
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">field_contact_us_en</span>
+                        <span class="input-group-text" id="addon-wrapping">contact_us_en</span>
                     </div>
-                    <input type="text" name="field_contact_us_en" id="field_contact_us_en" value="{{ $page_info->field_contact_us_en }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_us_en" id="contact_us_en" value="{{ $fields['contact_us_en'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">field_contact_us_ua</span>
+                        <span class="input-group-text" id="addon-wrapping">contact_us_ua</span>
                     </div>
-                    <input type="text" name="field_contact_us_ua" id="field_contact_us_ua" value="{{ $page_info->field_contact_us_ua }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_us_ua" id="contact_us_ua" value="{{ $fields['contact_us_ua'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">field_contact_us_ru</span>
+                        <span class="input-group-text" id="addon-wrapping">contact_us_ru</span>
                     </div>
-                    <input type="text" name="field_contact_us_ru" id="field_contact_us_ru" value="{{ $page_info->field_contact_us_ru }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_us_ru" id="contact_us_ru" value="{{ $fields['contact_us_ru'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">field_contact_us_de</span>
+                        <span class="input-group-text" id="addon-wrapping">contact_us_de</span>
                     </div>
-                    <input type="text" name="field_contact_us_de" id="field_contact_us_de" value="{{ $page_info->field_contact_us_de }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_us_de" id="contact_us_de" value="{{ $fields['contact_us_de'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">TITLE</span>
+                        <span class="input-group-text" id="addon-wrapping">contact_company_name_en</span>
                     </div>
-                    <input type="text" name="title" id="title" value="{{ $page_info->title }}" class="form-control" aria-describedby="addon-wrapping">
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">DESCRIPTION EN</label>
-                    <textarea class="form-control" name="description" id="description" style="height: 100px">{{ $page_info->description }}</textarea>
+                    <input type="text" name="contact_company_name_en" id="contact_company_name_en" value="{{ $fields['contact_company_name_en'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">COMPANY NAME EN</span>
+                        <span class="input-group-text" id="addon-wrapping">contact_company_name_ua</span>
                     </div>
-                    <input type="text" name="company_name_en" id="company_name_en" value="{{ $page_info->company_name_en }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_company_name_ua" id="contact_company_name_ua" value="{{ $fields['contact_company_name_ua'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">COMPANY NAME UA</span>
+                        <span class="input-group-text" id="addon-wrapping">contact_company_name_ru</span>
                     </div>
-                    <input type="text" name="company_name_ua" id="company_name_ua" value="{{ $page_info->company_name_ua }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_company_name_ru" id="contact_company_name_ru" value="{{ $fields['contact_company_name_ru'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">COMPANY NAME RU</span>
+                        <span class="input-group-text" id="addon-wrapping">contact_company_name_de</span>
                     </div>
-                    <input type="text" name="company_name_ru" id="company_name_ru" value="{{ $page_info->company_name_ru }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_company_name_de" id="contact_company_name_de" value="{{ $fields['contact_company_name_de'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">COMPANY NAME DE</span>
+                        <span class="input-group-text">contact_location_en</span>
                     </div>
-                    <input type="text" name="company_name_de" id="company_name_de" value="{{ $page_info->company_name_de }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_location_en" id="contact_location_en" value="{{ $fields['contact_location_en'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">LOCATION EN</span>
+                        <span class="input-group-text">contact_location_ua</span>
                     </div>
-                    <input type="text" name="location_text_en" id="location_text_en" value="{{ $page_info->location_text_en }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_location_ua" id="contact_location_ua" value="{{ $fields['contact_location_ua'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">LOCATION UA</span>
+                        <span class="input-group-text">contact_location_ru</span>
                     </div>
-                    <input type="text" name="location_text_ua" id="location_text_ua" value="{{ $page_info->location_text_ua }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_location_ru" id="contact_location_ru" value="{{ $fields['contact_location_ru'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">LOCATION RU</span>
+                        <span class="input-group-text">contact_location_de</span>
                     </div>
-                    <input type="text" name="location_text_ru" id="location_text_ru" value="{{ $page_info->location_text_ru }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_location_de" id="contact_location_de" value="{{ $fields['contact_location_de'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">LOCATION DE</span>
+                        <span class="input-group-text" id="addon-wrapping">contact_email</span>
                     </div>
-                    <input type="text" name="location_text_de" id="location_text_de" value="{{ $page_info->location_text_de }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="contact_email" id="contact_email" value="{{ $fields['contact_email'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">EMAIL</span>
+                        <span class="input-group-text" id="addon-wrapping">telegram</span>
                     </div>
-                    <input type="text" name="email" id="email" value="{{ $page_info->email }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="telegram" id="telegram" value="{{ $fields['telegram'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">TELEGRAM</span>
+                        <span class="input-group-text" id="addon-wrapping">artstation</span>
                     </div>
-                    <input type="text" name="social_1" id="social_1" value="{{ $page_info->social_1 }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="artstation" id="artstation" value="{{ $fields['artstation'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">ARTSTATION</span>
+                        <span class="input-group-text" id="addon-wrapping">instagram</span>
                     </div>
-                    <input type="text" name="social_2" id="social_2" value="{{ $page_info->social_2 }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="instagram" id="instagram" value="{{ $fields['instagram'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">INSTAGRAM</span>
+                        <span class="input-group-text" id="addon-wrapping">linkedin</span>
                     </div>
-                    <input type="text" name="social_3" id="social_3" value="{{ $page_info->social_3 }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="linkedin" id="linkedin" value="{{ $fields['linkedin'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">LINKEDIN</span>
+                        <span class="input-group-text" id="addon-wrapping">facebook</span>
                     </div>
-                    <input type="text" name="social_4" id="social_4" value="{{ $page_info->social_4 }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="facebook" id="facebook" value="{{ $fields['facebook'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <div class="input-group flex-nowrap mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">FACEBOOK</span>
+                        <span class="input-group-text" id="addon-wrapping">map_link</span>
                     </div>
-                    <input type="text" name="social_5" id="social_5" value="{{ $page_info->social_5 }}" class="form-control" aria-describedby="addon-wrapping">
-                </div>
-
-                <div class="input-group flex-nowrap mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-wrapping">MAP LINK</span>
-                    </div>
-                    <input type="text" name="map_src" id="map_src" value="{{ $page_info->map_src }}" class="form-control" aria-describedby="addon-wrapping">
+                    <input type="text" name="map_link" id="map_link" value="{{ $fields['map_link'] }}" class="form-control" aria-describedby="addon-wrapping">
                 </div>
 
                 <button class="btn btn-success my-3">EDIT</button>

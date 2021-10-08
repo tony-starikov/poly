@@ -46,14 +46,14 @@ class WorkController extends Controller
     {
         $cover = null;
 
-        if ($request->file('cover')){
-            $cover = $request->file('cover')->store('works');
+        if ($request->file('cover_img')){
+            $cover = $request->file('cover_img')->store('works');
         }
 
         $parameters = $request->all();
 
         $parameters['name'] = 'name';
-        $parameters['cover'] = $cover;
+        $parameters['cover_img'] = $cover;
 
         $work = Work::create($parameters);
 
@@ -129,17 +129,17 @@ class WorkController extends Controller
             }
         }
 
-        $cover = $work->cover;
+        $cover = $work->cover_img;
 
-        if ($request->file('cover')){
-            Storage::disk('public')->delete($work->cover);
-            $cover = $request->file('cover')->store('works');
+        if ($request->file('cover_img')){
+            Storage::disk('public')->delete($work->cover_img);
+            $cover = $request->file('cover_img')->store('works');
         }
 
         $parameters = $request->all();
 
         $parameters['name'] = 'name';
-        $parameters['cover'] = $cover;
+        $parameters['cover_img'] = $cover;
 
         $work->update($parameters);
         return redirect()->route('works.index');
@@ -162,7 +162,7 @@ class WorkController extends Controller
             $work->artists()->detach($artist->id);
         }
 
-        Storage::disk('public')->delete($work->cover);
+        Storage::disk('public')->delete($work->cover_img);
 
         $work->delete();
         return redirect()->route('works.index');

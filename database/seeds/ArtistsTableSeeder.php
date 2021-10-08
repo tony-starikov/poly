@@ -17,10 +17,10 @@ class ArtistsTableSeeder extends Seeder
 
                 'title' => 'polygonerds | Mishio Hirai | Design Company',
 
-                'name_en' => 'Mishio Hirai',
-                'name_ua' => 'Mishio Hirai',
-                'name_ru' => 'Mishio Hirai',
-                'name_de' => 'Mishio Hirai',
+                'name_en' => 'Artist',
+                'name_ua' => 'Artist',
+                'name_ru' => 'Artist',
+                'name_de' => 'Artist',
 
                 'position_en' => '3D artist',
                 'position_ua' => '3D artist',

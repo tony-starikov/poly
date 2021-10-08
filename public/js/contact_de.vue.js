@@ -149,16 +149,16 @@ const Contact = {
                 .then(res => res.json())
                 .then(res => {
                     console.log(res.data);
-                    this.company_name = res.data.company_name_de;
-                    this.location_text = res.data.location_text_de;
-                    this.email = res.data.email;
-                    this.social_1 = res.data.social_1;
-                    this.social_2 = res.data.social_2;
-                    this.social_3 = res.data.social_3;
-                    this.social_4 = res.data.social_4;
-                    this.social_5 = res.data.social_5;
-                    this.map_src = res.data.map_src;
-                    this.field_contact_us = res.data.field_contact_us_de;
+                    this.field_contact_us = res.fields.contact_us_de;
+                    this.company_name = res.fields.contact_company_name_de;
+                    this.location_text = res.fields.contact_location_de;
+                    this.email = res.fields.contact_email;
+                    this.social_1 = res.fields.telegram;
+                    this.social_2 = res.fields.artstation;
+                    this.social_3 = res.fields.instagram;
+                    this.social_4 = res.fields.linkedin;
+                    this.social_5 = res.fields.facebook;
+                    this.map_src = res.fields.map_link;
                 })
         }
     }

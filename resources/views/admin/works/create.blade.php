@@ -133,8 +133,8 @@
                             <span class="input-group-text" id="inputGroupFileAddon05">COVER IMAGE</span>
                         </div>
                         <div class="custom-file">
-                            <input type="file" name="cover" id="cover" class="custom-file-input" aria-describedby="inputGroupFileAddon05">
-                            <label class="custom-file-label" for="cover">Choose file</label>
+                            <input type="file" name="cover_img" id="cover_img" class="custom-file-input" aria-describedby="inputGroupFileAddon05">
+                            <label class="custom-file-label" for="cover_img">Choose file</label>
                         </div>
                     </div>
                 </div>

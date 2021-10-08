@@ -319,25 +319,24 @@ const Recruit = {
                 .then(res => {
                     console.log(res.positions);
                     this.positions = res.positions;
-                    this.description = res.data.description_en;
-                    this.email = res.data.email;
-                    this.employment_status = res.data.employment_status_en;
-                    this.location_text = res.data.location_text_en;
-                    this.benefits = res.data.benefits_en;
-                    this.workdays = res.data.workdays_en;
-                    this.field_positions_available = res.data.field_positions_available_en;
-                    this.field_job_description = res.data.field_job_description_en;
-                    this.field_employment_status = res.data.field_employment_status_en;
-                    this.field_location = res.data.field_location_en;
-                    this.field_benefits = res.data.field_benefits_en;
-                    this.field_workdays = res.data.field_workdays_en;
-                    this.field_recruiting_process = res.data.field_recruiting_process_en;
-                    this.field_recruiting_process_1 = res.data.field_recruiting_process_1_en;
-                    this.field_recruiting_process_2 = res.data.field_recruiting_process_2_en;
-                    this.field_recruiting_process_3 = res.data.field_recruiting_process_3_en;
-                    this.field_recruiting_process_4 = res.data.field_recruiting_process_4_en;
-                    this.field_bottom_text = res.data.field_bottom_text_en;
-
+                    this.description = res.fields.recruit_description_en;
+                    this.email = res.fields.recruit_email;
+                    this.employment_status = res.fields.employment_status_en;
+                    this.location_text = res.fields.field_recruit_location_en;
+                    this.benefits = res.fields.benefits_en;
+                    this.workdays = res.fields.workdays_en;
+                    this.field_positions_available = res.fields.field_positions_available_en;
+                    this.field_job_description = res.fields.field_job_description_en;
+                    this.field_employment_status = res.fields.field_employment_status_en;
+                    this.field_location = res.fields.recruit_location_en;
+                    this.field_benefits = res.fields.field_benefits_en;
+                    this.field_workdays = res.fields.field_workdays_en;
+                    this.field_recruiting_process = res.fields.field_recruiting_process_en;
+                    this.field_recruiting_process_1 = res.fields.field_recruiting_process_1_en;
+                    this.field_recruiting_process_2 = res.fields.field_recruiting_process_2_en;
+                    this.field_recruiting_process_3 = res.fields.field_recruiting_process_3_en;
+                    this.field_recruiting_process_4 = res.fields.field_recruiting_process_4_en;
+                    this.field_bottom_text = res.fields.field_bottom_text_en;
                 })
         },
     }

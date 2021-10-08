@@ -320,8 +320,8 @@ const Work = {
                     this.software = res.software;
                     this.name = res.work.name_en;
                     this.description = res.work.description_en;
-                    this.field_artists = res.works.field_artists_en;
-                    this.field_software = res.works.field_software_en;
+                    this.field_artists = res.fields.field_artists_en;
+                    this.field_software = res.fields.field_software_en;
                 })
         }
     }

@@ -14,5 +14,4 @@ yarn-error.log
 /laradock-*
 /public/images/artists
 /public/images/works
-/public/images/video
 /public/images/software
