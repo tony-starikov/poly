@@ -14,4 +14,6 @@ Run php artisan key:generate.
 
 Run php artisan migrate --seed.
 
+You can check it online https://polygonerds.herokuapp.com
+
 Enjoy)
