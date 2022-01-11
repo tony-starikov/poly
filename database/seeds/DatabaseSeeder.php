@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
              PagesTableSeeder::class,
              FieldsTableSeeder::class,
              FieldsPagesTableSeeder::class,
+             FilesTableSeeder::class
          ]);
     }
 }

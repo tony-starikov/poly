@@ -12,13 +12,34 @@ class SoftwareTableSeeder extends Seeder
     public function run()
     {
         DB::table('software')->insert([
-            ['name' => 'Marmoset'],
-            ['name' => 'Maya'],
-            ['name' => 'Photoshop'],
-            ['name' => 'RizomUV'],
-            ['name' => 'Substance'],
-            ['name' => 'UVLayout'],
-            ['name' => 'ZBrush']
+            [
+                'name' => 'Marmoset',
+                'image' => 'software/Marmoset.png',
+            ],
+            [
+                'name' => 'Maya',
+                'image' => 'software/Maya.png',
+            ],
+            [
+                'name' => 'Photoshop',
+                'image' => 'software/Photoshop.png',
+            ],
+            [
+                'name' => 'RizomUV',
+                'image' => 'software/RizomUV.png',
+            ],
+            [
+                'name' => 'Substance',
+                'image' => 'software/Substance.png',
+            ],
+            [
+                'name' => 'UVLayout',
+                'image' => 'software/UVLayout.png',
+            ],
+            [
+                'name' => 'ZBrush',
+                'image' => 'software/ZBrush.png',
+            ],
         ]);
     }
 }
