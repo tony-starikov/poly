@@ -12,6 +12,4 @@ npm-debug.log
 yarn-error.log
 /.idea
 /laradock-*
-/public/images/artists
-/public/images/works
-/public/images/software
+
